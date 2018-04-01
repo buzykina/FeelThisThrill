@@ -1,0 +1,19 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+#slider{
+     width:100%;
+     height:400px;
+     overflow: hidden;
+}
+#slider .slides{
+	display:block;
+	width:100%;
+	height: 400px;
+}
+#slider .slide{
+	float:left;
+	
+}
