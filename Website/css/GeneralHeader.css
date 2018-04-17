@@ -37,7 +37,7 @@ body{
 
 }
 
-.logotop img:hover{
+.logotop a:hover{
     cursor: pointer;
 }
 

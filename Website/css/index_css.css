@@ -46,3 +46,14 @@
 	left: 0;
 	animation: 20s slideshow infinite;
 }
+#clock{
+color:white;
+font-variant: small-caps; 
+}
+
+#clock{
+	position: absolute;
+	width:100%;
+	left: 25%;
+	top: 70%;
+}
