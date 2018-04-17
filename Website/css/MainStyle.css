@@ -1,5 +1,5 @@
-    .mainMenu 
-    {
+.mainMenu 
+{
         font-family: "proxima-nova",sans-serif; 
         font-weight: bold;
         margin-left: 0;
@@ -12,9 +12,9 @@
         border: 0;
         height: auto;
         
-    }
+}
 
-ul {
+.footer {
     
     list-style-type: none;
     margin: 0;
@@ -23,11 +23,11 @@ ul {
     border: 0;
 }    
     
-li {
+.footer li {
     float: left;
 }
 
-li a {
+.footer li a {
     display: block;
     color: white;
     text-align: center;
@@ -35,11 +35,11 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.footer li a:hover:not(.active) {
     background-color: #332438;
 }
 
-li a.active {
+.footer li a.active {
     color: white;
     background-color: #684c6b;
 }
@@ -67,8 +67,8 @@ li a.active {
 *
 {
     font-family: Roboto,helvetica neue,sans-serif;
+    box-sizing: border-box;
 }
-
 body 
   {
     background-color: black;
