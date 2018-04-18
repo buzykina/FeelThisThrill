@@ -35,7 +35,7 @@
 #slideshow figure img{
 	width: 20%;
 	float: left;
-	height: 550px;
+	height: 580px;
 }
 
 #slideshow figure{
@@ -53,7 +53,71 @@ font-variant: small-caps;
 
 #clock{
 	position: absolute;
-	width:100%;
 	left: 25%;
 	top: 70%;
+}
+.mouse {
+	width: 10%;
+	position:relative;
+	left:46%;
+}
+.scroll {
+	animation-name: scroll;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+	animation-iteration-count: infinite;
+	transform-origin: 50% 20.5px;
+	will-change: transform;
+}
+#lineup{
+	height: 300px;
+	padding: 4% 0 2% 10%;
+}
+#experience{
+	height: 300px;
+    width: 500px;
+    margin-left: 20%;
+    padding: 2% 10% 2% 0%;
+}
+#ticket{
+    left: 10%;*/
+    width: 500px;
+    height: 250px;
+    padding: 4% 0 2% 10%;
+}
+#gifts{
+    height: 250px;
+    margin-left: 20%;
+    padding: 2% 10% 2% 0%;
+}
+
+.scroll-link {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@keyframes scroll {
+
+	0%, 20% {
+		transform: translateY(0) scaleY(1);
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(36px) scaleY(2);
+		opacity: 0.01;
+	}
+
+}
+label{
+	color:white;
+}
+.content{
+display:grid;
+grid-template-columns: 1fr 1fr;
 }
