@@ -29,9 +29,9 @@
 }
 
 #slideshow{
-	position: relative;
+	position: absolute;
 	overflow: hidden;
-	
+	z-index: -1;
 	
 }
 
@@ -78,34 +78,43 @@
         );
 }
 .Logcontainer{
+	
    /* Hidden by default */
-    position: absolute; /* Stay in place */
+    position: relative; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-	margin-top:10%;
+    top:0;
     width: 100%; /* Full width */
-    height: 90%;
-	background-color: transparent;
+    height: 1000px;
 	display: block;
+	text-align: center;
 }
 .code{
  	position: relative;
-	
 	width: 100%;
 	height: 100%;
 	
 }
+.total{
+	position: relative;
+	z-index: 1;
+	
+	
+	width: 100%;
+	height:300px;
+	
+}
 .container {
-    padding: 16px;
+    padding: 1%;
 	text-align-last:center;
+	
 }
 .contains{
 	cursor:default;
  width: 100%;
- height: 50px;
+ height: 30px;
 	background-color: purple;
-	color:white;
+	font-size: 0.8vw;
+	color: white;
 }
 
 span.psw {
@@ -121,6 +130,7 @@ span.psw {
     border: none;
     cursor: pointer;
     width: 100%;
+	font-size: 0.8vw;
 }
 #Cancel {
     width: auto;
@@ -142,6 +152,7 @@ span.psw {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+font-size: 0.8vw;
 	color: white;
 }
 
@@ -157,12 +168,12 @@ span.psw {
 }
 div.container label{
 	color: white;
-	
+	font-size: 0.8vw;
 }
 .Signorlog{
-	position: absolute;
+	position: relative;
 	z-index: 1;
-	top:35%;
+	
 	left:15%;
 	
 	display:flex;
@@ -177,7 +188,20 @@ div.container label{
 	background-color: rgba(100,100,100,0.8);
 }
 .Update{
- position:relative;
+	width:auto;
+	height:auto;
+
+ position:absolute;
  text-align: center;
  color: white;
+	bottom:0;
+	left:45%;
+	font-size: 0.8vw;
+}
+@media only screen and (max-width: 320px) {
+
+   body { 
+      font-size: 2em; 
+   }
+
 }

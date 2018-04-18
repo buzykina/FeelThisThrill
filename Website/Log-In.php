@@ -26,7 +26,7 @@
     </figure>
 </div>
 	<div class = "Logcontainer">
-		
+		<div class = "total">
         <div class = "code">
 			
 		 <form class="LogBox animate">
@@ -38,6 +38,7 @@
        <button class = "Nat" name ='submit'  type="submit">Login</button>
 			 </div>
 		</form>
+		</div>
 		</div>
 		<div class = "Signorlog">
 		<div class = "code">

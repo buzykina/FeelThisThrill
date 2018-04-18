@@ -15,12 +15,6 @@
      ?> 
 	<div class = "Map">
 		<img src="http://2ukju42ryr9x2tkb6r2yfz8a.wpengine.netdna-cdn.com/wp-content/uploads/2013/04/Summer-Camp-2017-Map.jpg">
-		<div class="NavHandle">
-		<button onclick="ShowFood(1)">Camp Spots</button>
-			<button onclick="ShowFood(2)">Loan Stands</button>
-		<button onclick="ShowFood(3)">Food Stalls</button>
-			<button onclick="ShowFood(4)">ATM</button>
-		</div>
 		<div class = "marker">
 		<div class= "mkr" id = "camp1" ></div>
 		<div class= "mkr" id = "camp2"></div>
@@ -65,6 +59,12 @@
 			<div class= "mk2" id = "atm7"></div>
 		</div>
    </div>
+				<div class="NavHandle">
+		<button onclick="ShowFood(1)">Camp Spots</button>
+			<button onclick="ShowFood(2)">Loan Stands</button>
+		<button onclick="ShowFood(3)">Food Stalls</button>
+			<button onclick="ShowFood(4)">ATM</button>
+		</div>
 	  <div id = "bottomscreen">
       <?php if (isset($_POST['submit'])){
 	  include_once 'Stand.php';
