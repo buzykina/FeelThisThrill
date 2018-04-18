@@ -5,13 +5,15 @@ img{
     cursor: pointer;
 }
 
+
+
 .maincover{
     position: relative;
     background-image:url('../img/coverpage.jpg');
     min-height: 80%;
     width: 100%;
     opacity: 0.9;
-    
+    background-size: 100% 100%;
 }
 
 .maincover-text .border1{
@@ -39,12 +41,13 @@ img{
 .maincontent{
     position: absolute;
     top: 23%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .video img, .pictures img{
-    width: 90%;  
+    
+    width: 100%;  
     padding: 2vw;
     background-position: center;
     -webkit-filter: brightness(100%);
