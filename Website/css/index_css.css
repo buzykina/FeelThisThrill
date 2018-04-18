@@ -54,12 +54,13 @@ font-variant: small-caps;
 #clock{
 	position: absolute;
 	left: 25%;
-	top: 70%;
+	top: 60%;
 }
 .mouse {
-	width: 10%;
+	width: 3.5vw;
+    margin-bottom: 60px;
 	position:relative;
-	left:46%;
+
 }
 .scroll {
 	animation-name: scroll;
