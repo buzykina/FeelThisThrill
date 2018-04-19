@@ -1,0 +1,10 @@
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csprojResolveAssemblyReference.cache
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.Form1.resources
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.Properties.Resources.resources
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csproj.GenerateResource.Cache
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csproj.CoreCompileInputs.cache
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\bin\Debug\CampingEntranceApp.exe.config
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\bin\Debug\CampingEntranceApp.exe
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\bin\Debug\CampingEntranceApp.pdb
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.exe
+D:\! PROP\A_Visuals\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.pdb

@@ -119,6 +119,7 @@ div.custom>div{
 	width: auto;
 	height: auto;
 	position: relative;
+	font-size: 0.7vw;
 }
 .truce{
 	width: 100%;
@@ -131,8 +132,11 @@ div.truce>div{
 	width: auto;
 	height: auto;
 	position: relative;
+	font-size: 0.7vw;
 }
 .info{
+	width:100%;
+	height: 100%;
 	display:grid;
 	grid-template-columns: 1fr 3fr;
 	color:white;
@@ -152,10 +156,11 @@ div.truce>div{
         );
 }
 .menu{
-
+width: 100%;
+	height:100%;
+	
 }
 .fist{
-
 	width:auto;
 	height: auto;
 	position: relative;
@@ -163,12 +168,13 @@ div.truce>div{
 	left:10%;
 }
 div.fist >button{
-	width:150px;
+	width:15%;
 	height:40px;
 	background-color: rgba(130,130,130,0.6);
 	border-style: solid;
 	border-width: thin;
 	color:#AACCFF;
+	font-size: 0.7vw;
 }
 .fooditem{
 	overflow-y: scroll;

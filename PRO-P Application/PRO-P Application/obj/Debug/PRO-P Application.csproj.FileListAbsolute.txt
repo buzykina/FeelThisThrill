@@ -1,0 +1,10 @@
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csprojResolveAssemblyReference.cache
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Form1.resources
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Properties.Resources.resources
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.GenerateResource.Cache
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.CoreCompileInputs.cache
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.exe.config
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.exe
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.pdb
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.exe
+C:\Users\himan\source\repos\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.pdb
