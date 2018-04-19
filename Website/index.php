@@ -8,7 +8,8 @@
     <script src="js/index_js.js"></script>
     <link rel="stylesheet" href="css/flipclock.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="js/flipclock.js"></script>
+    <script src="js/flipclock.js"></script>
+	<script src="js/noframework.waypoints.min.js"></script>
     </head> 
  <body>
     <?php
@@ -33,28 +34,40 @@
 	</a>
 </div>
 <div id = "content" class="content">
-    <div>
+    <div class="hidden">
     	<img src="img/line_up.jpg" id="lineup">
     </div>
-    <div>
-        <label>dshdhsrthrthxdfdrdthjngdjgfnrufg</label>
+    <div id="lineuptext" class="hidden1">
+        <div id = "d1">
+        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <a href="line_up.php"><button class = "schedule">More artists</button></a>
     </div>
-    <div>
-        <label>dshdhsrthrthxdfdrdthjngdjgfnrufg</label>
     </div>
-    <div>
+    <div id = "experiencetext" class="hidden1">
+        <div id = "d2">
+        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <a href="experience.php"><button class = "schedule">More photos</button></a>
+    </div>
+    </div>
+    <div class="hidden">
     	<img src="img/experience.jpg" id="experience">
     </div>
-    <div>
+    <div class="hidden">
         <img src="img/feelthisthrill.jpg" id = "ticket">
     </div>
-    <div>
-        <label>dshdhsrthrthxdfdrdthjngdjgfnrufg</label>
+    <div id = "tickettext" class="hidden1">
+        <div id = "d3">
+        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <a href="Tickets.php"><button class = "schedule">Buy ticket</button></a>
     </div>
-    <div>
-        <label>dshdhsrthrthxdfdrdthjngdjgfnrufg</label>
     </div>
-    <div>
+    <div id = "giftstext" class="hidden1">
+        <div id = "d4">
+        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <a href="gifts.php"><button class = "schedule">Buy gifts</button></a>
+    </div>
+    </div>
+    <div class="hidden" class="hidden">
     	<img src="img/gifts.jpg" id="gifts">
     </div>
 </div>
