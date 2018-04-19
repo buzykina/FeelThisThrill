@@ -1,0 +1,10 @@
+D:\A_PROP\ShopApp\ShopApp\bin\Debug\ShopApp.exe.config
+D:\A_PROP\ShopApp\ShopApp\bin\Debug\ShopApp.exe
+D:\A_PROP\ShopApp\ShopApp\bin\Debug\ShopApp.pdb
+D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.csprojResolveAssemblyReference.cache
+D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.Form1.resources
+D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.Properties.Resources.resources
+D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.GenerateResource.Cache
+D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.CoreCompileInputs.cache
+D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.exe
+D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
