@@ -7,9 +7,9 @@
     <link rel="stylesheet" type="text/css" href="css/index_css.css">
     <script src="js/index_js.js"></script>
     <link rel="stylesheet" href="css/flipclock.css">
+    <link rel="stylesheet" href="css/animate.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/flipclock.js"></script>
-	<script src="js/noframework.waypoints.min.js"></script>
     </head> 
  <body>
     <?php

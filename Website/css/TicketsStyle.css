@@ -1,0 +1,149 @@
+.divPic
+        {
+            height:50%;
+            width:100%;
+        }
+.divMap
+{
+    height:auto;
+    width:100%;
+    position: relative;
+    z-index: -1;
+}
+
+.Mark1
+{
+    position: absolute;
+    top: 500px;
+    left: 500px;
+}
+
+
+h3 a{
+	font-variant: small-caps;
+	color:white;
+}
+h3{
+	text-align: center;
+}
+hr{
+	color:white;
+	height:70px;
+	background-color: white;
+	width: 0.1px;
+}
+
+ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+li{
+    float: left;
+}
+li h3 a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li h3 a:hover{
+	background-color: #684c6b;  
+    cursor: pointer;
+}
+
+        .container
+        {
+            width: 100%;
+            height:auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(4, 150px);
+            grid-gap: 1em;
+        }
+        
+        .divLeft
+        {
+            grid-column: 1/6;
+            grid-row: 1/4;
+            margin-left: 35px;
+            padding-top:20px;
+        }
+        .divRight
+        {
+            grid-column: 8/13;
+            grid-row: 1/4;
+            margin-right: 35px;
+            padding-top:20px;
+            padding-bottom: 10px;
+        }
+        #para
+        {
+            color:white;
+            float:left;
+            margin-left:10px;
+        }
+        .divBoxLeft
+        {
+            grid-column: 1/6;
+            grid-row: 1/4;
+            margin-top: 70px;
+            margin-left:40px;
+            margin-right:5px;
+            border: 2px solid white;
+            border-radius: 4px;
+    
+        }
+        .divBoxRight
+        {
+            grid-column: 1/6;
+            grid-row: 1/4;
+            margin-top:63px;
+            margin-left:10px;
+            margin-right:5px;
+            border: 2px solid white;
+            border-radius: 4px;
+        }
+        .button {
+  margin-top: 20px;
+  margin-left: 200px;
+  background-color: #66078b;
+  box-shadow: 0 0 6px 0 #fff;
+  font-family: 'Droid Serif', serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: none;
+}
+        
+    
+        .w-button {
+    display: inline-block;
+    padding: 9px 15px;
+    color: white;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    border-radius: 0;
+}
+        #Pic1
+        {
+            padding-top:15px;
+            object-position: center;
+            text-align: center;
+        }
+    #map {
+            height: 390px;
+            width: 570px;
+             }
+        
+        @media only screen and (max-width: 1000px) {
+    .container
+        {
+            width: 100%;
+            height:auto;
+            display: block;
+        }
+}
+        

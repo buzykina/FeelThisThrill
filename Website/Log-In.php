@@ -30,12 +30,12 @@
         <div class = "code">
 			
 		 <form class="LogBox animate">
-			 <button class = "contains"><label><b>Login with Code</b></label></button>
+			 <button class = "contains"><label><b>Log-in with Code</b></label></button>
 		 <div class="container">
       <label><b>Enter Code :</b></label>
       <input class = "Unary" type="text" placeholder="Enter Code" name="uid" required>
 
-       <button class = "Nat" name ='submit'  type="submit">Login</button>
+       <button class = "Nat" name ='submit'  type="submit">Log-in</button>
 			 </div>
 		</form>
 		</div>
@@ -43,13 +43,13 @@
 		<div class = "Signorlog">
 		<div class = "code">
 		<form class="LogBox1 animate">
-			<button class = "contains"><label><b>Login with Username</b></label></button>
+			<button class = "contains"><label><b>Log-in with Username</b></label></button>
 		 <div class="container">
       <label><b>Enter Username:</b></label>
       <input class = "Unary" type="text" placeholder="Enter Username" name="uid" required>
 			 <label><b>Enter Password:</b></label>
    <input class = "Unary" type="text" placeholder="Enter Password" name="uid" required>
-       <button class = "Nat" name ='submit'  type="submit">Login</button>
+       <button class = "Nat" name ='submit'  type="submit">Log-in</button>
 			 </div>
 		</form>
 		</div>
@@ -58,7 +58,7 @@
 		<button class = "contains"><label><b>Sign Up</b></label></button>
 		 <div class="container">
 			 <center><label><b>Need to buy a ticket to get Account</b></label></center>
-       <button class = "Nat" name ='submit'  type="submit">Tickets</button>
+       <button class = "Nat" name ='submit' type="submit">Tickets</button>
 			 </div>
 		</form>
 		</div>

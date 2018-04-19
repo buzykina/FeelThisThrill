@@ -61,9 +61,17 @@ body{
   cursor: pointer;
 }
 
+.gridButtonsLeft a.active {
+    color: mediumpurple;
+}
+
 .gridButtonsRight div:hover{
   background-color: #684c6b;  
   cursor: pointer;
+}
+
+.gridButtonsRight a.active {
+    color: mediumpurple;
 }
 
 .gridButtonsLeft{
