@@ -23,7 +23,7 @@
      <h2>Day 2</h2>
      <table>
   <thead>
-    <tr>
+    <tr class = "th">
       <th scope="col">Time</th>
       <th scope="col">Activity</th>
     </tr>
