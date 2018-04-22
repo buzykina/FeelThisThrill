@@ -1,9 +1,12 @@
 *{
 	color:white;
 }
-h2,h4{
+h2,h4,h3{
 	text-align: center;
 	font-variant: small-caps;
+}
+input{
+	color:black;
 }
 .filters{
 	border: 1px solid white;
@@ -32,22 +35,44 @@ input[type= range]{
 .content{
 margin-left: 30px;
 display:grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.content{
+	margin:20px auto;
 }
 #i1 img{
-	height:300px;
+	height:250px;
 }
 #i2 img{
 	height:210px;
+	width:190px;
 }
 #i3 img{
 	height:250px;
 }
 #i4 img{
-	height: 280px;
+	height: 210px;
+	width:190px;
 }
-
-.giftSelected{
-	background-color: #684c6b;  
-    border: 1px solid white;
+.schedule:hover{
+    color:white;
+    background-color: #332438 !important;
+    border-color: white !important;
+}
+.schedule {
+    background-color: transparent !important;
+    border: 2px solid #332438;
+    color: #332438;
+    font-size: 1vw;
+    font-weight: 700;
+    font-variant: small-caps;
+    height: 50px;
+    transition: color 1s;
+    margin-top: 30px;
+    margin-left: 70%;
+  
+  &:hover {
+    color: adjust-hue(white,180);
+    border-color: white;
+  }
 }

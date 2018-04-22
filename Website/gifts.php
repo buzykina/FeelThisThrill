@@ -65,7 +65,7 @@
     </nav>
   
   
-  <h2>Gifts</h2>
+ <h2>Gifts</h2>
   <div id = "combined">
   <div class="filters">
   <h4>Filter by</h4>
@@ -102,10 +102,17 @@
       <img src="img/bag1.png" id="lineup">
     </div>
     <div>
-      
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
     </div>
     <div id = "i3">
         <img src="img/cup1.png" id = "ticket">
+    </div>
+    <div>
+      
     </div>
     <div>
       
@@ -121,6 +128,9 @@
     </div>
     <div id = "i4">
         <img src="img/t1.png" id = "ticket">
+    </div>
+    <div>
+      
     </div>
   </div>
 </div>
