@@ -84,5 +84,10 @@ img{
     transition: all 0.5s ease;
 }
 
+.experienceSelected{
+    background-color: #684c6b;  
+    border: 1px solid white;
+}
+
 
 

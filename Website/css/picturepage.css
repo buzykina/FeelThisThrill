@@ -118,6 +118,11 @@ imagetab2{
      animation: fadein 0.5s;
 }
 
+.experienceSelected{
+    background-color: #684c6b;  
+    border: 1px solid white;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

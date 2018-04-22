@@ -71,7 +71,10 @@ html, body { height: 100%; margin: 0; }
 }
 
 
-
+.experienceSelected{
+    background-color: #684c6b;  
+    border: 1px solid white;
+}
 
 
 

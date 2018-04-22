@@ -46,3 +46,8 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 #i4 img{
 	height: 280px;
 }
+
+.giftSelected{
+	background-color: #684c6b;  
+    border: 1px solid white;
+}

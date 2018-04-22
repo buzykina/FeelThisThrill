@@ -146,4 +146,9 @@ li h3 a:hover{
             display: block;
         }
 }
+
+.ticketSelected{
+	background-color: #684c6b;  
+    border: 1px solid white;
+}
         
