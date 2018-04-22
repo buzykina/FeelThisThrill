@@ -17,7 +17,7 @@
         </div>
         <div class="gridButtons">
             <div class="gridButtonsLeft">
-                <a href="line_up.php"><div class="lineUpSelected"><p>Line-up</p></div></a>
+                <a href="line_up.php"><div class="Selected"><p>Line-up</p></div></a>
                 <a href="Tickets.php"><div><p>Tickets</p></div></a>
                 <a href="Camp.php"><div><p>Maps</p></div></a>
             </div>
@@ -65,7 +65,7 @@
 
 
      <ul id = "submenu">
-        <li><h3><a href="line_up.php">Artists</a></h3></li>  
+        <li><h3><a href="line_up.php" class = "Selected">Artists</a></h3></li>  
         <li><hr></li>
         <li><h3><a href="schedule_1.php">Schedule</a></h3></li>
      </ul>

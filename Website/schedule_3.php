@@ -18,14 +18,14 @@
      <ul id = "submenu">
         <li><h3><a href="line_up.php">Artists</a></h3></li>  
         <li><hr></li>
-        <li><h3><a href="schedule_1.php">Schedule</a></h3></li>
+        <li><h3><a href="schedule_1.php" class = "Selected">Schedule</a></h3></li>
      </ul>
      <ul id = "submenu1">
         <li><h3><a href="schedule_1.php">Day 1</a></h3></li>  
         <li><hr></li>
         <li><h3><a href="schedule_2.php">Day 2</a></h3></li>
         <li><hr></li>
-        <li><h3><a href="schedule_3.php">Day 3</a></h3></li>
+        <li><h3><a href="schedule_3.php" class = "Selected">Day 3</a></h3></li>
      </ul>
    </div>
      <h2>Day 3</h2>

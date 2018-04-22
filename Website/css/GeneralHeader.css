@@ -19,6 +19,10 @@ body{
   margin:0;
   padding:0;
 }
+.Selected{
+  background-color: #684c6b;  
+    border: 1px solid white;
+}
 
 .logotop{
   position: relative;
