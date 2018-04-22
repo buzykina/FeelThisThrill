@@ -71,7 +71,7 @@
   </tr>
   </tbody>
 </table>
-<a href="http://localhost/Website/schedule/day3.pdf"><button class = "schedule">View schedule in pdf</button></a>
+<a href="http://localhost/Website1/schedule/day3.pdf"><button class = "schedule">View schedule in pdf</button></a>
 </div>
     <?php
     include 'included/footer.html';

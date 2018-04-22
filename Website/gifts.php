@@ -25,7 +25,7 @@
 
             <div class="gridButtonsRight">
                 <a href="experience.php"><div><p>Experience</p></div></a>
-                <a href="gifts.php"><div class="giftSelected"><p>Gifts</p></div></a>
+                <a href="gifts.php"><div class="Selected"><p>Gifts</p></div></a>
                 <a href="Log-In.php"><div><p>Log-In</p></div></a>
             </div>
         </div>     
@@ -112,27 +112,151 @@
         <img src="img/cup1.png" id = "ticket">
     </div>
     <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    <div>
-      
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>  
     </div>
     <div id = "i2">
       <img src="img/cap1.png" id="experience">
     </div>
     <div>
-      
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
     </div>
     <div id = "i4">
         <img src="img/t1.png" id = "ticket">
     </div>
     <div>
-      
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
     </div>
-  </div>
+    <div id = "i5">
+      <img src="img/bag2.png" id="lineup">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
+    </div>
+    <div id = "i6">
+        <img src="img/cup2.png" id = "ticket">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>  
+    </div>
+    <div id = "i7">
+      <img src="img/cap2.png" id="experience">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
+    </div>
+    <div id = "i8">
+        <img src="img/t2.png" id = "ticket">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
+    </div>
+    <div id = "i9">
+      <img src="img/bag3.png" id="lineup">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
+    </div>
+    <div id = "i10">
+        <img src="img/cup3.png" id = "ticket">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>  
+    </div>
+    <div id = "i11">
+      <img src="img/cap3.png" id="experience">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
+    </div>
+    <div id = "i12">
+        <img src="img/t3.png" id = "ticket">
+    </div>
+    <div>
+      <h3>Some name</h3>
+      <p>Price</p>
+      <label>Quantity</label>
+      <input type="number" name="quantity" max = "100" min = "1" value = "1">
+      <button class = "schedule">Add to basket</button>
+    </div>
+</div>
+<div class="filters1">
+ <img src="img/logo2.JPG">
+ <h5 class="center-align">Feel This Thrill</h5>
+      <p>Feb 10, 2016 9:36 PM</p>
+          <div class="invoice">
+      <table class="highlight">
+        <thead>
+          <tr>
+            <th>QTY</th>
+            <th>ITEM</th>
+            <th class="right-align">PRICE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Large Mocha Latte</td>
+            <td class="right-align">$4.25</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Banana Nut Muffin</td>
+            <td class="right-align">$2.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="right-align">Tax</td>
+            <td class="right-align">$0.50</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="right-align bold">Total</td>
+            <td class="right-align bold">$6.75</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
 </div>
   <?php
     include 'included/footer.html';

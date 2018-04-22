@@ -159,6 +159,7 @@ table th {
     color:white;
     background-color: #332438 !important;
     border-color: white !important;
+    cursor:pointer;
 }
 .schedule {
     background-color: transparent !important;
