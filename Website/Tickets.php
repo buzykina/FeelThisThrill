@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    
+    <title>Feel This Thrill - Tickets</title>
 <link rel="stylesheet" type="text/css" href="css/jane_css.css">
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jane_js.js"></script>
@@ -10,7 +10,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/GeneralHeader.css">
 <link rel="stylesheet" type="text/css" href="css/TicketsStyle.css">
-
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
     </head>
   
     

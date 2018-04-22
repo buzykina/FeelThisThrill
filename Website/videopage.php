@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <title>Feel This Thrill - Videos</title>
     <link rel="stylesheet" type="text/css" href="css/Videopage.css">
     <script type="text/javascript" src="js/ContentTabs.js"></script>
     <?php

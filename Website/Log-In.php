@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <title>Feel This Thrill - Log-In</title>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jane_js.js"></script>
 <link rel="stylesheet" type="text/css" href="css/MainStyle.css">

@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Feel This Thrill - Buy Tickets</title>
+    
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Webflow" name="generator">
     <link href="Livia popper&#39;s First Project_files/livia-poppers-first-project.webflow.75e37ed8c.css" rel="stylesheet" type="text/css">
@@ -45,7 +46,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/GeneralHeader.css">
-    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="body">

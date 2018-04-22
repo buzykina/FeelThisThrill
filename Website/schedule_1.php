@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <title>Feel This Thrill - Day 1</title>
     <?php
     include 'included/common_head.html';
     ?>

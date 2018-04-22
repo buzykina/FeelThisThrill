@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Feel This Thrill - Camping Spots</title>
+    <title>Feel This Thrill - Rent Camping Spots</title>
     <meta content="CampingSpots" property="og:title">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Webflow" name="generator">

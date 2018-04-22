@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <title>Feel This Thrill - Experience</title>
     <link rel="stylesheet" type="text/css" href="css/Experience.css">
     <?php
     include 'included/common_head.html';

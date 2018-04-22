@@ -56,7 +56,7 @@ body{
   font-size: 1.3vw;
 }
 
-.gridButtonsLeft div:hover{
+.gridButtonsLeft a:hover{
   background-color: #684c6b;  
   cursor: pointer;
 }
@@ -65,7 +65,7 @@ body{
     color: mediumpurple;
 }
 
-.gridButtonsRight div:hover{
+.gridButtonsRight a:hover{
   background-color: #684c6b;  
   cursor: pointer;
 }
