@@ -32,11 +32,9 @@ html, body { height: 100%; margin: 0; }
 
 .yearselector{
     position: absolute;
-    left: 43%;
-    right: 40%;
+    width: 100%;
+    text-align: center;
 }
-
-
 
 
 .yearselector span{
@@ -151,11 +149,28 @@ imagetab2{
 .gallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
     grid-row-gap: 0.5em;
     grid-column-gap: 0.5em;
     cursor: pointer;
     margin-right: 10px;
     margin-left: 10px;
+}
+
+
+
+
+@media screen and (max-width: 1100px){
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+        width: 100%;
+        grid-row-gap: 0.5em;
+        grid-column-gap: 0.5em;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 }
 
 @keyframes fadeimage {
