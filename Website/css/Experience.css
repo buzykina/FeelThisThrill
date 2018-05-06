@@ -91,6 +91,11 @@ img{
     border: 1px solid white;
 }
 
+.navExperienceSelected{
+    background-color: #684c6b;  
+    border: 1px solid white;
+}
+
 @media screen and (max-width: 900px){
     body { height: 100%; min-width: 700px; }
 

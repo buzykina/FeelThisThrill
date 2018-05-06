@@ -38,7 +38,7 @@ body{
   border-radius: 50%;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 8.3vw;
+  height: 180px;
 }
 
 .logotop img:hover{
@@ -57,7 +57,7 @@ body{
   font-weight: 700;
   font-variant: small-caps;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1.3vw;
+  font-size: 25px;
 }
 
 .gridButtonsLeft a:hover{
@@ -108,11 +108,12 @@ body{
 .sbx-custom {
   display: inline-block;
   position: relative;
-  width: 12vw;
-  height: 1.7vw;
+  width: 300px;
+  height: 35px;
   white-space: nowrap;
   box-sizing: border-box;
   font-size: 14px;
+  padding-top: 7px;
 }
 
 .sbx-custom__wrapper {
@@ -209,8 +210,9 @@ body{
 }
 
 .sbx-custom__submit svg {
-  width: 1vw;
-  height: 1vw;
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
   vertical-align: middle;
   fill: #0D0D0D;
 }
@@ -278,4 +280,78 @@ body{
   }
 }
 
+
 /*End of the code lines for the search bar */
+
+.navbar{display: none}
+
+.side-nav{
+  position: absolute;
+  height:100%;
+  width:0;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  background-color:#332438;
+  opacity:0.9;
+  overflow-x:hidden;
+  padding-top:60px;
+  transition:0.5s;
+  z-index: 1;
+}
+
+.side-nav a{
+  padding:10px 10px 10px 30px;
+  text-decoration:none;
+  font-variant: small-caps;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size:22px;
+  color:#ccc;
+  display:block;
+  transition:0.2s;
+}
+
+
+
+.side-nav a:hover{
+  color:white;
+}
+
+.side-nav .btn-close{
+  position:absolute;
+  top:0;
+  right:22px;
+  font-size:36px;
+  margin-left:50px;
+}
+
+.navbarSelected{
+  background-color: #684c6b;  
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 900px){
+.logotop{display: none}
+
+.gridButtons{display: none}
+
+.wrapper1{
+  position: relative;
+  z-index: 1;
+  background-color: #332438;
+  width: 100%;
+  height: 50px;
+}
+.navbar {
+  position: relative;
+  display: initial;
+  z-index: 2;
+}
+.open-slide svg{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+}

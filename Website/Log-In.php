@@ -63,6 +63,39 @@
                 </script>
         </div>
 
+         <div class="navbar">
+                    <span class="open-slide">
+                        <a href="#" onclick="openSlideMenu()">
+                            <svg width="30" height="30">
+                                <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                                <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                                <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                            </svg>
+                        </a>
+                    </span>
+
+                    <div id="side-menu" class="side-nav">
+                            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                            <a href="line_up.php">Line-up</a>
+                            <a href="Tickets.php">Ticket</a>
+                            <a href="Camp.php">Maps</a>
+                            <a href="experience.php">Experience</a>
+                            <a href="gifts.php">Gifts</a>
+                            <a class="navbarSelected" href="Log-In.php">Log-in</a>
+                    </div>
+                </div>
+
+                <script>
+                    function openSlideMenu(){
+                    document.getElementById('side-menu').style.width = '250px';
+                    document.getElementById('main').style.marginLeft = '250px';
+                    }
+
+                    function closeSlideMenu(){
+                    document.getElementById('side-menu').style.width = '0';
+                    document.getElementById('main').style.marginLeft = '0';
+                    }
+                </script>
     </nav>
   
 
