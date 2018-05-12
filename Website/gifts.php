@@ -1,3 +1,49 @@
+<?php 
+include 'php.php';
+session_start();
+$product_ids = array();
+if(filter_input(INPUT_POST,'add_to_cart')){
+if(isset($_SESSION['shopping_cart']))
+{
+  $count = count($_SESSION['shopping_cart']);
+  $product_ids = array_column ($_SESSION['shopping_cart'],'laptopID');
+  if(!in_array(filter_input(INPUT_POST,'laptopID'),$product_ids))
+  {
+    $_SESSION['shopping_cart'][$count] = array
+    (
+    'laptopID' => filter_input(INPUT_POST,'laptopID'), 
+     'name' => filter_input(INPUT_POST,'name'), 
+     'price' => filter_input(INPUT_POST,'price'), 
+     'quantity' => filter_input(INPUT_POST,'quantity')
+    );
+  }
+  else
+  {
+    for($i = 0;$i< count($product_ids);$i++)
+    {
+      if($product_ids[$i]==filter_input(INPUT_POST,'laptopID'))
+      {
+        $_SESSION['shopping_cart'][$i]['quantity'] += filter_input(INPUT_POST,'quantity');
+      }
+    }
+  }
+
+
+}
+else
+{
+  $_SESSION['shopping_cart'][0] = array
+  ( 
+     'laptopID' => filter_input(INPUT_POST,'laptopID'), 
+     'name' => filter_input(INPUT_POST,'name'), 
+     'price' => filter_input(INPUT_POST,'price'), 
+     'quantity' => '1'
+
+    );
+
+}
+}
+?>
 <!doctype html>
 <html>
 <head>
@@ -132,131 +178,41 @@
     <br>
 </div>
 <div id = "content" class="content">
-    <div id = "i1">
-      <img src="img/bag1.png" id="lineup">
+<?php
+$sql = 'SELECT * FROM gift_products ORDER BY id ASC';
+$result = mysqli_query($conn,$sql);
+    if($result):
+      if(mysqli_num_rows($result)>0):
+        while($product = $result->fetch_assoc()):
+        ?>
+            <div id = "i<?php echo $product['id']; ?>">
+               <img src="<?php echo $product['image']; ?>" id="lineup">
+            </div>
+            <form method="post" action = "gifts.php?action=add&id=<?php echo $product['id']; ?>">
+            <div>
+               <h3><?php echo $product['name']; ?></h3>
+               <p class = "p1">Price: €<?php echo $product['price']; ?></p>
+               <label>Quantity</label>
+               <input type="number" name="quantity" max = "100" min = "1" value = "1">
+               <button class = "schedule" name ="add_to_cart" type = "submit">Add to basket</button>
     </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i3">
-        <img src="img/cup1.png" id = "ticket">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>  
-    </div>
-    <div id = "i2">
-      <img src="img/cap1.png" id="experience">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i4">
-        <img src="img/t1.png" id = "ticket">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i5">
-      <img src="img/bag2.png" id="lineup">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i6">
-        <img src="img/cup2.png" id = "ticket">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>  
-    </div>
-    <div id = "i7">
-      <img src="img/cap2.png" id="experience">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i8">
-        <img src="img/t2.png" id = "ticket">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i9">
-      <img src="img/bag3.png" id="lineup">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i10">
-        <img src="img/cup3.png" id = "ticket">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>  
-    </div>
-    <div id = "i11">
-      <img src="img/cap3.png" id="experience">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
-    <div id = "i12">
-        <img src="img/t3.png" id = "ticket">
-    </div>
-    <div>
-      <h3>Some name</h3>
-      <p>Price</p>
-      <label>Quantity</label>
-      <input type="number" name="quantity" max = "100" min = "1" value = "1">
-      <button class = "schedule">Add to basket</button>
-    </div>
+          </form>
+        
+        <?php
+          endwhile;
+          endif;
+          endif;
+
+        ?>
 </div>
 <div class="filters1">
  <img src="img/logo2.JPG">
  <h5 class="center-align">Feel This Thrill</h5>
-      <p>Feb 10, 2016 9:36 PM</p>
+      <p>
+        <?php
+        echo date("M d Y H:i");
+        ?>
+      </p>
           <div class="invoice">
       <table class="highlight">
         <thead>
@@ -289,6 +245,7 @@
           </tr>
         </tbody>
       </table>
+      <button class = "checkout">Checkout</button>
     </div>
 </div>
 </div>
