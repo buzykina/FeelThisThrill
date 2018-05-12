@@ -84,11 +84,7 @@ height:250px;
 #i9 img,#i11 img,#i12 img{
 	height:250px;
 }
-.schedule:hover{
-    color:white;
-    background-color: #332438 !important;
-    border-color: white !important;
-}
+
 .p1{
 	font-size: 15px;
 
@@ -102,14 +98,18 @@ height:250px;
     font-variant: small-caps;
     height: 50px;
     transition: color 1s;
-    margin-top: 30px;
-    margin-left: 70%;
-  
-  &:hover {
-    color: adjust-hue(white,180);
-    border-color: white;
-  }
 }
+.schedule{
+	margin-top: 30px;
+    margin-left: 70%;
+}
+.schedule:hover,.checkout:hover{
+    color:white;
+    background-color: #332438 !important;
+    border-color: white !important;
+    border-color: white;
+    cursor: pointer;;
+  }
 .checkout{
 	float: right;
     margin: auto 10px;
