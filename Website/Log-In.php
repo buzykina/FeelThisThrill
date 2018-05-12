@@ -1,3 +1,14 @@
+<?php
+session_start();
+$_SESSION['LoggedIn']=false;
+$servername = "studmysql01.fhict.local";
+$username = "dbi380316";
+$password = "LP2699";
+$db = "dbi380316";
+$conn = new mysqli($servername,$username,$password,$db);
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -9,9 +20,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/GeneralHeader.css">
+       
     </head>
 	<body>
-	
 	<nav class="wrapper1">
         
         <div class="logotop">
@@ -97,6 +108,34 @@
                     }
                 </script>
     </nav>
+        
+	 <?php
+    
+    if(isset($_POST['LogIn']))
+    {
+        $username=$_POST['user'];
+        $password=$_POST['pass'];
+        
+        $sql_query="SELECT * FROM user WHERE username='".$username."' AND password='".$password."' LIMIT 1";
+        
+        $result = mysqli_query($conn, $sql_query);
+        $num =mysqli_num_rows($result);
+        
+        if(mysqli_num_rows($result))
+        {
+            $_SESSION['LoggedIn']=true;
+            echo '<script> window.location.href="Event-Account.php"; </script>';
+            
+        }
+        else
+        {
+            $_SESSION['LoggedIn']=false;
+            echo "Failed!";
+        }
+        mysqli_close($conn);
+    }
+        
+?>
   
 
 
@@ -122,30 +161,35 @@
       <label><b>Enter Code :</b></label>
       <input class = "Unary" type="text" placeholder="Enter Code" name="uid" required>
 
-       <button class = "Nat" name ='submit'  type="submit">Log-in</button>
+       <button class = "Nat" name ='submit'>Log-in</button>
 			 </div>
 		</form>
 		</div>
 		</div>
 		<div class = "Signorlog">
 		<div class = "code">
-		<form class="LogBox1 animate">
-			<button class = "contains"><label><b>Log-in with Username</b></label></button>
-		 <div class="container">
-      <label><b>Enter Username:</b></label>
-      <input class = "Unary" type="text" placeholder="Enter Username" name="uid" required>
-			 <label><b>Enter Password:</b></label>
-   <input class = "Unary" type="text" placeholder="Enter Password" name="uid" required>
-       <button class = "Nat" name ='submit'  type="submit">Log-in</button>
-			 </div>
+            
+    
+                        
+		<form method="post" class="LogBox1 animate" action = "Log-In.php" >
+      <button class = "contains"><label><b>Log-in with Username</b></label></button>
+       <div class="container">
+       <label><b>Enter Username:</b></label>
+        <input class = "Unary" type="text" placeholder="Enter Username" name="user" required>
+		<label><b>Enter Password:</b></label>
+       <input class = "Unary" type="text" placeholder="Enter Password" name="pass" required>
+       <input class = "Nat" name ="LogIn" type="submit" value = "Log-In">
+		</div>
 		</form>
+
+            
 		</div>
 		<div class = "code">
 		<form class="LogBox1 animate">
 		<button class = "contains"><label><b>Sign Up</b></label></button>
 		 <div class="container">
 			 <center><label><b>Need to buy a ticket to get Account</b></label></center>
-       <button class = "Nat" name ='submit' type="submit">Tickets</button>
+       <button class = "Nat" name ='submit'>Tickets</button>
 			 </div>
 		</form>
 		</div>

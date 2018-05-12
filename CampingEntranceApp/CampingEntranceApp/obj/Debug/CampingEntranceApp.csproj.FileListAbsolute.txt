@@ -18,3 +18,13 @@ D:\A_PROP\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csp
 D:\A_PROP\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csproj.CoreCompileInputs.cache
 D:\A_PROP\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.exe
 D:\A_PROP\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.pdb
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\bin\Debug\CampingEntranceApp.exe.config
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\bin\Debug\CampingEntranceApp.exe
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\bin\Debug\CampingEntranceApp.pdb
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csprojResolveAssemblyReference.cache
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.Form1.resources
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.Properties.Resources.resources
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csproj.GenerateResource.Cache
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.csproj.CoreCompileInputs.cache
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.exe
+D:\ProP_Appollo15\CampingEntranceApp\CampingEntranceApp\obj\Debug\CampingEntranceApp.pdb

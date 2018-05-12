@@ -20,3 +20,15 @@ D:\A_PROP\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj
 D:\A_PROP\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.CoreCompileInputs.cache
 D:\A_PROP\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.exe
 D:\A_PROP\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.pdb
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.exe.config
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.exe
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.pdb
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csprojResolveAssemblyReference.cache
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Form1.resources
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Form2.resources
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Form3.resources
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Properties.Resources.resources
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.GenerateResource.Cache
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.CoreCompileInputs.cache
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.exe
+D:\ProP_Appollo15\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.pdb

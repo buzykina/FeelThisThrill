@@ -1,28 +1,4 @@
-<?php
-session_start();
-?>
-<!doctype html>
-<html>
-<head>
-	
-	
-	<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jane_js.js"></script>
-<link rel="stylesheet" type="text/css" href="css/MainStyle.css">
-	<link rel="stylesheet" type="text/css" href="css/Acc.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/GeneralHeader.css">
-    
-     <style>
-    .pointer {cursor: pointer;}
-    </style>
-    
-	</head>
-	
-	<body>
-	
-        <nav class="wrapper1">
+<nav class="wrapper1">
         
         <div class="logotop">
            <a href="index.php"><img  src="img/logo2.JPG"></a>
@@ -37,7 +13,7 @@ session_start();
             <div class="gridButtonsRight">
                 <a href="experience.php"><div><p>Experience</p></div></a>
                 <a href="gifts.php"><div><p>Gifts</p></div></a>
-                <a href="Event-Account.php"><div class="logInSelected"><p>My Account</p></div></a>
+                <a href="Event-Account.php"><div><p>My Account</p></div></a>
             </div>
         </div>     
 
@@ -73,68 +49,5 @@ session_start();
                 </script>
         </div>
 
-         <div class="navbar">
-                    <span class="open-slide">
-                        <a href="#" onclick="openSlideMenu()">
-                            <svg width="30" height="30">
-                                <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-                                <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                                <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
-                            </svg>
-                        </a>
-                    </span>
-
-                    <div id="side-menu" class="side-nav">
-                            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-                            <a href="line_up.php">Line-up</a>
-                            <a href="Tickets.php">Ticket</a>
-                            <a href="Camp.php">Maps</a>
-                            <a href="experience.php">Experience</a>
-                            <a href="gifts.php">Gifts</a>
-                            <a class="navbarSelected" href="Event-Account.php">My Account</a>
-                    </div>
-                </div>
-
-                <script>
-                    function openSlideMenu(){
-                    document.getElementById('side-menu').style.width = '250px';
-                    document.getElementById('main').style.marginLeft = '250px';
-                    }
-
-                    function closeSlideMenu(){
-                    document.getElementById('side-menu').style.width = '0';
-                    document.getElementById('main').style.marginLeft = '0';
-                    }
-                </script>
     </nav>
-        
-        
-        
-        
-	<div class ="D1">
-
-	<div class="D2">
-	<div class="D2D1">
-	<h1>Q312434</h1>
-		<label><b>User</b>: HimanshuKotai   #1233423 </label><br>
-		
-		</div>
-	<div class = "D2D2">
-	
-	<button class="pointer">Log-Out</button>
-	<button class="pointer">Add Credits</button>
-	<h1>100.00 Credits</h1>
-	
-	</div>
-	</div>
-	<div class = "Info">
-		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: Q312434</p> <p>Ticket type: Normal</p> <p>Ticket Package: 1 Day</p><p>Camp Spot: 22R2</p></div><div class = "clo"><p>Username: Himanshu Kotai</p> <p>Tag: #1233423</p><p>Age: 19</p><p>Email: himanshuk1998@outlook.com</p></div></div></div>
-	<div class ="Campcontainer"><div class ="Set1"><h3>Camp Details</h3></div><div class ="Set2"><p>Row: 22 NO: R2</p></div><div class="Set3"><div>Himanshu Kotai<div class ="se">Member</div></div><div> Jane Buzykina<div class="se">Member</div></div><div>Livia Popper<div class = "se1">Host</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>
-	<div>Trung Dung Luong<div class = "se">Member</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>	</div></div>
-	</div>
-		</div>
-		 <?php
-    include 'included/footer.html';
-     ?>
-	</body>
-</html>
+    
