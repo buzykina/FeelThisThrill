@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Phidget22;
+using Phidget22.Events;
 
 namespace CampingEntranceApp
 {
@@ -17,6 +19,9 @@ namespace CampingEntranceApp
             InitializeComponent();
         }
 
-      
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
