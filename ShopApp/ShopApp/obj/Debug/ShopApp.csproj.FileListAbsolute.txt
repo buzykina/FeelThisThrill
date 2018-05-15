@@ -8,13 +8,3 @@ D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.GenerateResource.Cache
 D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.CoreCompileInputs.cache
 D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.exe
 D:\A_PROP\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
-D:\ProP_Appollo15\ShopApp\ShopApp\bin\Debug\ShopApp.exe.config
-D:\ProP_Appollo15\ShopApp\ShopApp\bin\Debug\ShopApp.exe
-D:\ProP_Appollo15\ShopApp\ShopApp\bin\Debug\ShopApp.pdb
-D:\ProP_Appollo15\ShopApp\ShopApp\obj\Debug\ShopApp.csprojResolveAssemblyReference.cache
-D:\ProP_Appollo15\ShopApp\ShopApp\obj\Debug\ShopApp.Form1.resources
-D:\ProP_Appollo15\ShopApp\ShopApp\obj\Debug\ShopApp.Properties.Resources.resources
-D:\ProP_Appollo15\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.GenerateResource.Cache
-D:\ProP_Appollo15\ShopApp\ShopApp\obj\Debug\ShopApp.csproj.CoreCompileInputs.cache
-D:\ProP_Appollo15\ShopApp\ShopApp\obj\Debug\ShopApp.exe
-D:\ProP_Appollo15\ShopApp\ShopApp\obj\Debug\ShopApp.pdb
