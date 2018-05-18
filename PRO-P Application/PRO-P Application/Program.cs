@@ -16,7 +16,9 @@ namespace PRO_P_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-         Application.Run(new LogInWindows());
-                 }
+            Application.Run(new LogInWindows());
+        }
+
+        
     }
 }

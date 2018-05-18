@@ -60,7 +60,7 @@ namespace PRO_P_Application
                 {
                     MessageBox.Show("Successfully connected!");
                     this.Hide();
-                    Form1 nextForm = new Form1();
+                    Form2 nextForm = new Form2();
                     nextForm.Show();
                 }
                 else
