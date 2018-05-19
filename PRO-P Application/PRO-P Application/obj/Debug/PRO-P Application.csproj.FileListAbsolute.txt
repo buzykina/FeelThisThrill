@@ -38,21 +38,3 @@ C:\Users\L0tusw0w\Desktop\ProP Applications\PRO-P Application\PRO-P Application\
 C:\Users\L0tusw0w\Desktop\ProP Applications\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.CoreCompileInputs.cache
 C:\Users\L0tusw0w\Desktop\ProP Applications\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.exe
 C:\Users\L0tusw0w\Desktop\ProP Applications\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.pdb
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.exe.config
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.exe
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\PRO-P Application.pdb
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\MySql.Data.dll
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\Phidget22.NET.dll
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\MySql.Data.xml
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\Phidget22.NET.pdb
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\bin\Debug\Phidget22.NET.xml
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csprojResolveAssemblyReference.cache
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Form1.resources
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Form2.resources
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Form3.resources
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.LogInWindows.resources
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO_P_Application.Properties.Resources.resources
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.GenerateResource.Cache
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.csproj.CoreCompileInputs.cache
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.exe
-D:\! A PROP_TESTING\PRO-P Application\PRO-P Application\obj\Debug\PRO-P Application.pdb
