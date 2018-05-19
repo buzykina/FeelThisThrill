@@ -109,26 +109,53 @@ session_start();
     </nav>
         
         
-        
+ 
         
 	<div class ="D1">
 
 	<div class="D2">
 	<div class="D2D1">
-	<h1>Q312434</h1>
-		<label><b>User</b>: HimanshuKotai   #1233423 </label><br>
+	<h1> <?php echo $_SESSION['TicketID']; ?></h1>
+		<label><b>Username</b>: <?php echo $_SESSION['Name']; ?></label><br>
 		
 		</div>
 	<div class = "D2D2">
-	
-	<button class="pointer">Log-Out</button>
+        
+        
+<!--the log-out-->
+	<form method="post" action = "Event-Account.php">
+        <button class="pointer" name="LogOut">Log-Out</button>
+        </form>
+	 <?php
+
+        
+if(isset($_POST['LogOut']))
+   {
+
+    
+       if ($_SESSION['LoggedIn'] === true)
+       {
+           
+           $_SESSION['LoggedIn'] = false;
+            header("location: Log-In.php");
+       }
+       
+   }
+        else
+        {
+            echo "There was a problem with clicking the button!!!!!";
+        }
+
+?>
+        
+        
 	<button class="pointer">Add Credits</button>
-	<h1>100.00 Credits</h1>
+	<h1><?php echo $_SESSION['Credits']; ?> Credits</h1>
 	
 	</div>
 	</div>
 	<div class = "Info">
-		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: Q312434</p> <p>Ticket type: Normal</p> <p>Ticket Package: 1 Day</p><p>Camp Spot: 22R2</p></div><div class = "clo"><p>Username: Himanshu Kotai</p> <p>Tag: #1233423</p><p>Age: 19</p><p>Email: himanshuk1998@outlook.com</p></div></div></div>
+		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: <?php echo $_SESSION['TicketID']; ?></p> <p>Ticket type: Normal</p> <p>Ticket Package: 1 Day</p><p>Camp Spot: 22R2</p></div><div class = "clo"><p>Name: <?php echo $_SESSION['Buyer']; ?></p> <p>Tag: #1233423</p><p>Age: 19</p><p>Email: <?php echo $_SESSION['Buyer_Email']; ?></p></div></div></div>
 	<div class ="Campcontainer"><div class ="Set1"><h3>Camp Details</h3></div><div class ="Set2"><p>Row: 22 NO: R2</p></div><div class="Set3"><div>Himanshu Kotai<div class ="se">Member</div></div><div> Jane Buzykina<div class="se">Member</div></div><div>Livia Popper<div class = "se1">Host</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>
 	<div>Trung Dung Luong<div class = "se">Member</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>	</div></div>
 	</div>

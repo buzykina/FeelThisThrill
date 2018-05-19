@@ -119,11 +119,23 @@ $conn = new mysqli($servername,$username,$password,$db);
         $sql_query="SELECT * FROM user WHERE username='".$username."' AND password='".$password."' LIMIT 1";
         
         $result = mysqli_query($conn, $sql_query);
+        
+        $row = mysqli_fetch_array($result); 
+        
+        
+       
+        
         $num =mysqli_num_rows($result);
         
         if(mysqli_num_rows($result))
         {
             $_SESSION['LoggedIn']=true;
+            $_SESSION['Name']=$row['username'];
+            $_SESSION['TicketID']=$row['ticketID'];
+            $_SESSION['Credits']=$row['credits'];
+            $_SESSION['Buyer']=$row['buyerName'];
+            $_SESSION['Buyer_Email']=$row['email'];
+            $_SESSION['Buyer_CampSpot']=$row['campingSpot'];
             echo '<script> window.location.href="Event-Account.php"; </script>';
             
         }
@@ -189,7 +201,7 @@ $conn = new mysqli($servername,$username,$password,$db);
 		<button class = "contains"><label><b>Sign Up</b></label></button>
 		 <div class="container">
 			 <center><label><b>Need to buy a ticket to get Account</b></label></center>
-       <button class = "Nat" name ='submit'>Tickets</button>
+       <button class = "Nat" name ='submit' action="BuyTickets.php">Buy Tickets</button>
 			 </div>
 		</form>
 		</div>
