@@ -1,7 +1,5 @@
 <?php
 session_start();
-?>
-<?php 
 include 'php.php';
 session_start();
 $product_ids = array();
@@ -9,12 +7,12 @@ if(filter_input(INPUT_POST,'add_to_cart')){
 if(isset($_SESSION['shopping_cart']))
 {
   $count = count($_SESSION['shopping_cart']);
-  $product_ids = array_column ($_SESSION['shopping_cart'],'laptopID');
-  if(!in_array(filter_input(INPUT_POST,'laptopID'),$product_ids))
+  $product_ids = array_column ($_SESSION['shopping_cart'],'id');
+  if(!in_array(filter_input(INPUT_POST,'id'),$product_ids))
   {
     $_SESSION['shopping_cart'][$count] = array
     (
-    'laptopID' => filter_input(INPUT_POST,'laptopID'), 
+    'id' => filter_input(INPUT_POST,'id'), 
      'name' => filter_input(INPUT_POST,'name'), 
      'price' => filter_input(INPUT_POST,'price'), 
      'quantity' => filter_input(INPUT_POST,'quantity')
@@ -24,7 +22,7 @@ if(isset($_SESSION['shopping_cart']))
   {
     for($i = 0;$i< count($product_ids);$i++)
     {
-      if($product_ids[$i]==filter_input(INPUT_POST,'laptopID'))
+      if($product_ids[$i]==filter_input(INPUT_POST,'id'))
       {
         $_SESSION['shopping_cart'][$i]['quantity'] += filter_input(INPUT_POST,'quantity');
       }
@@ -37,10 +35,10 @@ else
 {
   $_SESSION['shopping_cart'][0] = array
   ( 
-     'laptopID' => filter_input(INPUT_POST,'laptopID'), 
+     'id' => filter_input(INPUT_POST,'id'), 
      'name' => filter_input(INPUT_POST,'name'), 
      'price' => filter_input(INPUT_POST,'price'), 
-     'quantity' => '1'
+     'quantity' => filter_input(INPUT_POST,'quantity')
 
     );
 
@@ -55,7 +53,7 @@ else
     include 'included/common_head.html';
     ?>
     <link rel="stylesheet" type="text/css" href="css/gifts.css">
-    <script src="js/gifts.js"></script>
+    <script src="js/gift.js"></script>
 </head> 
  <body>
  <?php
@@ -246,35 +244,68 @@ else
   <h4>Filter by</h4>
   <div>
       <h4>Type</h4>
-      <input type="radio" class="radio" name="type" value="tshirt"><label>T-Shirt</label>
+      <form id = "type" method = "get">
+      <input type="radio" class="radio" name="type" onclick="formSubmit('type')" value="tshirt"><label>T-Shirt</label>
       <br>
-      <input type="radio" class="radio" name="type" value="cup">
+      <input type="radio" class="radio" onclick="formSubmit('type')" name="type" value="cup">
       <label>Cup</label>
       <br>
-      <input type="radio" class="radio" name="type" value="bag">
+      <input type="radio" class="radio" onclick="formSubmit('type')" name="type" value="bag">
       <label>Bag</label>
       <br>
-      <input type="radio" class="radio" name="type" value="cap">
+      <input type="radio" class="radio" onclick="formSubmit('type')" name="type" value="cap">
       <label>Cap</label>
+    </form>
   </div>
   <div>
       <h4>Price Range</h4>
-      <input name ="price" type="range" min="229" max="2899" value="229">
+      <form  id = "price" method ="get">
+      <input name ="price" onclick="formSubmit('price')" type="range" min="229" max="2899" value="229">
+    </form>
       <h4>Color</h4>
-      <input type="radio" name="Color" value="silver">
+      <form  id = "color" method ="get">
+      <input type="radio" onclick="formSubmit('color')" name="color" value="black">
       <label>Black</label>
       <br>
-      <input type="radio" name="Color" value="black" >
+      <input type="radio" onclick="formSubmit('color')" name="color" value="white" >
       <label>White</label>
       <br>
-      <input type="radio" name="Color" value="white">
+      <input type="radio" onclick="formSubmit('color')" name="color" value="colorful">
       <label>Colorful</label>
+    </form>
   </div>
     <br>
 </div>
 <div id = "content" class="content">
 <?php
-$sql = 'SELECT * FROM gift_products ORDER BY id ASC';
+if(isset($_GET['color'])){
+        if($_GET['color'] == 'black'){
+             $sql = "SELECT * FROM gift_products Where color = 'black' ORDER BY id ASC";
+        }elseif($_GET['color'] == 'white'){
+             $sql = "SELECT * FROM gift_products Where color = 'white' ORDER BY id ASC";
+        }
+        elseif($_GET['color'] == 'colorful'){
+             $sql = "SELECT * FROM gift_products Where color = 'colorful' ORDER BY id ASC";
+        }
+    }
+elseif(isset($_GET['price'])){
+            $sql = "SELECT * FROM gift_products Where price < ".$_GET['price']." ORDER BY id ASC";
+}
+elseif(isset($_GET['type'])){
+        if($_GET['type'] == 'cap'){
+            $sql = "SELECT * FROM gift_products Where type = 'cap' ORDER BY id ASC";
+        }elseif($_GET['type'] == 'cup'){
+             $sql = "SELECT * FROM gift_products Where type = 'cup' ORDER BY id ASC";
+        }elseif($_GET['type'] == 'bag'){
+            $sql = "SELECT * FROM gift_products Where type = 'bag' ORDER BY id ASC";
+        }
+        elseif($_GET['type'] == 'tshirt'){
+            $sql = "SELECT * FROM gift_products Where type = 'tshirt' ORDER BY id ASC";
+        }
+}
+else{
+     $sql = 'SELECT * FROM gift_products ORDER BY id ASC';
+}
 $result = mysqli_query($conn,$sql);
     if($result):
       if(mysqli_num_rows($result)>0):
@@ -289,7 +320,10 @@ $result = mysqli_query($conn,$sql);
                <p class = "p1">Price: €<?php echo $product['price']; ?></p>
                <label>Quantity</label>
                <input type="number" name="quantity" max = "100" min = "1" value = "1">
-               <button class = "schedule" name ="add_to_cart" type = "submit">Add to basket</button>
+               <input type="hidden" name="name" value = "<?php echo "$product[name]";?>">
+              <input type="hidden" name="id" value = "<?php echo "$product[id]";?>">
+              <input type="hidden" name="price" value = "<?php echo "$product[price]";?>">
+               <input class = "schedule" name ="add_to_cart" type = "submit" value = "Add to cart">
     </div>
           </form>
         
@@ -318,26 +352,33 @@ $result = mysqli_query($conn,$sql);
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>2</td>
-            <td>Large Mocha Latte</td>
-            <td class="right-align">$4.25</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Banana Nut Muffin</td>
-            <td class="right-align">$2.00</td>
-          </tr>
+            <?php
+              if(!empty($_SESSION['shopping_cart'])){
+                $total = 0;
+                foreach($_SESSION['shopping_cart'] as $key => $product){  
+            ?>
+            <tr>
+              <td><?php echo $product['quantity'];?></td>
+              <td><label id="name"><?php echo $product['name'];?></label></td>
+              <td>$<label class= "<?php echo $product['id'];?> right-align"><?php echo $product['price'];?></label></td>
+            </tr>
+            <?php
+            $total = $total + ($product['quantity']*$product['price']);
+            }
+            }
+            ?>   
+          <div id = "total">    
           <tr>
             <td></td>
             <td class="right-align">Tax</td>
-            <td class="right-align">$0.50</td>
+            <td class="right-align">21%</td>
           </tr>
           <tr>
             <td></td>
             <td class="right-align bold">Total</td>
-            <td class="right-align bold">$6.75</td>
+            <td class="right-align bold"><div class= "<?php echo $product['id'];?>">$<?php echo number_format((1+0.21)*($total),2);?></td>
           </tr>
+        </div>
         </tbody>
       </table>
       <button class = "checkout">Checkout</button>

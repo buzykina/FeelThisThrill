@@ -16,13 +16,13 @@ margin-left:5px;
 	border: 1px solid white;
 	display: flex;
 	flex: 0 0 auto;
-	height:450px;
+	height: fit-content;
 	flex-direction: column;
-	width: 13%;
+	width: 14%;
 	position: sticky;
+	margin-bottom: 30px;
 	position: -webkit-sticky;
 	top: 10px;
-	bottom: 30px;
 }
 .filters1 img{
   border-radius: 50%;
@@ -101,20 +101,27 @@ height:250px;
 }
 .schedule{
 	margin-top: 30px;
-    margin-left: 70%;
+    float:right;
 }
 .schedule:hover,.checkout:hover{
     color:white;
     background-color: #332438 !important;
     border-color: white !important;
     border-color: white;
-    cursor: pointer;;
+    cursor: pointer;
   }
 .checkout{
 	float: right;
-    margin: auto 10px;
+    margin: 10px;
     margin-top: 20px;
 }
 td{
 	text-align:center;
+}
+.highlight{
+    margin-left: auto;
+    margin-right: auto;
+}
+#total{
+	margin-top: 10px;
 }
