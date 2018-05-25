@@ -1,0 +1,30 @@
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\ProPApplication.exe.config
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\ProPApplication.exe
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\ProPApplication.pdb
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\MySql.Data.dll
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\Phidget22.NET.dll
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\MySql.Data.xml
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\Phidget22.NET.pdb
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\bin\Debug\Phidget22.NET.xml
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\obj\Debug\ProPApplication.csprojResolveAssemblyReference.cache
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\obj\Debug\ProPApplication.Form1.resources
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\obj\Debug\ProPApplication.Properties.Resources.resources
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\obj\Debug\ProPApplication.csproj.GenerateResource.Cache
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\obj\Debug\ProPApplication.csproj.CoreCompileInputs.cache
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\obj\Debug\ProPApplication.exe
+C:\Users\L0tusw0w\Documents\Visual Studio 2017\Projects\ProPApplication\ProPApplication\obj\Debug\ProPApplication.pdb
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\ProPApplication.exe.config
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\ProPApplication.exe
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\ProPApplication.pdb
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\MySql.Data.dll
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\Phidget22.NET.dll
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\MySql.Data.xml
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\Phidget22.NET.pdb
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\bin\Debug\Phidget22.NET.xml
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\obj\Debug\ProPApplication.csprojResolveAssemblyReference.cache
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\obj\Debug\ProPApplication.Form1.resources
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\obj\Debug\ProPApplication.Properties.Resources.resources
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\obj\Debug\ProPApplication.csproj.GenerateResource.Cache
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\obj\Debug\ProPApplication.csproj.CoreCompileInputs.cache
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\obj\Debug\ProPApplication.exe
+C:\Users\L0tusw0w\Desktop\ProP Applications\ProP_Appollo15\ProP Application Remastered\ProPApplication\ProPApplication\obj\Debug\ProPApplication.pdb
