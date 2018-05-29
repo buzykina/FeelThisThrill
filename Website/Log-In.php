@@ -14,7 +14,7 @@ $conn = new mysqli($servername,$username,$password,$db);
 <head>
     <title>Feel This Thrill - Log-In</title>
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jane_js.js"></script>
+<script src="js/log_in.js"></script>
 <link rel="stylesheet" type="text/css" href="css/MainStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/Log-in.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,23 +119,11 @@ $conn = new mysqli($servername,$username,$password,$db);
         $sql_query="SELECT * FROM user WHERE username='".$username."' AND password='".$password."' LIMIT 1";
         
         $result = mysqli_query($conn, $sql_query);
-        
-        $row = mysqli_fetch_array($result); 
-        
-        
-       
-        
         $num =mysqli_num_rows($result);
         
         if(mysqli_num_rows($result))
         {
             $_SESSION['LoggedIn']=true;
-            $_SESSION['Name']=$row['username'];
-            $_SESSION['TicketID']=$row['ticketID'];
-            $_SESSION['Credits']=$row['credits'];
-            $_SESSION['Buyer']=$row['buyerName'];
-            $_SESSION['Buyer_Email']=$row['email'];
-            $_SESSION['Buyer_CampSpot']=$row['campingSpot'];
             echo '<script> window.location.href="Event-Account.php"; </script>';
             
         }
@@ -162,55 +150,59 @@ $conn = new mysqli($servername,$username,$password,$db);
      <img src="slideshow/slide4.png">
      <img src="slideshow/slide1.png">
     </figure>
-</div>
-	<div class = "Logcontainer">
-		<div class = "total">
-        <div class = "code">
-			
-		 <form class="LogBox animate">
-			 <button class = "contains"><label><b>Log-in with Code</b></label></button>
-		 <div class="container">
-      <label><b>Enter Code :</b></label>
-      <input class = "Unary" type="text" placeholder="Enter Code" name="uid" required>
-
-       <button class = "Nat" name ='submit'>Log-in</button>
-			 </div>
-		</form>
-		</div>
-		</div>
-		<div class = "Signorlog">
-		<div class = "code">
-            
-    
-                        
-		<form method="post" class="LogBox1 animate" action = "Log-In.php" >
-      <button class = "contains"><label><b>Log-in with Username</b></label></button>
-       <div class="container">
-       <label><b>Enter Username:</b></label>
-        <input class = "Unary" type="text" placeholder="Enter Username" name="user" required>
-		<label><b>Enter Password:</b></label>
-       <input class = "Unary" type="text" placeholder="Enter Password" name="pass" required>
+</div>    
+<div class = "login">
+        <h1>Login</h1>   
+        <div class="login-form">             
+		<form method="post" action = "Log-In.php">
+       <h3>Username:</h3>
+        <input class = "username" type="text" placeholder="Username" name="user" required>
+		<h3>Password:</h3>
+       <input class = "password" type="password" placeholder="Password" name="pass" required>
        <input class = "Nat" name ="LogIn" type="submit" value = "Log-In">
-		</div>
 		</form>
+        <p class="sign-up" id = "myBtn">Enter the code here!</p><br>
+        <div id="myModal" class="modal">
 
-            
-		</div>
-		<div class = "code">
-		<form class="LogBox1 animate">
-		<button class = "contains"><label><b>Sign Up</b></label></button>
-		 <div class="container">
-			 <center><label><b>Need to buy a ticket to get Account</b></label></center>
-       <button class = "Nat" name ='submit' action="BuyTickets.php">Buy Tickets</button>
-			 </div>
-		</form>
-		</div>
-		</div>
-		<div class = "Update"><label>0/10000 Tickets Sold</label></div>
-		</div>
-    <?php
-			include 'included/footer.html';
-			?>
+  <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Enter your code here:</h3>
+            <input class = "code" type="text" placeholder="Code" name="code" required>
+            <input class = "Nat" name ="Code" type="button" value = "Submit">
+          </div>
+
+        </div>
+        <p class="sign-up">How to sign up?!<span class = "link">To sign up you need to buy a ticket first. You can do it <a href="Tickets.php" id = "link">here</a>!</span></p>
+    <br>
+    </div>
+</div>
+<script type="text/javascript">
+    var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
     </body>   
     
 

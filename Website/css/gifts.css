@@ -124,4 +124,6 @@ td{
 }
 #total{
 	margin-top: 10px;
+	float: right;
+	margin-right: 15px;
 }

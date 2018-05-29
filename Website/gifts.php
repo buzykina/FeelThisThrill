@@ -343,8 +343,20 @@ $result = mysqli_query($conn,$sql);
         ?>
       </p>
           <div class="invoice">
-      <table class="highlight">
-        <thead>
+            <table class="highlight">
+            <?php
+              if(!empty($_SESSION['shopping_cart'])){
+                $total = 0;
+                foreach($_SESSION['shopping_cart'] as $key => $product){  
+            ?>
+            
+            <?php
+            $total = $total + ($product['quantity']*$product['price']);
+            }
+            if($total!=0)
+            {
+              ?>
+              <thead>
           <tr>
             <th>QTY</th>
             <th>ITEM</th>
@@ -352,37 +364,34 @@ $result = mysqli_query($conn,$sql);
           </tr>
         </thead>
         <tbody>
-            <?php
-              if(!empty($_SESSION['shopping_cart'])){
-                $total = 0;
-                foreach($_SESSION['shopping_cart'] as $key => $product){  
+              <?php
+              foreach($_SESSION['shopping_cart'] as $key => $product){ 
             ?>
             <tr>
               <td><?php echo $product['quantity'];?></td>
               <td><label id="name"><?php echo $product['name'];?></label></td>
               <td>$<label class= "<?php echo $product['id'];?> right-align"><?php echo $product['price'];?></label></td>
             </tr>
-            <?php
-            $total = $total + ($product['quantity']*$product['price']);
-            }
-            }
-            ?>   
-          <div id = "total">    
+            <?php 
+          }?>
+      <table id = "total">
           <tr>
-            <td></td>
             <td class="right-align">Tax</td>
             <td class="right-align">21%</td>
           </tr>
           <tr>
-            <td></td>
             <td class="right-align bold">Total</td>
             <td class="right-align bold"><div class= "<?php echo $product['id'];?>">$<?php echo number_format((1+0.21)*($total),2);?></td>
           </tr>
-        </div>
-        </tbody>
-      </table>
-      <button class = "checkout">Checkout</button>
-    </div>
+          </table>
+          <button class = "checkout">Checkout</button>
+          <?php
+            }
+            }
+            ?>   
+</tbody> 
+</table>
+</div>
 </div>
 </div>
   <?php
