@@ -44,6 +44,15 @@ else
 
 }
 }
+if(filter_input(INPUT_GET,'action')=='delete')
+{
+  foreach($_SESSION['shopping_cart'] as $key => $product){
+    if($product['id']==filter_input(INPUT_GET,'id')){
+        unset($_SESSION['shopping_cart'][$key]);
+    }
+  }
+  $_SESSION['shopping_cart'] = array_values($_SESSION['shopping_cart']);
+}
 ?>
 <!doctype html>
 <html>
@@ -361,6 +370,7 @@ $result = mysqli_query($conn,$sql);
             <th>QTY</th>
             <th>ITEM</th>
             <th class="right-align">PRICE</th>
+            <th>ACTION</th>
           </tr>
         </thead>
         <tbody>
@@ -371,6 +381,10 @@ $result = mysqli_query($conn,$sql);
               <td><?php echo $product['quantity'];?></td>
               <td><label id="name"><?php echo $product['name'];?></label></td>
               <td>$<label class= "<?php echo $product['id'];?> right-align"><?php echo $product['price'];?></label></td>
+              <td>
+                  <a href="gifts.php?action=delete&id=<?php echo $product['id'];?>">
+            <img src="img/delete.jpg" id="delete"/></a>
+            </td>
             </tr>
             <?php 
           }?>

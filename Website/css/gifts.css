@@ -127,3 +127,8 @@ td{
 	float: right;
 	margin-right: 15px;
 }
+#delete
+{
+    height: 50px;
+    width: 30px;
+}
