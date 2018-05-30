@@ -78,9 +78,10 @@
             this.labelEmpID = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panelFoodsNDrinks = new System.Windows.Forms.Panel();
+            this.btnClearAll = new System.Windows.Forms.Button();
             this.lbScanCheckOut = new System.Windows.Forms.Label();
             this.lbTotalPrice = new System.Windows.Forms.Label();
-            this.button27 = new System.Windows.Forms.Button();
+            this.btnClearItems = new System.Windows.Forms.Button();
             this.btnCusCheckOut = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.listBoxItemsToSell = new System.Windows.Forms.ListBox();
@@ -104,6 +105,14 @@
             this.btnFanta = new System.Windows.Forms.Button();
             this.btnCola = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.panelLoan = new System.Windows.Forms.Panel();
+            this.lbLoanScanStatus = new System.Windows.Forms.Label();
+            this.btnLoanReturn = new System.Windows.Forms.Button();
+            this.btnLoan = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnLoanedItems = new System.Windows.Forms.Button();
+            this.btnGetLoanItems = new System.Windows.Forms.Button();
+            this.lbDisplayLoan = new System.Windows.Forms.ListBox();
             this.panelLogIn.SuspendLayout();
             this.panelEntrance.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -111,6 +120,7 @@
             this.panelAppList.SuspendLayout();
             this.panelFoodsNDrinks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.panelLoan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLogIn
@@ -529,6 +539,7 @@
             this.button8.TabIndex = 4;
             this.button8.Text = "Loan Stand Application";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -589,9 +600,10 @@
             // 
             // panelFoodsNDrinks
             // 
+            this.panelFoodsNDrinks.Controls.Add(this.btnClearAll);
             this.panelFoodsNDrinks.Controls.Add(this.lbScanCheckOut);
             this.panelFoodsNDrinks.Controls.Add(this.lbTotalPrice);
-            this.panelFoodsNDrinks.Controls.Add(this.button27);
+            this.panelFoodsNDrinks.Controls.Add(this.btnClearItems);
             this.panelFoodsNDrinks.Controls.Add(this.btnCusCheckOut);
             this.panelFoodsNDrinks.Controls.Add(this.button25);
             this.panelFoodsNDrinks.Controls.Add(this.listBoxItemsToSell);
@@ -614,15 +626,25 @@
             this.panelFoodsNDrinks.Controls.Add(this.btnPepsi);
             this.panelFoodsNDrinks.Controls.Add(this.btnFanta);
             this.panelFoodsNDrinks.Controls.Add(this.btnCola);
-            this.panelFoodsNDrinks.Location = new System.Drawing.Point(24, 12);
+            this.panelFoodsNDrinks.Location = new System.Drawing.Point(18, 12);
             this.panelFoodsNDrinks.Name = "panelFoodsNDrinks";
             this.panelFoodsNDrinks.Size = new System.Drawing.Size(1326, 701);
             this.panelFoodsNDrinks.TabIndex = 5;
             // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Location = new System.Drawing.Point(1106, 504);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(113, 42);
+            this.btnClearAll.TabIndex = 25;
+            this.btnClearAll.Text = "Clear all items";
+            this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
             // lbScanCheckOut
             // 
             this.lbScanCheckOut.AutoSize = true;
-            this.lbScanCheckOut.Location = new System.Drawing.Point(1009, 574);
+            this.lbScanCheckOut.Location = new System.Drawing.Point(983, 593);
             this.lbScanCheckOut.Name = "lbScanCheckOut";
             this.lbScanCheckOut.Size = new System.Drawing.Size(131, 13);
             this.lbScanCheckOut.TabIndex = 24;
@@ -632,24 +654,25 @@
             // lbTotalPrice
             // 
             this.lbTotalPrice.AutoSize = true;
-            this.lbTotalPrice.Location = new System.Drawing.Point(846, 471);
+            this.lbTotalPrice.Location = new System.Drawing.Point(840, 447);
             this.lbTotalPrice.Name = "lbTotalPrice";
             this.lbTotalPrice.Size = new System.Drawing.Size(60, 13);
             this.lbTotalPrice.TabIndex = 23;
             this.lbTotalPrice.Text = "Total price:";
             // 
-            // button27
+            // btnClearItems
             // 
-            this.button27.Location = new System.Drawing.Point(1043, 456);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(113, 42);
-            this.button27.TabIndex = 22;
-            this.button27.Text = "Clear item";
-            this.button27.UseVisualStyleBackColor = true;
+            this.btnClearItems.Location = new System.Drawing.Point(1043, 456);
+            this.btnClearItems.Name = "btnClearItems";
+            this.btnClearItems.Size = new System.Drawing.Size(113, 42);
+            this.btnClearItems.TabIndex = 22;
+            this.btnClearItems.Text = "Clear item";
+            this.btnClearItems.UseVisualStyleBackColor = true;
+            this.btnClearItems.Click += new System.EventHandler(this.button27_Click);
             // 
             // btnCusCheckOut
             // 
-            this.btnCusCheckOut.Location = new System.Drawing.Point(873, 559);
+            this.btnCusCheckOut.Location = new System.Drawing.Point(840, 578);
             this.btnCusCheckOut.Name = "btnCusCheckOut";
             this.btnCusCheckOut.Size = new System.Drawing.Size(113, 42);
             this.btnCusCheckOut.TabIndex = 21;
@@ -866,6 +889,86 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // panelLoan
+            // 
+            this.panelLoan.Controls.Add(this.lbLoanScanStatus);
+            this.panelLoan.Controls.Add(this.btnLoanReturn);
+            this.panelLoan.Controls.Add(this.btnLoan);
+            this.panelLoan.Controls.Add(this.label18);
+            this.panelLoan.Controls.Add(this.btnLoanedItems);
+            this.panelLoan.Controls.Add(this.btnGetLoanItems);
+            this.panelLoan.Controls.Add(this.lbDisplayLoan);
+            this.panelLoan.Location = new System.Drawing.Point(18, 12);
+            this.panelLoan.Name = "panelLoan";
+            this.panelLoan.Size = new System.Drawing.Size(1326, 701);
+            this.panelLoan.TabIndex = 13;
+            // 
+            // lbLoanScanStatus
+            // 
+            this.lbLoanScanStatus.AutoSize = true;
+            this.lbLoanScanStatus.Location = new System.Drawing.Point(242, 376);
+            this.lbLoanScanStatus.Name = "lbLoanScanStatus";
+            this.lbLoanScanStatus.Size = new System.Drawing.Size(71, 13);
+            this.lbLoanScanStatus.TabIndex = 21;
+            this.lbLoanScanStatus.Text = "Scan the tag!";
+            // 
+            // btnLoanReturn
+            // 
+            this.btnLoanReturn.Location = new System.Drawing.Point(638, 77);
+            this.btnLoanReturn.Name = "btnLoanReturn";
+            this.btnLoanReturn.Size = new System.Drawing.Size(141, 52);
+            this.btnLoanReturn.TabIndex = 19;
+            this.btnLoanReturn.Text = "Return this item";
+            this.btnLoanReturn.UseVisualStyleBackColor = true;
+            this.btnLoanReturn.Click += new System.EventHandler(this.btnLoanReturn_Click);
+            // 
+            // btnLoan
+            // 
+            this.btnLoan.Location = new System.Drawing.Point(63, 356);
+            this.btnLoan.Name = "btnLoan";
+            this.btnLoan.Size = new System.Drawing.Size(141, 52);
+            this.btnLoan.TabIndex = 18;
+            this.btnLoan.Text = "Loan this item";
+            this.btnLoan.UseVisualStyleBackColor = true;
+            this.btnLoan.Click += new System.EventHandler(this.btnLoan_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(46, 324);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(269, 13);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "Select an item from the list then press this button to loan";
+            // 
+            // btnLoanedItems
+            // 
+            this.btnLoanedItems.Location = new System.Drawing.Point(76, 79);
+            this.btnLoanedItems.Name = "btnLoanedItems";
+            this.btnLoanedItems.Size = new System.Drawing.Size(175, 49);
+            this.btnLoanedItems.TabIndex = 15;
+            this.btnLoanedItems.Text = "All items loaned";
+            this.btnLoanedItems.UseVisualStyleBackColor = true;
+            this.btnLoanedItems.Click += new System.EventHandler(this.btnLoanedItems_Click);
+            // 
+            // btnGetLoanItems
+            // 
+            this.btnGetLoanItems.Location = new System.Drawing.Point(76, 138);
+            this.btnGetLoanItems.Name = "btnGetLoanItems";
+            this.btnGetLoanItems.Size = new System.Drawing.Size(175, 49);
+            this.btnGetLoanItems.TabIndex = 14;
+            this.btnGetLoanItems.Text = "All items for loan";
+            this.btnGetLoanItems.UseVisualStyleBackColor = true;
+            this.btnGetLoanItems.Click += new System.EventHandler(this.btnGetLoanItems_Click);
+            // 
+            // lbDisplayLoan
+            // 
+            this.lbDisplayLoan.FormattingEnabled = true;
+            this.lbDisplayLoan.Location = new System.Drawing.Point(814, 14);
+            this.lbDisplayLoan.Name = "lbDisplayLoan";
+            this.lbDisplayLoan.Size = new System.Drawing.Size(489, 615);
+            this.lbDisplayLoan.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -874,8 +977,9 @@
             this.Controls.Add(this.labelEmpID);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.panelLogIn);
-            this.Controls.Add(this.panelFoodsNDrinks);
             this.Controls.Add(this.panelEntrance);
+            this.Controls.Add(this.panelLoan);
+            this.Controls.Add(this.panelFoodsNDrinks);
             this.Controls.Add(this.panelAppList);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -893,6 +997,8 @@
             this.panelFoodsNDrinks.ResumeLayout(false);
             this.panelFoodsNDrinks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.panelLoan.ResumeLayout(false);
+            this.panelLoan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -950,7 +1056,7 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.TextBox tbStatusCheckedIn;
         private System.Windows.Forms.Panel panelFoodsNDrinks;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button btnClearItems;
         private System.Windows.Forms.Button btnCusCheckOut;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.ListBox listBoxItemsToSell;
@@ -976,6 +1082,15 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Label lbTotalPrice;
         private System.Windows.Forms.Label lbScanCheckOut;
+        private System.Windows.Forms.Button btnClearAll;
+        private System.Windows.Forms.Panel panelLoan;
+        private System.Windows.Forms.ListBox lbDisplayLoan;
+        private System.Windows.Forms.Button btnLoanedItems;
+        private System.Windows.Forms.Button btnGetLoanItems;
+        private System.Windows.Forms.Button btnLoanReturn;
+        private System.Windows.Forms.Button btnLoan;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbLoanScanStatus;
     }
 }
 
