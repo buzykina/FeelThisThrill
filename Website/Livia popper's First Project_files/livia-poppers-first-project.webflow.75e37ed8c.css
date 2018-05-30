@@ -2413,6 +2413,7 @@ textarea.w-select {
 .close-link {
     display: block;
     color: #999;
+    float:right;
 }
 
 .text-field-3 {

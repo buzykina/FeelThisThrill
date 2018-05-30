@@ -1,6 +1,12 @@
 <?php
 session_start();
+
+    if(!(isset($_SESSION['tagNo'])))
+    { $_SESSION['tagNo']=111130; 
+    }   
+    
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -239,18 +245,10 @@ session_start();
     <div id="Modal-Wrapper" class="modal-wrapper">
         <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
             <h2>Fill in your details!</h2>
+            
             <div class="w-form">
-                <form id="email-form-4" name="email-form-4" data-name="Email Form 4"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""></form>
-                <div class="w-form-done">
-                    <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div class="w-form-fail">
-                    <div>Oops! Something went wrong while submitting the form.</div>
-                </div>
-            </div>
-            <div class="w-form">
-                <form id="email-form-5" name="email-form-5" data-name="Email Form 5"><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required=""><label for="username">Username:</label><input type="text" class="text-field-4 w-input" maxlength="256" name="username" data-name="username" placeholder="e.g. liviapopper" id="username" required="">
-                    <h4>Choose a payment method:</h4><img src="./Livia popper&#39;s First Project_files/5ad5b9723d5f8322070b55f0_003-visa.png"><img src="./Livia popper&#39;s First Project_files/5ad5b971966f0943064b2033_002-paypal.png" class="image-5"><img src="./Livia popper&#39;s First Project_files/5ad5b9723d5f835fcc0b55f1_001-mastercard.png" class="image-6"><img src="./Livia popper&#39;s First Project_files/5ad5b9720745fc0d61f59830_004-ideal.png" class="image-7"><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button"></form>
+                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required=""><label for="username">Username:</label><input type="text" class="text-field-4 w-input" maxlength="256" name="username" data-name="username" placeholder="e.g. liviapopper" id="username" required="">
+                    <label for="password">Password:</label><input type="text" class="text-field-4 w-input" maxlength="45" name="password" data-name="password" placeholder="New password" id="password" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button"></form>
                 <div class="w-form-done">
                     <div>Thank you! Your submission has been received!</div>
                 </div>
@@ -260,10 +258,46 @@ session_start();
             </div>
         </div>
     </div>
+    
+    
+
+   
+   <!-- 
+/*php
+$_SESSION['LoggedIn']=false;
+/$servername = "studmysql01.fhict.local";
+$username = "dbi380316";
+$password = "LP2699";
+$db = "dbi380316";
+$conn = new mysqli($servername,$username,$password,$db);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+    
+$sql = "INSERT INTO user (tag, buyerName, username, email, password)
+VALUES('111117', 'Vlad Luca', 'vladluca', 'vlad@example.com', 'vlad')";
+
+// ('$name', '$email', '$DoB', '$username', '$password')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>*/ 
+-->
+    
+    
+    
+    
     <div><img src="img/balluminaria_hot_air_balloon_glow_festival-widescreen_wallpapers.jpg"></div><br><br>
     <div class="w-form">
         <form id="email-form" name="email-form" data-name="Email Form" class="form">
-            <h3 class="heading-3">Choose your currency:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="">EUR</option><option value="">USD</option><option value="">GBP</option></select><label for="name" class="field-label"></label></form>
+            <h3 class="heading-3">Number of participants:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="">1</option><option value="">2</option><option value="">3</option><option value="">4</option><option value="">5</option><option value="">6</option></select><label for="name" class="field-label"></label></form>
         <div class="w-form-done">
             <div>Thank you! Your submission has been received!</div>
         </div>
@@ -272,7 +306,7 @@ session_start();
         </div>
     </div>
     <div class="div-block-5"><img src="./Livia popper&#39;s First Project_files/5ad4d245fbca00c250d6ef14_logo2.JPG" width="113" class="image-3">
-        <h3 class="heading-5">55 euros/day</h3>
+        <h3 class="heading-5">20 euros/day</h3>
         <h4 class="heading-4">Tickets option:</h4>
         <div class="w-form">
             <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form-2"><label for="name" class="field-label-2"></label>
@@ -289,7 +323,7 @@ session_start();
         </div><a class="button-2 w-button">BUY TICKETS</a></div>
     <div class="div-block-7"><img src="./Livia popper&#39;s First Project_files/5ad4d245fbca00c250d6ef14_logo2.JPG" width="105" class="image-4">
         <h3 class="heading-8">VIP Ticket</h3>
-        <h2 class="heading-7">75 euros/day</h2>
+        <h2 class="heading-7">30 euros/day</h2>
         <h4 class="heading-6">Tickets option:</h4>
         <div class="form-block w-form">
             <form id="email-form-3" name="email-form-3" data-name="Email Form 3" class="form-3">
