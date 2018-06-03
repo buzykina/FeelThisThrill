@@ -223,13 +223,12 @@ session_start();
         }
         ?>
    
+     <ul id = "submenu">
+        <li><h3><a href="BuyTickets.php">Buy Tickets</a></h3></li>  
+        <li><hr></li>
+        <li><h3><a href="CampingSpots.php" class = "Selected">Rent Camping Spots</a></h3></li>
+     </ul>
      
-     <div class="TicketsPic">
-       <div class="DivPic">
-        <img class = "divPic" src="img/tent-548022_1280.jpg">
-        </div>
-     </div>
-     <br>
     
     <img src="./CampingSpots_files/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map.jpg" srcset="http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-500.jpeg 500w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-800.jpeg 800w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-1080.jpeg 1080w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map.jpg 1519w" sizes="(max-width: 1519px) 100vw, 1519px">
     

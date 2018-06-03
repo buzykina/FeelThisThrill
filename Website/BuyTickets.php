@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-    if(!(isset($_SESSION['tagNo'])))
-    { $_SESSION['tagNo']=111130; 
+    if(!(isset($_SESSION['ticketNo'])))
+    { $_SESSION['ticketNo']=111130; 
     }   
     
 ?>
@@ -57,6 +57,7 @@ session_start();
 <link rel="stylesheet" href="css/GeneralHeader.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/TicketsStyle.css">
 </head>
 
 <body class="body">
@@ -240,15 +241,18 @@ session_start();
         }
         ?>
      
-	
+	<ul id = "submenu">
+        <li><h3><a href="BuyTickets.php" class = "Selected">Buy Tickets</a></h3></li>  
+        <li><hr></li>
+        <li><h3><a href="CampingSpots.php">Rent Camping Spots</a></h3></li>
+     </ul>
       
     <div id="Modal-Wrapper" class="modal-wrapper">
         <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
             <h2>Fill in your details!</h2>
             
             <div class="w-form">
-                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required=""><label for="username">Username:</label><input type="text" class="text-field-4 w-input" maxlength="256" name="username" data-name="username" placeholder="e.g. liviapopper" id="username" required="">
-                    <label for="password">Password:</label><input type="text" class="text-field-4 w-input" maxlength="45" name="password" data-name="password" placeholder="New password" id="password" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button"></form>
+                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button"></form>
                 <div class="w-form-done">
                     <div>Thank you! Your submission has been received!</div>
                 </div>
@@ -260,9 +264,8 @@ session_start();
     </div>
     
     
-
-
-    <div><img src="img/wp1889480.jpg"></div><br><br>
+<br><br>
+    
     <div class="w-form">
         <form id="email-form" name="email-form" data-name="Email Form" class="form">
             <h3 class="heading-3">Number of participants:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="">1</option><option value="">2</option><option value="">3</option><option value="">4</option><option value="">5</option><option value="">6</option></select><label for="name" class="field-label"></label></form>

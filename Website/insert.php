@@ -12,15 +12,25 @@ if (!$conn) {
 }
 
 $myName = $_GET['name'];
-$myUsername = $_GET['username'];
 $myEmail = $_GET['email'];
-$myPassword = $_GET['password'];
 $myDoB = $_GET['DoB'];
-$myTag=rand(111130,999999);
+$myticketID=rand(111130,999999);
 
+//code generator function
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 
-$sql = "INSERT INTO user (tag, buyerName, username, email, DoB, password)
-VALUES('$myTag', '$myName', '$myUsername', '$myEmail', '$myDoB', '$myPassword')";
+$myCode = generateRandomString();
+
+$sql = "INSERT INTO user (ticketID, buyerName, email, DoB, code)
+VALUES('$myticketID', '$myName', '$myEmail', '$myDoB', '$myCode')";
 
 // ('$name', '$email', '$DoB', '$username', '$password')";
 
@@ -32,17 +42,14 @@ $msg = "Hello, $myName!\nWelcome to Feel This Thrill!";
 $msg = wordwrap($msg,70);
 
     
-//$host = "ssl://sub4.mail.dreamhost.com";
-//$username = "l.popper@student.fontys.nl";
-//$password = "Bvk21gvWc6";
-//$port = "25";
+
 $to = $myEmail;
-//$email_from = "feelthisthrill@gmail.com";
-$email_body = "Hello, '$myName'!\nWelcome to Feel This Thrill!";
-//$email_address = "feelthisthrill@gmail.com";
+$email_body = "Hello, $myName!\n\nWelcome to Feel This Thrill!\n\nYour code is: $myCode\nGo to http://i380316.hera.fhict.nl/Log-In.php and enter your code. Choose a username and a password!";
 
     mail($to, "Subj: Feel This Thrill - Subscription confirmation", $email_body, "From: feelthisthrill@gmail.com");
-//
+
+    
+    //
 //$headers = array ('From' => $email_from, 'To' => $to, 'Subject' => $email_subject, 'Reply-To' => $email_address);
 //$smtp = Mail::factory('smtp', array ('host' => $host, 'port' => $port, 'auth' => true, 'username' => $username, 'password' => $password));
 //$mail = $smtp->send($to, $headers, $email_body);

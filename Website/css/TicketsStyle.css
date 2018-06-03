@@ -79,12 +79,7 @@ li h3 a:hover{
             padding-top:20px;
             padding-bottom: 10px;
         }
-        #para
-        {
-            color:white;
-            float:left;
-            margin-left:10px;
-        }
+       
         .divBoxLeft
         {
             grid-column: 1/6;

@@ -269,8 +269,6 @@ body {
     min-height: 100%;
     background-color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 35px;
     color: #333
 }
 
@@ -446,9 +444,8 @@ h2 {
 }
 
 h3 {
-    font-size: 24px;
+    
     line-height: 30px;
-    margin-top: 20px
 }
 
 h4 {
@@ -2126,9 +2123,8 @@ textarea.w-select {
 
 .heading-3 {
     margin-top: 13px;
-    margin-left: 28px;
+    margin-left: 0;
     padding-top: 23px;
-    padding-left: 500px;
     background-image: -webkit-linear-gradient(270deg, transparent, transparent);
     background-image: linear-gradient(180deg, transparent, transparent);
     font-family: Inconsolata, monospace;
@@ -2138,7 +2134,7 @@ textarea.w-select {
 .select-field {
     width: 10%;
     margin-right: 0px;
-    margin-left: 606px;
+    margin-left: 680px;
     padding-right: 28px;
     padding-left: 0px;
 }
@@ -2150,7 +2146,6 @@ textarea.w-select {
 
 .form {
     margin-top: -61px;
-    margin-left: 101px;
     padding-left: 0px;
 }
 
@@ -2230,7 +2225,7 @@ textarea.w-select {
 
 .heading-5 {
     position: relative;
-    left: 368px;
+    left: 170px;
     top: -116px;
     right: 9px;
     font-family: Verdana, Geneva, sans-serif;
