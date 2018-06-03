@@ -210,7 +210,6 @@ $conn = new mysqli($servername,$username,$password,$db);
     {
         $user= $_POST['userReg'];
         $pass = $_POST['passReg'];
-        $passconf = $_POST['passconfirmReg'];
         
         $sql_query="SELECT * FROM user WHERE username='".$user."' LIMIT 1";
         
@@ -233,9 +232,7 @@ $conn = new mysqli($servername,$username,$password,$db);
         }
         else
         {
-            if($pass == $passconf)
-            {
-                $sql_query2 = "UPDATE user SET username='".$user."',password='".$pass."' WHERE code = '".$_SESSION["code"]."';";
+            $sql_query2 = "UPDATE user SET username='".$user."',password='".$pass."' WHERE code = '".$_SESSION["code"]."';";
             mysqli_query($conn,$sql_query2);
             if(mysqli_num_rows($result1))
         {
@@ -248,18 +245,6 @@ $conn = new mysqli($servername,$username,$password,$db);
             $_SESSION['Buyer_CampSpot']=$row['campingSpot'];
             echo '<script> window.location.href="Event-Account.php"; </script>';     
         }
-            }
-            else
-            {
-                echo '<style type="text/css">
-                                    #error4{
-                                    display:block;
-                                    }
-                                    #regist{
-                                    display:block;
-                                    }
-                                    </style>';
-            }
         }
         mysqli_close($conn);
     }
@@ -310,13 +295,10 @@ $conn = new mysqli($servername,$username,$password,$db);
             <form method="post" action = "Log-In.php">
             <h2>Register</h2>
             <div id = "error3">Please choose another nickname. This is one is already used.</div>
-            <div id = "error4">Your passwords should match!</div>
             <h3>Enter a username:</h3>
             <input class = "username" type="text" placeholder="Username" name="userReg" required>
             <h3>Enter a password:</h3>
             <input class = "password" type="password" placeholder="Password" name="passReg" required>
-            <h3>Repeat the password:</h3>
-            <input class = "password" type="password" placeholder="Password" name="passconfirmReg" required>
             <input class = "Nat" id = "regButton" name ="Register" type="submit" value = "Submit">
             </form>
           </div>

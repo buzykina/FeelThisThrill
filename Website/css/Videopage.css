@@ -1,0 +1,110 @@
+html, body { height: 100%; margin: 0; }
+
+.videocover{
+    position: relative;
+    background-image:url('../img/videocover.jpeg');
+    min-width: 100%;
+    min-height: 40%;
+    background-size: 100% 100%;
+}
+
+
+
+.videocover .videocover-text{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.videowarper{
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+.contenttab{
+    border: 0;
+}
+
+.videowarper iframe{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border: 0;
+}
+
+
+.yearselector{
+    position: absolute;
+    left: 43%;
+    right: 40%;
+    padding-top: 10px;
+}
+
+.yearselector span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.yearselector button{
+    background-color: black;
+    height: 50px;
+    z-index: 1;
+    outline:none
+}
+
+.yearselector button:hover{
+    background-color: #332438;
+}
+
+.yearselector button:focus{
+    background-color: #6a2083;
+}
+
+
+
+
+
+
+.fade{
+    -webkit-animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; 
+    -ms-animation: fadein 0.5s; 
+    -o-animation: fadein 0.5s; 
+     animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+

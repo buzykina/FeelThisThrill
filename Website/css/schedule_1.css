@@ -1,0 +1,181 @@
+h2,h3 a{
+	font-variant: small-caps;
+	color:white;
+}
+.body {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: linear-gradient(-45deg, #9370DB,#7e1f82, #A020F0, #431f82);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+.th{
+    background-color: #306eba;
+}
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+h2{
+  text-align: center;
+}
+hr{
+  color:white;
+  height:70px;
+  background-color: white;
+  width: 1%;
+}
+#submenu1{
+  float:right;
+}
+ul {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 0;
+  margin:0;
+  text-align: center;
+}
+li {
+  list-style: none;
+  float:left;
+  display:inline-block;
+}
+li h3 a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li h3 a:hover{
+  background-color: #684c6b;  
+    cursor: pointer;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color:white;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 50%;
+  margin-bottom: 3%;
+}
+
+table tr {
+  opacity: 40%;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .990em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+.schedule:hover{
+    color:white;
+    background-color: #332438 !important;
+    border-color: white !important;
+    cursor:pointer;
+}
+.schedule {
+    background-color: transparent !important;
+    border: 2px solid #332438;
+    color: #332438;
+    font-size: 1vw;
+    font-weight: 700;
+    font-variant: small-caps;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left:80%;
+    transition: color 1s;
+  
+  &:hover {
+    color: adjust-hue(white,180);
+    border-color: white;
+  }
+}

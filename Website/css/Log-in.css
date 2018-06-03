@@ -245,15 +245,12 @@ h1
     font-size: 28px;
     font-weight: bold;
 }
-#error,#error1,#error2,#error3,#error4{
+#error,#error1,#error2,#error3{
     margin-top: 50px;
     display:none;
     padding: 5px;
     border-radius: 5px;
     border: 2px solid red;
-}
-#error4,#error3{
-    margin-top: 30px !important;
 }
 .close:hover,
 .close:focus {
