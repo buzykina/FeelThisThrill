@@ -123,7 +123,7 @@ session_start();
         
         
 <!--the log-out-->
-	<form method="post" action = "Event-Account.php">
+	<form method="post" action = "Log-In.php">
         <button class="pointer" name="LogOut">Log-Out</button>
         </form>
 	 <?php
@@ -141,11 +141,6 @@ if(isset($_POST['LogOut']))
        }
        
    }
-        else
-        {
-            echo "There was a problem with clicking the button!!!!!";
-        }
-
 ?>
         
         
