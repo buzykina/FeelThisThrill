@@ -37,7 +37,7 @@ session_start();
             <div class="gridButtonsRight">
                 <a href="experience.php"><div><p>Experience</p></div></a>
                 <a href="gifts.php"><div><p>Gifts</p></div></a>
-                <a href="Event-Account.php"><div class="logInSelected"><p>My Account</p></div></a>
+                <a href="Event-Account.php" class = "Selected"><div class="logInSelected"><p>My Account</p></div></a>
             </div>
         </div>     
 
@@ -91,7 +91,7 @@ session_start();
                             <a href="Camp.php">Maps</a>
                             <a href="experience.php">Experience</a>
                             <a href="gifts.php">Gifts</a>
-                            <a class="navbarSelected" href="Event-Account.php">My Account</a>
+                            <a class="navbarSelected" href="Event-Account.php" class = "Selected">My Account</a>
                     </div>
                 </div>
 

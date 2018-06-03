@@ -26,18 +26,44 @@ VALUES('$myTag', '$myName', '$myUsername', '$myEmail', '$myDoB', '$myPassword')"
 
 if (mysqli_query($conn, $sql)) {
     // the message
-$msg = "Hello, '$myName'!\nWelcome to Feel This Thrill!";
+$msg = "Hello, $myName!\nWelcome to Feel This Thrill!";
 
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);
 
-    ini_set('SMTP','myserver');
-ini_set('smtp_port',25);
-// send email
-mail($myEmail,"Feel This Thrill - Subscription confirmation",$msg, "From: feelthisthrill@gmail.com");
+    
+//$host = "ssl://sub4.mail.dreamhost.com";
+//$username = "l.popper@student.fontys.nl";
+//$password = "Bvk21gvWc6";
+//$port = "25";
+$to = $myEmail;
+//$email_from = "feelthisthrill@gmail.com";
+$email_body = "Hello, '$myName'!\nWelcome to Feel This Thrill!";
+//$email_address = "feelthisthrill@gmail.com";
 
-    echo "An email has been sent to your address!";
-    header("Location: PaymentPage.html");
+    mail($to, "Subj: Feel This Thrill - Subscription confirmation", $email_body, "From: feelthisthrill@gmail.com");
+//
+//$headers = array ('From' => $email_from, 'To' => $to, 'Subject' => $email_subject, 'Reply-To' => $email_address);
+//$smtp = Mail::factory('smtp', array ('host' => $host, 'port' => $port, 'auth' => true, 'username' => $username, 'password' => $password));
+//$mail = $smtp->send($to, $headers, $email_body);
+//
+//
+//if (PEAR::isError($mail)) {
+//echo("<p>" . $mail->getMessage() . "</p>");
+//} else {
+//echo("<p>Message successfully sent!</p>");
+//}
+    
+    
+//ini_set('SMTP',$host);
+//ini_set('smtp_port',25);
+// send email
+//mail($myEmail,"Feel This Thrill - Subscription confirmation",$msg, "From: feelthisthrill@gmail.com");
+    
+    
+
+   //echo "An email has been sent to your address!";
+   header("Location: PaymentPage.html");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

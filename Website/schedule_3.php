@@ -23,7 +23,7 @@ session_start();
         </div>
         <div class="gridButtons">
             <div class="gridButtonsLeft">
-                <a href="line_up.php"><div><p>Line-up</p></div></a>
+                <a href="line_up.php" class = "Selected"><div><p>Line-up</p></div></a>
                 <a href="Tickets.php"><div><p>Tickets</p></div></a>
                 <a href="Camp.php"><div><p>Maps</p></div></a>
             </div>
@@ -80,7 +80,7 @@ session_start();
 
                     <div id="side-menu" class="side-nav">
                             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-                            <a href="line_up.php">Line-up</a>
+                            <a href="line_up.php" class = "Selected">Line-up</a>
                             <a href="Tickets.php">Ticket</a>
                             <a href="Camp.php">Maps</a>
                             <a href="experience.php">Experience</a>
@@ -110,7 +110,7 @@ session_start();
         </div>
         <div class="gridButtons">
             <div class="gridButtonsLeft">
-                <a href="line_up.php"><div><p>Line-up</p></div></a>
+                <a href="line_up.php" class = "Selected"><div><p>Line-up</p></div></a>
                 <a href="Tickets.php"><div><p>Tickets</p></div></a>
                 <a href="Camp.php"><div><p>Maps</p></div></a>
             </div>
@@ -167,7 +167,7 @@ session_start();
 
                     <div id="side-menu" class="side-nav">
                             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-                            <a href="line_up.php">Line-up</a>
+                            <a href="line_up.php" class = "Selected">Line-up</a>
                             <a href="Tickets.php">Ticket</a>
                             <a href="Camp.php">Maps</a>
                             <a href="experience.php">Experience</a>

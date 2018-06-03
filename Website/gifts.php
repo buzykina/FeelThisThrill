@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'php.php';
-session_start();
 $product_ids = array();
 if(filter_input(INPUT_POST,'add_to_cart')){
 if(isset($_SESSION['shopping_cart']))
@@ -82,7 +81,7 @@ if(filter_input(INPUT_GET,'action')=='delete')
 
             <div class="gridButtonsRight">
                 <a href="experience.php"><div><p>Experience</p></div></a>
-                <a href="gifts.php"><div><p>Gifts</p></div></a>
+                <a href="gifts.php" class = "Selected"><div><p>Gifts</p></div></a>
                 <a href="Event-Account.php"><div><p>My Account</p></div></a>
             </div>
         </div>     
@@ -136,7 +135,7 @@ if(filter_input(INPUT_GET,'action')=='delete')
                             <a href="Tickets.php">Ticket</a>
                             <a href="Camp.php">Maps</a>
                             <a href="experience.php">Experience</a>
-                            <a href="gifts.php">Gifts</a>
+                            <a href="gifts.php" class = "Selected">Gifts</a>
                             <a class="navbarSelected" href="Log-In.php">Log-in</a>
                     </div>
                 </div>
@@ -169,7 +168,7 @@ if(filter_input(INPUT_GET,'action')=='delete')
 
             <div class="gridButtonsRight">
                 <a href="experience.php"><div><p>Experience</p></div></a>
-                <a href="gifts.php"><div><p>Gifts</p></div></a>
+                <a href="gifts.php" class = "Selected"><div><p>Gifts</p></div></a>
                 <a href="Log-In.php"><div><p>Log-In</p></div></a>
             </div>
         </div>     
@@ -223,7 +222,7 @@ if(filter_input(INPUT_GET,'action')=='delete')
                             <a href="Tickets.php">Ticket</a>
                             <a href="Camp.php">Maps</a>
                             <a href="experience.php">Experience</a>
-                            <a href="gifts.php">Gifts</a>
+                            <a href="gifts.php" class = "Selected">Gifts</a>
                             <a class="navbarSelected" href="Log-In.php">Log-in</a>
                     </div>
                 </div>

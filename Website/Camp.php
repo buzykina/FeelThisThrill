@@ -27,7 +27,7 @@ session_start();
             <div class="gridButtonsLeft">
                 <a href="line_up.php"><div><p>Line-up</p></div></a>
                 <a href="Tickets.php"><div><p>Tickets</p></div></a>
-                <a href="Camp.php"><div><p>Maps</p></div></a>
+                <a href="Camp.php" class = "Selected"><div><p>Maps</p></div></a>
             </div>
 
             <div class="gridButtonsRight">
@@ -84,7 +84,7 @@ session_start();
                             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
                             <a href="line_up.php">Line-up</a>
                             <a href="Tickets.php">Ticket</a>
-                            <a href="Camp.php">Maps</a>
+                            <a href="Camp.php" class = "Selected">Maps</a>
                             <a href="experience.php">Experience</a>
                             <a href="gifts.php">Gifts</a>
                             <a class="navbarSelected" href="Log-In.php">Log-in</a>
@@ -114,7 +114,7 @@ session_start();
             <div class="gridButtonsLeft">
                 <a href="line_up.php"><div><p>Line-up</p></div></a>
                 <a href="Tickets.php"><div><p>Tickets</p></div></a>
-                <a href="Camp.php"><div><p>Maps</p></div></a>
+                <a href="Camp.php" class = "Selected"><div><p>Maps</p></div></a>
             </div>
 
             <div class="gridButtonsRight">
@@ -171,7 +171,7 @@ session_start();
                             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
                             <a href="line_up.php">Line-up</a>
                             <a href="Tickets.php">Ticket</a>
-                            <a href="Camp.php">Maps</a>
+                            <a href="Camp.php" class = "Selected">Maps</a>
                             <a href="experience.php">Experience</a>
                             <a href="gifts.php">Gifts</a>
                             <a class="navbarSelected" href="Log-In.php">Log-in</a>

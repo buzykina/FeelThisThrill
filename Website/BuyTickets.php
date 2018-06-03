@@ -61,7 +61,7 @@ session_start();
 
 <body class="body">
    
-     	 <?php
+    <?php
         if(isset($_SESSION['LoggedIn']) && $_SESSION['LoggedIn']==true)
         { ?>
             <nav class="wrapper1">
@@ -72,7 +72,7 @@ session_start();
         <div class="gridButtons">
             <div class="gridButtonsLeft">
                 <a href="line_up.php"><div><p>Line-up</p></div></a>
-                <a href="Tickets.php"><div><p>Tickets</p></div></a>
+                <a href="Tickets.php" class = "Selected"><div><p>Tickets</p></div></a>
                 <a href="Camp.php"><div><p>Maps</p></div></a>
             </div>
 
@@ -129,7 +129,7 @@ session_start();
                     <div id="side-menu" class="side-nav">
                             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
                             <a href="line_up.php">Line-up</a>
-                            <a href="Tickets.php">Ticket</a>
+                            <a href="Tickets.php" class = "Selected">Ticket</a>
                             <a href="Camp.php">Maps</a>
                             <a href="experience.php">Experience</a>
                             <a href="gifts.php">Gifts</a>
@@ -159,7 +159,7 @@ session_start();
         <div class="gridButtons">
             <div class="gridButtonsLeft">
                 <a href="line_up.php"><div><p>Line-up</p></div></a>
-                <a href="Tickets.php"><div><p>Tickets</p></div></a>
+                <a href="Tickets.php" class = "Selected"><div><p>Tickets</p></div></a>
                 <a href="Camp.php"><div><p>Maps</p></div></a>
             </div>
 
@@ -216,7 +216,7 @@ session_start();
                     <div id="side-menu" class="side-nav">
                             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
                             <a href="line_up.php">Line-up</a>
-                            <a href="Tickets.php">Ticket</a>
+                            <a href="Tickets.php" class = "Selected">Ticket</a>
                             <a href="Camp.php">Maps</a>
                             <a href="experience.php">Experience</a>
                             <a href="gifts.php">Gifts</a>
@@ -261,40 +261,8 @@ session_start();
     
     
 
-   
-   <!-- 
-/*php
-$_SESSION['LoggedIn']=false;
-/$servername = "studmysql01.fhict.local";
-$username = "dbi380316";
-$password = "LP2699";
-$db = "dbi380316";
-$conn = new mysqli($servername,$username,$password,$db);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
-    
-$sql = "INSERT INTO user (tag, buyerName, username, email, password)
-VALUES('111117', 'Vlad Luca', 'vladluca', 'vlad@example.com', 'vlad')";
-
-// ('$name', '$email', '$DoB', '$username', '$password')";
-
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-mysqli_close($conn);
-?>*/ 
--->
-    
-    
-    
-    
-    <div><img src="img/balluminaria_hot_air_balloon_glow_festival-widescreen_wallpapers.jpg"></div><br><br>
+    <div><img src="img/wp1889480.jpg"></div><br><br>
     <div class="w-form">
         <form id="email-form" name="email-form" data-name="Email Form" class="form">
             <h3 class="heading-3">Number of participants:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="">1</option><option value="">2</option><option value="">3</option><option value="">4</option><option value="">5</option><option value="">6</option></select><label for="name" class="field-label"></label></form>

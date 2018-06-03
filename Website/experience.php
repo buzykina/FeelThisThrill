@@ -29,7 +29,7 @@ session_start();
             </div>
 
             <div class="gridButtonsRight">
-                <a href="experience.php"><div><p>Experience</p></div></a>
+                <a href="experience.php" class = "Selected"><div><p>Experience</p></div></a>
                 <a href="gifts.php"><div><p>Gifts</p></div></a>
                 <a href="Event-Account.php"><div><p>My Account</p></div></a>
             </div>
@@ -83,7 +83,7 @@ session_start();
                             <a href="line_up.php">Line-up</a>
                             <a href="Tickets.php">Ticket</a>
                             <a href="Camp.php">Maps</a>
-                            <a href="experience.php">Experience</a>
+                            <a href="experience.php" class = "Selected">Experience</a>
                             <a href="gifts.php">Gifts</a>
                             <a class="navbarSelected" href="Log-In.php">Log-in</a>
                     </div>
@@ -116,7 +116,7 @@ session_start();
             </div>
 
             <div class="gridButtonsRight">
-                <a href="experience.php"><div><p>Experience</p></div></a>
+                <a href="experience.php" class = "Selected"><div><p>Experience</p></div></a>
                 <a href="gifts.php"><div><p>Gifts</p></div></a>
                 <a href="Log-In.php"><div><p>Log-In</p></div></a>
             </div>
