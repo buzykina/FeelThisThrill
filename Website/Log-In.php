@@ -136,7 +136,6 @@ $conn = new mysqli($servername,$username,$password,$db);
         }
         else
         {
-            $_SESSION['LoggedIn']=false;
             echo '<style type="text/css">
                     #error1{
                     display:block;
@@ -152,17 +151,17 @@ $conn = new mysqli($servername,$username,$password,$db);
     if(isset($_POST['Code']))
     {
         $code=$_POST['code'];
-        
+        $_SESSION["code"] = $code;
         $sql_query="SELECT * FROM user WHERE code='".$code."' LIMIT 1";
-        
+        $sql_query1="SELECT * FROM user WHERE code='".$code."' And username IS NULL AND password IS NULL LIMIT 1";
         $result = mysqli_query($conn, $sql_query);
+        $result1 = mysqli_query($conn, $sql_query1);
         $num =mysqli_num_rows($result);
         $row = mysqli_fetch_array($result); 
-        
-        if(mysqli_num_rows($result))
+        if(mysqli_num_rows($result1))
         {
             echo '<style type="text/css">
-                    #myModal {
+                    #myModal{
                      display: none;
                     }
                     #regist{
@@ -170,9 +169,23 @@ $conn = new mysqli($servername,$username,$password,$db);
                     }
                     </style>';
         }
+        else if(mysqli_num_rows($result))
+        {
+            echo '<style type="text/css">
+                    #myModal {
+                     display: block;
+                    }
+                    .modal-content h3{
+                        margin-top: 0px;
+                        padding-top: 25px;
+                    }
+                    #error2{
+                    display:block;
+                    }
+                    </style>';
+        }
         else
         {
-            $_SESSION['LoggedIn']=false;
             echo '<style type="text/css">
                     #myModal {
                      display: block;
@@ -186,6 +199,7 @@ $conn = new mysqli($servername,$username,$password,$db);
                     }
                     </style>';
         }
+        
         mysqli_close($conn);
     }
         
@@ -201,13 +215,15 @@ $conn = new mysqli($servername,$username,$password,$db);
         
         $result = mysqli_query($conn, $sql_query);
         $num =mysqli_num_rows($result);
-        $row = mysqli_fetch_array($result); 
+        $sql_query1="SELECT * FROM user WHERE code='".$_SESSION["code"]."' LIMIT 1";
+        $result1 = mysqli_query($conn, $sql_query1);
+        $row = mysqli_fetch_array($result1); 
         
         if(mysqli_num_rows($result))
         {
             echo '<style type="text/css">
-                    #myModal {
-                     display: none;
+                    #error3{
+                    display:block;
                     }
                     #regist{
                     display:block;
@@ -216,19 +232,19 @@ $conn = new mysqli($servername,$username,$password,$db);
         }
         else
         {
-            $_SESSION['LoggedIn']=false;
-            echo '<style type="text/css">
-                    #myModal {
-                     display: block;
-                    }
-                    .modal-content h3{
-                        margin-top: 0px;
-                        padding-top: 25px;
-                    }
-                    #error{
-                    display:block;
-                    }
-                    </style>';
+            $sql_query2 = "UPDATE user SET username='".$user."',password='".$pass."' WHERE code = '".$_SESSION["code"]."';";
+            mysqli_query($conn,$sql_query2);
+            if(mysqli_num_rows($result1))
+        {
+            $_SESSION['LoggedIn']=true;
+            $_SESSION['Name']=$user;
+            $_SESSION['TicketID']=$row['ticketID'];
+            $_SESSION['Credits']=$row['credits'];
+            $_SESSION['Buyer']=$row['buyerName'];
+            $_SESSION['Buyer_Email']=$row['email'];
+            $_SESSION['Buyer_CampSpot']=$row['campingSpot'];
+            echo '<script> window.location.href="Event-Account.php"; </script>';     
+        }
         }
         mysqli_close($conn);
     }
@@ -266,6 +282,7 @@ $conn = new mysqli($servername,$username,$password,$db);
             <span class="close">&times;</span>
             <form method="post" action = "Log-In.php">
             <div id = "error">You could not be logged on. Make sure that your code is correct, and then try again.</div>
+            <div id = "error2">User with this code is already registered.</div>
             <h3>Enter your code here:</h3>
             <input class = "code" type="text" placeholder="Code" name="code" required>
             <input class = "Nat" name ="Code" type="submit" value = "Submit">
@@ -277,6 +294,7 @@ $conn = new mysqli($servername,$username,$password,$db);
             <span class="close">&times;</span>
             <form method="post" action = "Log-In.php">
             <h2>Register</h2>
+            <div id = "error3">Please choose another nickname. This is one is already used.</div>
             <h3>Enter a username:</h3>
             <input class = "username" type="text" placeholder="Username" name="userReg" required>
             <h3>Enter a password:</h3>

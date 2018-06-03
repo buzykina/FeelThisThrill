@@ -245,7 +245,7 @@ h1
     font-size: 28px;
     font-weight: bold;
 }
-#error,#error1{
+#error,#error1,#error2,#error3{
     margin-top: 50px;
     display:none;
     padding: 5px;
