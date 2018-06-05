@@ -130,7 +130,14 @@ $conn = new mysqli($servername,$username,$password,$db);
             $_SESSION['Credits']=$row['credits'];
             $_SESSION['Buyer']=$row['buyerName'];
             $_SESSION['Buyer_Email']=$row['email'];
+            $_SESSION['age'] = date_diff(date_create($row['DoB']), date_create('today'))->y;
             $_SESSION['Buyer_CampSpot']=$row['campingSpot'];
+            $sql_query1="SELECT * FROM ticket WHERE idTicket='".$_SESSION['TicketID']."'";
+            $result1 = mysqli_query($conn, $sql_query1);
+            $row1 = mysqli_fetch_array($result1); 
+            $_SESSION['price']=$row1['price'];
+            $_SESSION['day']=$row1['day(s)'];
+            $_SESSION['type']=$row1['type'];
             echo '<script> window.location.href="Event-Account.php"; </script>';
             
         }
@@ -210,6 +217,7 @@ $conn = new mysqli($servername,$username,$password,$db);
     {
         $user= $_POST['userReg'];
         $pass = $_POST['passReg'];
+        $passconf = $_POST['passconfirmReg'];
         
         $sql_query="SELECT * FROM user WHERE username='".$user."' LIMIT 1";
         
@@ -232,6 +240,8 @@ $conn = new mysqli($servername,$username,$password,$db);
         }
         else
         {
+            if($pass == $passconf)
+            {
             $sql_query2 = "UPDATE user SET username='".$user."',password='".$pass."' WHERE code = '".$_SESSION["code"]."';";
             mysqli_query($conn,$sql_query2);
             if(mysqli_num_rows($result1))
@@ -243,8 +253,27 @@ $conn = new mysqli($servername,$username,$password,$db);
             $_SESSION['Buyer']=$row['buyerName'];
             $_SESSION['Buyer_Email']=$row['email'];
             $_SESSION['Buyer_CampSpot']=$row['campingSpot'];
-            echo '<script> window.location.href="Event-Account.php"; </script>';     
+            $_SESSION['age'] = date_diff(date_create($row['DoB']), date_create('today'))->y;
+            $sql_query4="SELECT * FROM ticket WHERE idTicket='".$_SESSION['TicketID']."'";
+            $result4 = mysqli_query($conn, $sql_query4);
+            $row4 = mysqli_fetch_array($result4); 
+            $_SESSION['price']=$row4['price'];
+            $_SESSION['day']=$row4['day(s)'];
+            $_SESSION['type']=$row4['type'];
+            echo '<script> window.location.href="Event-Account.php"; </script>';  
         }
+         }
+            else
+            {
+                echo '<style type="text/css">
+                                    #error4{
+                                    display:block;
+                                    }
+                                    #regist{
+                                    display:block;
+                                    }
+                                    </style>';
+            }
         }
         mysqli_close($conn);
     }
@@ -266,14 +295,14 @@ $conn = new mysqli($servername,$username,$password,$db);
 <div class = "login">
         <h1>Login</h1>   
         <div class="login-form">             
-		<form method="post" action = "Log-In.php">            
+        <form method="post" action = "Log-In.php">            
             <div id = "error1">You could not be logged on. Make sure that your username and password are correct, and then try again.</div>
        <h3>Username:</h3>
         <input class = "username" type="text" placeholder="Username" name="user" required>
-		<h3>Password:</h3>
+        <h3>Password:</h3>
        <input class = "password" type="password" placeholder="Password" name="pass" required>
        <input class = "log" name ="LogIn" type="submit" value = "Log-In">
-		</form>
+        </form>
         <p class="sign-up" id = "myBtn">Enter the code here!</p><br>
         <div id="myModal" class="modal">
 
@@ -295,10 +324,13 @@ $conn = new mysqli($servername,$username,$password,$db);
             <form method="post" action = "Log-In.php">
             <h2>Register</h2>
             <div id = "error3">Please choose another nickname. This is one is already used.</div>
+            <div id = "error4">Your passwords should match!</div>
             <h3>Enter a username:</h3>
             <input class = "username" type="text" placeholder="Username" name="userReg" required>
             <h3>Enter a password:</h3>
             <input class = "password" type="password" placeholder="Password" name="passReg" required>
+            <h3>Repeat the password:</h3>
+            <input class = "password" type="password" placeholder="Password" name="passconfirmReg" required>
             <input class = "Nat" id = "regButton" name ="Register" type="submit" value = "Submit">
             </form>
           </div>

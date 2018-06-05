@@ -150,7 +150,7 @@ if(isset($_POST['LogOut']))
 	</div>
 	</div>
 	<div class = "Info">
-		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: <?php echo $_SESSION['TicketID']; ?></p> <p>Ticket type: Normal</p> <p>Ticket Package: 1 Day</p><p>Camp Spot: 22R2</p></div><div class = "clo"><p>Name: <?php echo $_SESSION['Buyer']; ?></p> <p>Tag: #1233423</p><p>Age: 19</p><p>Email: <?php echo $_SESSION['Buyer_Email']; ?></p></div></div></div>
+		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: <?php echo $_SESSION['TicketID']; ?></p> <p>Ticket type: <?php echo $_SESSION['type']; ?></p> <p>Ticket Package: <?php echo $_SESSION['day']; ?> Day(s)</p><p>Camp Spot: 22R2</p></div><div class = "clo"><p>Name: <?php echo $_SESSION['Buyer']; ?></p><p>Age: <?php echo $_SESSION['age']; ?></p><p>Email: <?php echo $_SESSION['Buyer_Email']; ?></p></div></div></div>
 	<div class ="Campcontainer"><div class ="Set1"><h3>Camp Details</h3></div><div class ="Set2"><p>Row: 22 NO: R2</p></div><div class="Set3"><div>Himanshu Kotai<div class ="se">Member</div></div><div> Jane Buzykina<div class="se">Member</div></div><div>Livia Popper<div class = "se1">Host</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>
 	<div>Trung Dung Luong<div class = "se">Member</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>	</div></div>
 	</div>
