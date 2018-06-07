@@ -29,8 +29,8 @@ function generateRandomString($length = 10) {
 
 $myCode = generateRandomString();
 
-$sql = "INSERT INTO user (ticketID, buyerName, email, DoB, code)
-VALUES('$myticketID', '$myName', '$myEmail', '$myDoB', '$myCode')";
+$sql = "INSERT INTO user (ticketID, buyerName, email, DoB, code, status, campStatus)
+VALUES('$myticketID', '$myName', '$myEmail', '$myDoB', '$myCode', '0', '0')";
 
 // ('$name', '$email', '$DoB', '$username', '$password')";
 
@@ -70,7 +70,7 @@ $email_body = "Hello, $myName!\n\nWelcome to Feel This Thrill!\n\nYour code is: 
     
 
    //echo "An email has been sent to your address!";
-   header("Location: PaymentPage.html");
+  header("Location: PaymentPage.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

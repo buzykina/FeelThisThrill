@@ -114,7 +114,7 @@ $conn = new mysqli($servername,$username,$password,$db);
     if(isset($_POST['LogIn']))
     {
         $username=$_POST['user'];
-        $password=$_POST['pass'];
+        $password=md5($_POST['pass']);
         
         $sql_query="SELECT * FROM user WHERE username='".$username."' AND password='".$password."' LIMIT 1";
         
@@ -216,8 +216,8 @@ $conn = new mysqli($servername,$username,$password,$db);
     if(isset($_POST['Register']))
     {
         $user= $_POST['userReg'];
-        $pass = $_POST['passReg'];
-        $passconf = $_POST['passconfirmReg'];
+        $pass = md5($_POST['passReg']);
+        $passconf = md5($_POST['passconfirmReg']);
         
         $sql_query="SELECT * FROM user WHERE username='".$user."' LIMIT 1";
         
@@ -256,11 +256,11 @@ $conn = new mysqli($servername,$username,$password,$db);
             $_SESSION['age'] = date_diff(date_create($row['DoB']), date_create('today'))->y;
             $sql_query4="SELECT * FROM ticket WHERE idTicket='".$_SESSION['TicketID']."'";
             $result4 = mysqli_query($conn, $sql_query4);
-            $row4 = mysqli_fetch_array($result4); 
+            $row4 = mysqli_fetch_array($result4);
             $_SESSION['price']=$row4['price'];
             $_SESSION['day']=$row4['day(s)'];
             $_SESSION['type']=$row4['type'];
-            echo '<script> window.location.href="Event-Account.php"; </script>';  
+            echo '<script> window.location.href="Event-Account.php"; </script>';
         }
          }
             else

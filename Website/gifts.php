@@ -397,7 +397,7 @@ $result = mysqli_query($conn,$sql);
             <td class="right-align bold"><div class= "<?php echo $product['id'];?>">$<?php echo number_format((1+0.21)*($total),2);?></td>
           </tr>
           </table>
-          <button class = "checkout">Checkout</button>
+          <form method="post" action="PaymentPage.php"><button class="checkout">Checkout</button></form>
           <?php
             }
             }
