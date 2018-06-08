@@ -115,8 +115,8 @@ session_start();
 
 	<div class="D2">
 	<div class="D2D1">
-	<h1> <?php echo $_SESSION['TicketID']; ?></h1>
-		<label><b>Username</b>: <?php echo $_SESSION['Name']; ?></label><br>
+	
+		<label>Welcome, <?php echo $_SESSION['Name']; ?>!</label><br>
 		
 		</div>
 	<div class = "D2D2">
@@ -145,12 +145,11 @@ if(isset($_POST['LogOut']))
         
         
 	<button class="pointer">Add Credits</button>
-	<h1><?php echo $_SESSION['Credits']; ?> Credits</h1>
 	
 	</div>
 	</div>
 	<div class = "Info">
-		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: <?php echo $_SESSION['TicketID']; ?></p> <p>Ticket type: <?php echo $_SESSION['type']; ?></p> <p>Ticket Package: <?php echo $_SESSION['day']; ?> Day(s)</p><p>Camp Spot: 22R2</p></div><div class = "clo"><p>Name: <?php echo $_SESSION['Buyer']; ?></p><p>Age: <?php echo $_SESSION['age']; ?></p><p>Email: <?php echo $_SESSION['Buyer_Email']; ?></p></div></div></div>
+		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: <?php echo $_SESSION['TicketID']; ?></p> <p>Ticket type: <?php echo $_SESSION['type']; ?></p> <p>Camp Spot: 22R2</p></div><div class = "clo"><p>Name: <?php echo $_SESSION['Buyer']; ?></p><p>Credit: <?php echo $_SESSION['Credits']; ?> €</p><p>Email: <?php echo $_SESSION['Buyer_Email']; ?></p></div></div></div>
 	<div class ="Campcontainer"><div class ="Set1"><h3>Camp Details</h3></div><div class ="Set2"><p>Row: 22 NO: R2</p></div><div class="Set3"><div>Himanshu Kotai<div class ="se">Member</div></div><div> Jane Buzykina<div class="se">Member</div></div><div>Livia Popper<div class = "se1">Host</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>
 	<div>Trung Dung Luong<div class = "se">Member</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>	</div></div>
 	</div>

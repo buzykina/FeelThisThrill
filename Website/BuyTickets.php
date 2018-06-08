@@ -246,12 +246,14 @@ session_start();
         <li><hr></li>
         <li><h3><a href="CampingSpots.php">Rent Camping Spots</a></h3></li>
      </ul>
-      
-    <div id="Modal-Wrapper" class="modal-wrapper">
+    
+    <div id="modals">
+   <!--modal for 1 person-->
+      <div id="Modal-Wrapper" class="modal-wrapper" name="form1">
         <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
             <h2>Fill in your details!</h2>
             
-            <div class="w-form">
+            <div class="w-form" id="form1">
                 <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button" action="PaymentPage.php"></form>
                 <div class="w-form-done">
                     <div>Thank you! Your submission has been received!</div>
@@ -263,18 +265,181 @@ session_start();
         </div>
     </div>
     
+    <!--modal for 2 persons-->
+     <div id="Modal-Wrapper" class="modal-wrapper" name="form2" style="overflow-y: scroll;">
+        <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
+            <h2>Fill in your details!</h2>
+            
+            <div class="w-form" id="form1">
+                <h3>Ticket 1:</h3>
+                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required="">
+                    <h3>Ticket 2:</h3>
+                
+                <label for="name2">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name2" data-name="Name2" placeholder="Enter your name" id="name2" required=""><label for="email2">Email Address:</label><input type="email2" class="text-field-2 w-input" maxlength="256" name="email2" data-name="Email2" placeholder="Enter your email" id="email2" required=""><label for="DoB2">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB2" data-name="DoB2" placeholder="DD-MM-YYYY" id="DoB" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button" action="PaymentPage.php">
+                </form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <!--modal for 3 persons-->
+   <div id="Modal-Wrapper" class="modal-wrapper" name="form3" style="overflow-y: scroll;">
+        <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
+            <h2>Fill in your details!</h2>
+            
+            <div class="w-form" id="form1">
+                <h3>Ticket 1:</h3>
+                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required="">
+                    
+                    <h3>Ticket 2:</h3>
+                
+                <label for="name2">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name2" data-name="Name2" placeholder="Enter your name" id="name2" required=""><label for="email2">Email Address:</label><input type="email2" class="text-field-2 w-input" maxlength="256" name="email2" data-name="Email2" placeholder="Enter your email" id="email2" required=""><label for="DoB2">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB2" data-name="DoB2" placeholder="DD-MM-YYYY" id="DoB2" required="">
+                    
+                    <h3>Ticket 3:</h3>
+                
+                <label for="name3">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name3" data-name="Name3" placeholder="Enter your name" id="name3" required=""><label for="email3">Email Address:</label><input type="email3" class="text-field-2 w-input" maxlength="256" name="email3" data-name="Email3" placeholder="Enter your email" id="email3" required=""><label for="DoB3">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB3" data-name="DoB3" placeholder="DD-MM-YYYY" id="DoB3" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button" action="PaymentPage.php">
+                </form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    
+    <!--modal for 4 persons-->
+     <div id="Modal-Wrapper" class="modal-wrapper" name="form4" style="overflow-y: scroll;">
+        <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
+            <h2>Fill in your details!</h2>
+            
+            <div class="w-form" id="form1">
+                <h3>Ticket 1:</h3>
+                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required="">
+                    
+                    <h3>Ticket 2:</h3>
+                
+                <label for="name2">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name2" data-name="Name2" placeholder="Enter your name" id="name2" required=""><label for="email2">Email Address:</label><input type="email2" class="text-field-2 w-input" maxlength="256" name="email2" data-name="Email2" placeholder="Enter your email" id="email2" required=""><label for="DoB2">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB2" data-name="DoB2" placeholder="DD-MM-YYYY" id="DoB2" required="">
+                    
+                    <h3>Ticket 3:</h3>
+                
+                <label for="name3">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name3" data-name="Name3" placeholder="Enter your name" id="name3" required=""><label for="email3">Email Address:</label><input type="email3" class="text-field-2 w-input" maxlength="256" name="email3" data-name="Email3" placeholder="Enter your email" id="email3" required=""><label for="DoB3">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB3" data-name="DoB3" placeholder="DD-MM-YYYY" id="DoB3" required="">
+                    
+                    <h3>Ticket 4:</h3>
+                
+                <label for="name4">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name4" data-name="Name4" placeholder="Enter your name" id="name4" required=""><label for="email4">Email Address:</label><input type="email4" class="text-field-2 w-input" maxlength="256" name="email4" data-name="Email4" placeholder="Enter your email" id="email4" required=""><label for="DoB4">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB4" data-name="DoB4" placeholder="DD-MM-YYYY" id="DoB4" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button" action="PaymentPage.php">
+                    
+                </form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    
+    
+     <!--modal for 5 persons-->
+  <div id="Modal-Wrapper" class="modal-wrapper" name="form5" style="overflow-y: scroll;">
+        <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
+            <h2>Fill in your details!</h2>
+            
+            <div class="w-form" id="form1">
+                <h3>Ticket 1:</h3>
+                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required="">
+                    
+                    <h3>Ticket 2:</h3>
+                
+                <label for="name2">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name2" data-name="Name2" placeholder="Enter your name" id="name2" required=""><label for="email2">Email Address:</label><input type="email2" class="text-field-2 w-input" maxlength="256" name="email2" data-name="Email2" placeholder="Enter your email" id="email2" required=""><label for="DoB2">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB2" data-name="DoB2" placeholder="DD-MM-YYYY" id="DoB2" required="">
+                    
+                    <h3>Ticket 3:</h3>
+                
+                <label for="name3">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name3" data-name="Name3" placeholder="Enter your name" id="name3" required=""><label for="email3">Email Address:</label><input type="email3" class="text-field-2 w-input" maxlength="256" name="email3" data-name="Email3" placeholder="Enter your email" id="email3" required=""><label for="DoB3">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB3" data-name="DoB3" placeholder="DD-MM-YYYY" id="DoB3" required="">
+                    
+                    <h3>Ticket 4:</h3>
+                
+                <label for="name4">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name4" data-name="Name4" placeholder="Enter your name" id="name4" required=""><label for="email4">Email Address:</label><input type="email4" class="text-field-2 w-input" maxlength="256" name="email4" data-name="Email4" placeholder="Enter your email" id="email4" required=""><label for="DoB4">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB4" data-name="DoB4" placeholder="DD-MM-YYYY" id="DoB4" required="">
+                    
+                    <h3>Ticket 5:</h3>
+                
+                <label for="name5">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name5" data-name="Name5" placeholder="Enter your name" id="name5" required=""><label for="email5">Email Address:</label><input type="email5" class="text-field-2 w-input" maxlength="256" name="email5" data-name="Email5" placeholder="Enter your email" id="email5" required=""><label for="DoB5">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB5" data-name="DoB5" placeholder="DD-MM-YYYY" id="DoB5" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button" action="PaymentPage.php">
+                    
+                </form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    
+    
+    <!--modal for 6 persons-->
+    <div id="Modal-Wrapper" class="modal-wrapper" name="form6" style="overflow-y: scroll;">
+        <div class="sign-up-wrapper" style="margin-top:20px;"><a class="close-link" data-ix="close-interaction" style="cursor:pointer;">Close X</a>
+            <h2>Fill in your details!</h2>
+            
+            <div class="w-form" id="form1">
+                <h3>Ticket 1:</h3>
+                <form id="email-form-5" name="email-form-5" data-name="Email Form 5" method="get" action = "insert.php"><label for="name">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your name" id="name" required=""><label for="email">Email Address:</label><input type="email" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" id="email" required=""><label for="DoB">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB" data-name="DoB" placeholder="DD-MM-YYYY" id="DoB" required="">
+                    
+                    <h3>Ticket 2:</h3>
+                
+                <label for="name2">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name2" data-name="Name2" placeholder="Enter your name" id="name2" required=""><label for="email2">Email Address:</label><input type="email2" class="text-field-2 w-input" maxlength="256" name="email2" data-name="Email2" placeholder="Enter your email" id="email2" required=""><label for="DoB2">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB2" data-name="DoB2" placeholder="DD-MM-YYYY" id="DoB2" required="">
+                    
+                    <h3>Ticket 3:</h3>
+                
+                <label for="name3">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name3" data-name="Name3" placeholder="Enter your name" id="name3" required=""><label for="email3">Email Address:</label><input type="email3" class="text-field-2 w-input" maxlength="256" name="email3" data-name="Email3" placeholder="Enter your email" id="email3" required=""><label for="DoB3">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB3" data-name="DoB3" placeholder="DD-MM-YYYY" id="DoB3" required="">
+                    
+                    <h3>Ticket 4:</h3>
+                
+                <label for="name4">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name4" data-name="Name4" placeholder="Enter your name" id="name4" required=""><label for="email4">Email Address:</label><input type="email4" class="text-field-2 w-input" maxlength="256" name="email4" data-name="Email4" placeholder="Enter your email" id="email4" required=""><label for="DoB4">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB4" data-name="DoB4" placeholder="DD-MM-YYYY" id="DoB4" required="">
+                    
+                    <h3>Ticket 5:</h3>
+                
+                <label for="name5">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name5" data-name="Name5" placeholder="Enter your name" id="name5" required=""><label for="email5">Email Address:</label><input type="email5" class="text-field-2 w-input" maxlength="256" name="email5" data-name="Email5" placeholder="Enter your email" id="email5" required=""><label for="DoB5">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB5" data-name="DoB5" placeholder="DD-MM-YYYY" id="DoB5" required="">
+                    
+                    <h3>Ticket 6:</h3>
+                
+                <label for="name6">Name:</label><input type="text" class="text-field w-input" maxlength="256" name="name6" data-name="Name6" placeholder="Enter your name" id="name6" required=""><label for="email6">Email Address:</label><input type="email6" class="text-field-2 w-input" maxlength="256" name="email6" data-name="Email6" placeholder="Enter your email" id="email6" required=""><label for="DoB6">Date of birth:</label><input type="text" class="text-field-3 w-input" maxlength="256" name="DoB6" data-name="DoB6" placeholder="DD-MM-YYYY" id="DoB6" required=""><input type="submit" value="To the payment page" data-wait="Please wait..." class="submit w-button" action="PaymentPage.php">
+                    
+                </form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    
     
 <br><br>
     
     <div class="w-form">
         <form id="email-form" name="email-form" data-name="Email Form" class="form">
-            <h3 class="heading-3">Number of participants:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="">1</option><option value="">2</option><option value="">3</option><option value="">4</option><option value="">5</option><option value="">6</option></select><label for="name" class="field-label"></label></form>
-        <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-        </div>
-        <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-        </div>
+            <h3 class="heading-3">Number of participants:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select><label for="name" class="field-label"></label></form>
+        
     </div>
     <div class="div-block-5"><img src="./Livia popper&#39;s First Project_files/5ad4d245fbca00c250d6ef14_logo2.JPG" width="113" class="image-3">
         <h3 class="heading-5">20 euros/day</h3>
@@ -316,30 +481,153 @@ session_start();
      ?>
     
     
+   <script>
+    //var modal = document.getElementById('Modal-Wrapper');
+
+        // Get the button that opens the modal
+        var btn = $(".button-3.w-button");
+
+        // Get the <span> element that closes the modal
+        var span = $(".close-link")
+
+        // When the user clicks on the button, open the modal 
+        btn.click(function() {
+           // modal.style.opacity=1;
+           // modal.style.display = "block";
+            var amount = $("#email-form select#field")
+            amount = amount[0].value
+            toggleModals(amount);
+        })
+       
+       
+        btn = $(".button-2.w-button");
+       
+        // When the user clicks on the button, open the modal 
+        btn.click(function() {
+           // modal.style.opacity=1;
+           // modal.style.display = "block";
+            var amount = $("#email-form select#field")
+            amount = amount[0].value
+            toggleModals(amount);
+        })
+
+        // When the user clicks on <span> (x), close the modal
+        span.click(function() {
+            hideModals();
+        });
+
+
+    </script> 
+<script>        
+    var modals = $(".modal-wrapper");
+    function toggleModals(number){
+        
+        hideModals();
+        $("#modals").css("display", "block")
+        modals.each(function(){
+            
+            if(number == 0) return;
+            number -= 1;
+            $(this).css("opacity", "1")
+            $(this).css("display", "block")
+        })
+    }
+    
+    function hideModals(){
+        
+        $("#modals").css("display", "none")
+    }
+    
+    </script>    
+    <!--
     <script>
-    var modal = document.getElementById('Modal-Wrapper');
+
+    var modal1 = document.getElementsByName("form1");
+    var modal2 = document.getElementsByName("form2");
+    var modal3 = document.getElementsByName("form3");
+    var modal4 = document.getElementsByName("form4");
+    var modal5 = document.getElementsByName("form5");
+    var modal6 = document.getElementsByName("form6");
 
         // Get the button that opens the modal
         var btn = document.getElementsByClassName("button-2 w-button")[0];
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close-link")[0];
+        var span = document.getInputsByValue("value")[0];
 
         // When the user clicks on the button, open the modal 
         btn.onclick = function() {
-            modal.style.opacity=1;
-            modal.style.display = "block";
+        console.log(event.args);
+        switch(value) {
+                            case 1:
+                            modal1.style.opacity=1;
+                            modal2.style.opacity=0;
+                            modal3.style.opacity=0;
+                            modal4.style.opacity=0;
+                            modal5.style.opacity=0;
+                            modal6.style.opacity=0;
+                            break;
+                
+                            case 2:
+                            modal1.style.opacity=0;
+                            modal2.style.opacity=1;
+                            modal3.style.opacity=0;
+                            modal4.style.opacity=0;
+                            modal5.style.opacity=0;
+                            modal6.style.opacity=0;
+                            break;
+                
+                            case 3:
+                            modal1.style.opacity=0;
+                            modal2.style.opacity=0;
+                            modal3.style.opacity=1;
+                            modal4.style.opacity=0;
+                            modal5.style.opacity=0;
+                            modal6.style.opacity=0;
+                            break;
+                
+                            case 4:
+                            modal1.style.opacity=0;
+                            modal2.style.opacity=0;
+                            modal3.style.opacity=0;
+                            modal4.style.opacity=1;
+                            modal5.style.opacity=0;
+                            modal6.style.opacity=0;
+                            break;
+                            
+                            case 5:
+                            modal1.style.opacity=0;
+                            modal2.style.opacity=0;
+                            modal3.style.opacity=0;
+                            modal4.style.opacity=0;
+                            modal5.style.opacity=1;
+                            modal6.style.opacity=0;
+                            break;
+                            
+                            case 6:
+                            modal1.style.opacity=0;
+                            modal2.style.opacity=0;
+                            modal3.style.opacity=0;
+                            modal4.style.opacity=0;
+                            modal5.style.opacity=0;
+                            modal6.style.opacity=1;
+                            break;
+}
+        
+        
+            modal1.style.display = "block";
            
         }
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
-            modal.style.display = "none";
-            modal.style.opacity=0;
+            modal1.style.display = "none";
+            modal1.style.opacity=0;
         }
 
 
     </script>
+    -->
     
     </body>
 

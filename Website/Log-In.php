@@ -339,6 +339,7 @@ $conn = new mysqli($servername,$username,$password,$db);
     <br>
     </div>
 </div>
+       
 <script type="text/javascript">
     var modal = document.getElementById('myModal');
     var registermod = document.getElementById('regist');
@@ -374,6 +375,9 @@ window.onclick = function(event) {
     }
 }
 </script>
+        
+       
+        
     </body>   
     
 

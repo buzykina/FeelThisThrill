@@ -30,6 +30,8 @@
 	padding: 10px;
 	position:relative;
 	display: block;
+    padding-left:640px;
+    padding-top:35px;
 	
 	
 }
@@ -50,10 +52,11 @@ background-color: #222233;
 	color:#AACCFF;
 border-style: solid;
 box-shadow: 3px 4px 6px black;
-	width:60%;
-	margin-left: auto;
+	width:100px;
+	
 	margin-right: auto;
 	font-family: Verdana, Geneva, sans-serif;
+    margin-bottom: 10px;
 }
 div.D2D2 h1{
 		font-family: Verdana, Geneva, sans-serif;
@@ -73,19 +76,20 @@ div.D2D2 h1{
 	background-color: #222233;
 	color:#AACCFF;
 	box-shadow: 3px 4px 6px black;
-	display: grid;
-	grid-template-rows: 2fr 2fr;
+	
+	grid-template-rows: 1fr 1fr;
 }
 .i1{
 	margin-top: 10px;
 	width:90%;
-	height: 90%;
+	height: 70%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: transparent; 
 	border-style: groove;
 	border-width: medium;
 	border-color:black;
+    margin-bottom: 20px;
 }
 .hea1{
 	top:0;
