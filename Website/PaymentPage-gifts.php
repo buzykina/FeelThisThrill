@@ -1,11 +1,11 @@
 <?php
 
-if(isset($_POST['cardNo']))
+if(isset($_POST['gifts']))
 {
 $myGiftsEmail = $_POST['gifts_email'];
 $myGiftsName = $_POST['name'];
 $email_body = "Hello, $myGiftsName!\n\nWelcome to Feel This Thrill!\n\nThank you for your payment!";
-
+    $_SESSION['shopping_cart'] = NULL;
     mail($myGiftsEmail, "Subj: Feel This Thrill - Gift purchase", $email_body, "From: feelthisthrill@gmail.com");
 
     header("location: index.php");
@@ -25,6 +25,7 @@ $email_body = "Hello, $myGiftsName!\n\nWelcome to Feel This Thrill!\n\nThank you
     <link href="./PaymentPage_files/livia-poppers-first-project.webflow.bd85a1a0a.css" rel="stylesheet" type="text/css">
     <script src="./PaymentPage_files/webfont.js.download" type="text/javascript"></script>
     <link rel="stylesheet" href="./PaymentPage_files/css">
+    <script src="js/gift.js"></script>
     <script type="text/javascript">
         WebFont.load({
             google: {
@@ -57,7 +58,7 @@ $email_body = "Hello, $myGiftsName!\n\nWelcome to Feel This Thrill!\n\nThank you
             <h3 class="heading-9">Payment Information</h3><input type="text" class="w-input" maxlength="256" name="name" data-name="Name" placeholder="Name on card" id="name"><input type="text" class="w-input" maxlength="256" name="cardNo" data-name="cardNo" placeholder="Credit Card Number" id="cardNo" required=""><input type="text" class="text-field-5 w-input" maxlength="256" name="MonthYear" data-name="MonthYear" placeholder="MM/YY" id="MonthYear" required=""><input type="text" class="w-input" maxlength="256" name="cvc" data-name="cvc" placeholder="CVC" id="cvc" required="">
             <input type="text" class="w-input" maxlength="256" name="gifts_email" data-name="gifts_email" placeholder="Email address" id="gifts_email" required="">
             
-            <input type="submit" value="Finish and pay" data-wait="Please wait..." class="submit-button w-button" data-toggle="modal" data-target="#myModal"></form>
+            <input type="submit" value="Finish and pay" data-wait="Please wait..." class="submit-button w-button" data-toggle="modal" name = "gifts" onclick="Back()" data-target="#myModal"></form>
 
     </div>
     <script src="./PaymentPage_files/jquery-3.3.1.min.js.download" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

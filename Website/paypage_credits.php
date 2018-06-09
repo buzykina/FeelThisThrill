@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['LoggedIn']=false;
+$_SESSION['LoggedIn']=true;
 $servername = "studmysql01.fhict.local";
 $username = "dbi380316";
 $password = "LP2699";
@@ -59,7 +59,7 @@ if(isset($_POST['payform']))
 ?>
 <body class="body-2"><img src="./PaymentPage_files/5ad4d245fbca00c250d6ef14_logo2.JPG" width="172" class="image-19">
     <div class="form-block-2 w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" class="form-4" action="paypage_gifts.php" method="post">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form-4" action="paypage_credits.php" method="post">
             <h3 class="heading-9">Payment Information</h3><input type="text" class="w-input" maxlength="256" name="name" data-name="Name" placeholder="Name on card" id="name"><input type="text" class="w-input" maxlength="256" name="cardNo" data-name="cardNo" placeholder="Credit Card Number" id="cardNo" required=""><input type="text" class="text-field-5 w-input" maxlength="256" name="MonthYear" data-name="MonthYear" placeholder="MM/YY" id="MonthYear" required=""><input type="text" class="w-input" maxlength="256" name="cvc" data-name="cvc" placeholder="CVC" id="cvc" required=""><input type="submit" value="Finish and pay" data-wait="Please wait..." class="submit-button w-button" data-toggle="modal" name = "payform" data-target="#myModal"></form>
 
     </div>

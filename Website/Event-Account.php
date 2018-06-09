@@ -151,7 +151,7 @@ if(isset($_POST['LogOut']))
                     #error{
                     display:none;
                     }</style>';
-            echo '<script> window.location.href="paypage_gifts.php"; </script>';
+            echo '<script> window.location.href="paypage_credits.php"; </script>';
         }
         else
         {
