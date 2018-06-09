@@ -192,3 +192,86 @@ div.Set3 div{
 	margin-left: auto;
 	margin-right: 100px;
 }
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+.modal-content h3{
+	text-decoration: none !important;
+    font-variant: small-caps;
+    color: #332438;
+    margin-bottom: 10px;
+    margin-top: 40px;
+	margin-left: 5%;
+}
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    min-width:840px;
+}
+.Nat {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent !important;
+    border: 2px solid #332438;
+    color: #332438;
+    font-size: 1vw;
+    font-weight: 700;
+    font-variant: small-caps;
+    height: 50px;
+    width: 150px;
+    transition: color 1s;
+}
+#error{
+    margin-top: 50px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display:none;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+.modal input[type="text"]
+{
+    max-width: 500px;
+    width: 80%;
+    line-height: 3em;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 1em 4em;
+    border-radius: 5px;
+    border: 2px solid #f2f2f2;
+    outline: none;
+    padding-left: 10px;
+}
+.Nat:hover{
+	color: white;
+    background-color: #332438 !important;
+    border-color: white !important;
+    cursor: pointer;
+}

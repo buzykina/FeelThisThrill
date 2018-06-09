@@ -7,7 +7,6 @@ session_start();
 	
 	
 	<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jane_js.js"></script>
 <link rel="stylesheet" type="text/css" href="css/MainStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/Acc.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -142,10 +141,44 @@ if(isset($_POST['LogOut']))
        
    }
 ?>
+    <?php 
+    if(isset($_POST['credit']))
+    {
+        $_SESSION['creditsnew'] = $_POST['credits'];
+        if($_SESSION['creditsnew'] >0)
+        {
+             echo '<style type="text/css">
+                    #error{
+                    display:none;
+                    }</style>';
+            echo '<script> window.location.href="paypage_gifts.php"; </script>';
+        }
+        else
+        {
+           echo '<style type="text/css">
+                    #error{
+                    display:block;
+                    }
+                    #myModal{
+                    display:block;
+                    }
+                    </style>';
+        }
+    }
+    ?>
         
-        
-	<button class="pointer">Add Credits</button>
-	
+	<button class="pointer" id = "myBtn">Add Credits</button>
+    <div id="myModal" class="modal">
+	<div class="modal-content">
+            <span class="close">&times;</span>
+            <form method="post" action = "Event-Account.php">
+            <div id = "error">Please enter the number bigger than 0.</div>
+            <h3>Enter how much you want to deposit here:</h3>
+            <input class = "credit" type="text" placeholder="Amount" name="credits" required>
+            <input class = "Nat" name ="credit" type="submit" value = "Submit">
+            </form>
+    </div>
+    </div>
 	</div>
 	</div>
 	<div class = "Info">
@@ -157,5 +190,32 @@ if(isset($_POST['LogOut']))
 		 <?php
     include 'included/footer.html';
      ?>
+<script type="text/javascript">
+    var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    document.getElementById('error').style.display = "none";
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        document.getElementById('error').style.display = "none";
+        modal.style.display = "none";
+    }
+}
+</script>
 	</body>
 </html>
