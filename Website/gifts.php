@@ -244,7 +244,12 @@ if(filter_input(INPUT_GET,'action')=='delete')
         ?>
      
 	
-  
+  <?php
+     if(isset($_POST['checkout']))
+     {
+         echo '<script> window.location.href = "PaymentPage-gifts.php"; </script>';
+     }
+     ?>
   
  <h2>Gifts</h2>
   <div id = "combined">
@@ -397,7 +402,7 @@ $result = mysqli_query($conn,$sql);
             <td class="right-align bold"><div class= "<?php echo $product['id'];?>">$<?php echo number_format((1+0.21)*($total),2);?></td>
           </tr>
           </table>
-          <form method="post" action="PaymentPage.php"><button class="checkout">Checkout</button></form>
+          <form method="post" action="gifts.php"><input type = "submit" class="checkout" value = "Checkout" name = "checkout"></form>
           <?php
             }
             }

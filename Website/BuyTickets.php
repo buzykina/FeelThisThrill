@@ -450,12 +450,7 @@ session_start();
                 <div class="w-radio"><input type="radio" id="2 Days Ticket" name="Tickets-choice" value="2 Days Ticket" data-name="Tickets choice" class="w-radio-input"><label for="2 Days Ticket" class="w-form-label">2 Days Ticket</label></div>
                 <div class="radio-button-field-2 w-radio"><input type="radio" id="General Ticket" name="Tickets-choice" value="General Ticket" data-name="Tickets choice" class="w-radio-input"><label for="General Ticket" class="w-form-label">General Ticket</label></div>
             </form>
-            <div class="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
+           
         </div><a class="button-2 w-button">BUY TICKETS</a></div>
     <div class="div-block-7"><img src="./Livia popper&#39;s First Project_files/5ad4d245fbca00c250d6ef14_logo2.JPG" width="105" class="image-4">
         <h3 class="heading-8">VIP Ticket</h3>
@@ -467,12 +462,7 @@ session_start();
                 <div class="radio-button-field-4 w-radio"><input type="radio" id="2 Days Ticket-2" name="Tickets-option" value="2 Days Ticket" data-name="Tickets option" class="w-radio-input"><label for="2 Days Ticket-2" class="field-label-4 w-form-label">2 Days Ticket</label></div>
                 <div class="radio-button-field-5 w-radio"><input type="radio" id="General Ticket-2" name="Tickets-option" value="General Ticket" data-name="Tickets option" class="w-radio-input"><label for="General Ticket-2" class="field-label-5 w-form-label">General Ticket</label></div>
             </form>
-            <div class="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
+          
         </div><a class="button-3 w-button">BUY TICKETS</a></div>
    
       
@@ -539,95 +529,7 @@ session_start();
     }
     
     </script>    
-    <!--
-    <script>
-
-    var modal1 = document.getElementsByName("form1");
-    var modal2 = document.getElementsByName("form2");
-    var modal3 = document.getElementsByName("form3");
-    var modal4 = document.getElementsByName("form4");
-    var modal5 = document.getElementsByName("form5");
-    var modal6 = document.getElementsByName("form6");
-
-        // Get the button that opens the modal
-        var btn = document.getElementsByClassName("button-2 w-button")[0];
-
-        // Get the <span> element that closes the modal
-        var span = document.getInputsByValue("value")[0];
-
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
-        console.log(event.args);
-        switch(value) {
-                            case 1:
-                            modal1.style.opacity=1;
-                            modal2.style.opacity=0;
-                            modal3.style.opacity=0;
-                            modal4.style.opacity=0;
-                            modal5.style.opacity=0;
-                            modal6.style.opacity=0;
-                            break;
-                
-                            case 2:
-                            modal1.style.opacity=0;
-                            modal2.style.opacity=1;
-                            modal3.style.opacity=0;
-                            modal4.style.opacity=0;
-                            modal5.style.opacity=0;
-                            modal6.style.opacity=0;
-                            break;
-                
-                            case 3:
-                            modal1.style.opacity=0;
-                            modal2.style.opacity=0;
-                            modal3.style.opacity=1;
-                            modal4.style.opacity=0;
-                            modal5.style.opacity=0;
-                            modal6.style.opacity=0;
-                            break;
-                
-                            case 4:
-                            modal1.style.opacity=0;
-                            modal2.style.opacity=0;
-                            modal3.style.opacity=0;
-                            modal4.style.opacity=1;
-                            modal5.style.opacity=0;
-                            modal6.style.opacity=0;
-                            break;
-                            
-                            case 5:
-                            modal1.style.opacity=0;
-                            modal2.style.opacity=0;
-                            modal3.style.opacity=0;
-                            modal4.style.opacity=0;
-                            modal5.style.opacity=1;
-                            modal6.style.opacity=0;
-                            break;
-                            
-                            case 6:
-                            modal1.style.opacity=0;
-                            modal2.style.opacity=0;
-                            modal3.style.opacity=0;
-                            modal4.style.opacity=0;
-                            modal5.style.opacity=0;
-                            modal6.style.opacity=1;
-                            break;
-}
-        
-        
-            modal1.style.display = "block";
-           
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal1.style.display = "none";
-            modal1.style.opacity=0;
-        }
-
-
-    </script>
-    -->
+  
     
     </body>
 
