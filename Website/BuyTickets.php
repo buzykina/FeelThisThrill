@@ -438,7 +438,7 @@ session_start();
     
     <div class="w-form">
         <form id="email-form" name="email-form" data-name="Email Form" class="form">
-            <h3 class="heading-3">Number of participants:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select><label for="name" class="field-label"></label></form>
+            <h3 class="heading-3">Number of participants:</h3><select id="field" name="field" required="" class="select-field w-select"><option value="1" >1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select><label for="name" class="field-label"></label></form>
         
     </div>
     <div class="div-block-5"><img src="./Livia popper&#39;s First Project_files/5ad4d245fbca00c250d6ef14_logo2.JPG" width="113" class="image-3">
@@ -446,7 +446,7 @@ session_start();
         <h4 class="heading-4">Tickets option:</h4>
         <div class="w-form">
             <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form-2"><label for="name" class="field-label-2"></label>
-                <div class="radio-button-field w-radio"><input type="radio" id="1 Day Ticket" name="Tickets-choice" value="1 Day Ticket" data-name="Tickets choice" required="" class="w-radio-input"><label for="1 Day Ticket" class="w-form-label">1 Day Ticket</label></div>
+                <div class="radio-button-field w-radio"><input type="radio" id="1 Day Ticket" name="Tickets-choice" value="1 Day Ticket" data-name="Tickets choice" required="" class="w-radio-input" checked><label for="1 Day Ticket" class="w-form-label">1 Day Ticket</label></div>
                 <div class="w-radio"><input type="radio" id="2 Days Ticket" name="Tickets-choice" value="2 Days Ticket" data-name="Tickets choice" class="w-radio-input"><label for="2 Days Ticket" class="w-form-label">2 Days Ticket</label></div>
                 <div class="radio-button-field-2 w-radio"><input type="radio" id="General Ticket" name="Tickets-choice" value="General Ticket" data-name="Tickets choice" class="w-radio-input"><label for="General Ticket" class="w-form-label">General Ticket</label></div>
             </form>
@@ -463,7 +463,7 @@ session_start();
         <h4 class="heading-6">Tickets option:</h4>
         <div class="form-block w-form">
             <form id="email-form-3" name="email-form-3" data-name="Email Form 3" class="form-3">
-                <div class="radio-button-field-3 w-radio"><input type="radio" id="1 Day Ticket-2" name="Tickets-option" value="1 Day Ticket" data-name="Tickets option" class="w-radio-input"><label for="1 Day Ticket-2" class="field-label-3 w-form-label">1 Day Ticket</label></div>
+                <div class="radio-button-field-3 w-radio"><input type="radio" id="1 Day Ticket-2" name="Tickets-option" value="1 Day Ticket" data-name="Tickets option" class="w-radio-input" checked><label for="1 Day Ticket-2" class="field-label-3 w-form-label">1 Day Ticket</label></div>
                 <div class="radio-button-field-4 w-radio"><input type="radio" id="2 Days Ticket-2" name="Tickets-option" value="2 Days Ticket" data-name="Tickets option" class="w-radio-input"><label for="2 Days Ticket-2" class="field-label-4 w-form-label">2 Days Ticket</label></div>
                 <div class="radio-button-field-5 w-radio"><input type="radio" id="General Ticket-2" name="Tickets-option" value="General Ticket" data-name="Tickets option" class="w-radio-input"><label for="General Ticket-2" class="field-label-5 w-form-label">General Ticket</label></div>
             </form>
