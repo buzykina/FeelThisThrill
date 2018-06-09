@@ -244,7 +244,18 @@ session_start();
 	<ul id = "submenu">
         <li><h3><a href="BuyTickets.php" class = "Selected">Buy Tickets</a></h3></li>  
         <li><hr></li>
+        <?php 
+        if($_SESSION['LoggedIn']==true)
+        {
+        ?>
         <li><h3><a href="CampingSpots.php">Rent Camping Spots</a></h3></li>
+        <?php 
+        }
+        else
+        {
+        ?>
+        <li><h3><a href="login.php">Rent Camping Spots</a></h3></li>
+        <?php }?>
      </ul>
     
     <div id="modals">

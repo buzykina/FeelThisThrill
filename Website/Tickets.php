@@ -216,7 +216,18 @@ session_start();
             </div>
 
             <div class="pictures">
-                <a href="CampingSpots.php">
+                <?php 
+        if($_SESSION['LoggedIn']==true)
+        {
+        ?>
+        <a href="CampingSpots.php">
+        <?php 
+        }
+        else
+        {
+        ?>
+        <a href="login.php">
+        <?php }?>
                     <img src="img/tent-2.jpg">
                     <h3>
                         Rent Camping Spots

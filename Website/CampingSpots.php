@@ -29,10 +29,7 @@ session_start();
         }(window, document);
 
     </script>
-
-    <link rel="stylesheet" type="text/css" href="css/jane_css.css">
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jane_js.js"></script>
 <link rel="stylesheet" type="text/css" href="css/MainStyle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
@@ -250,7 +247,7 @@ session_start();
 
             <!-- Modal content -->
        <div class="modal-content">
-                <span class="close" style="cursor: pointer; float:right;">&times;</span><br>
+                <span class="close">&times;</span><br>
                 <form>
 
                     <div class="temporary-container">
