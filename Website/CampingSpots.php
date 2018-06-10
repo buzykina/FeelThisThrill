@@ -220,6 +220,10 @@ session_start();
         }
         ?>
    
+     <?php 
+     if($_SESSION['LoggedIn']==true)
+     {
+     ?>
      <ul id = "submenu">
         <li><h3><a href="BuyTickets.php">Buy Tickets</a></h3></li>  
         <li><hr></li>
@@ -404,7 +408,13 @@ session_start();
         }
     
     </script>
-    
+    <?php
+        }
+        else
+        {
+         echo '<script> window.location.href="login.php"; </script>';
+        } 
+    ?>
     </body>
 
 </html>
