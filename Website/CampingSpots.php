@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'php.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -233,63 +234,41 @@ session_start();
     
     <img src="./CampingSpots_files/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map.jpg" srcset="http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-500.jpeg 500w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-800.jpeg 800w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-1080.jpeg 1080w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map.jpg 1519w" sizes="(max-width: 1519px) 100vw, 1519px">
     
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-18" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-17" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-16" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-15" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-14" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-13" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-10" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-12" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-9" style="cursor: pointer;">
-    <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="image-11" style="cursor: pointer;">
-    
-    
-    
-            <!-- The Modal -->
- <div id="myModal" class="modal">
+<?php
+    $sql = 'SELECT * FROM campspot ORDER BY idCamp ASC';
+    $result = mysqli_query($conn,$sql);
+    if($result):
+      if(mysqli_num_rows($result)>0):
+        while($product = $result->fetch_assoc()):
+        if($product['nrPeople']<6):
+        ?>
+        <img src="img/facebook-placeholder-for-locate-places-on-maps.png" class="img" id = "img<?php echo $product['idCamp']; ?>">
+         <div id="i<?php echo $product['idCamp']; ?>" class="modal">
 
             <!-- Modal content -->
        <div class="modal-content">
-                <span class="close">&times;</span><br>
+                <span class="close" id = "cl<?php echo $product['idCamp']; ?>">&times;</span><br>
                 <form>
 
                     <div class="temporary-container">
-
-                       <h4><p>Price: 20 euros/night</p></h4>
-                        <p>Row #: 2</p>
-                        <p>Spot #: 881</p>
-                        <button class="button5">            Rent the camping spot            </button>
-
+                       <h4><p>Price: <?php echo $product['price']; ?> euros/night</p></h4>
+                        <p>Location: <?php echo $product['location']; ?></p>
+                        <p>Nr of people: <?php echo $product['nrPeople']; ?>/6</p>
+                        <p>Type: <?php echo $product['status']; ?></p>
+                        <input type="submit" name="campspot" class = "button5" value= "Rent the camping spot">
                     </div>
                 </form>
 
             </div>
 
         </div>
-   
+        <?php
+          endif;
+          endwhile;
+          endif;
+          endif;
+        ?>
     
-               <!-- The Modal -->
- <div id="myModal2" class="modal">
-
-            <!-- Modal content -->
-       <div class="modal-content">
-                <span class="close2" style="cursor: pointer; float:right;">&times;</span><br>
-                <form>
-
-                    <div class="temporary-container">
-
-                       <h4><p>Price: 40 euros/night</p></h4>
-                        <p>Row #: 6</p>
-                        <p>Spot #: 881</p>
-                        <button class="button5">            Rent the camping spot            </button>
-
-                    </div>
-                </form>
-
-            </div>
-
-        </div>
     
       <?php
     include 'included/footer.html';
@@ -298,116 +277,42 @@ session_start();
     <script src="./CampingSpots_files/jquery-3.3.1.min.js.download" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./CampingSpots_files/webflow.54797e483.js.download" type="text/javascript"></script>
     
+<?php
+    $sql = 'SELECT * FROM campspot ORDER BY idCamp ASC';
+    $result = mysqli_query($conn,$sql);
+    if($result):
+      if(mysqli_num_rows($result)>0):
+        while($product = $result->fetch_assoc()):
+        if($product['nrPeople']<6):
+        ?>
 <script>
-    
-   var modal = document.getElementById('myModal');
+        var modal<?php echo $product['idCamp']; ?> = document.getElementById('i<?php echo $product['idCamp']; ?>');
 
         // Get the button that opens the modal
-        var btn = document.getElementsByClassName("image-17")[0];
+        var btn<?php echo $product['idCamp']; ?> = document.getElementById("img<?php echo $product['idCamp']; ?>");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var span<?php echo $product['idCamp']; ?> = document.getElementById("cl<?php echo $product['idCamp']; ?>");
 
         // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
+        btn<?php echo $product['idCamp'];?>.onclick = function() {
+            modal<?php echo $product['idCamp']; ?>.style.display = "block";
         }
         
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
+        span<?php echo $product['idCamp']; ?>.onclick = function() {
+            modal<?php echo $product['idCamp']; ?>.style.display = "none";
         }
     
     </script>
-  
-    <script>
-    
-   var modal = document.getElementById('myModal');
+        <?php
+          endif;
+          endwhile;
+          endif;
+          endif;
 
-        // Get the button that opens the modal
-        var btn = document.getElementsByClassName("image-18")[0];
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-    
-    </script>
-    
-    
-    <script>
-    
-   var modal = document.getElementById('myModal2');
-
-        // Get the button that opens the modal
-        var btn = document.getElementsByClassName("image-13")[0];
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close2")[0];
-
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-    
-    </script>
-    
-    <script>
-    
-   var modal = document.getElementById('myModal2');
-
-        // Get the button that opens the modal
-        var btn = document.getElementsByClassName("image-10")[0];
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close2")[0];
-
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-    
-    </script>
-    
-    <script>
-    
-   var modal = document.getElementById('myModal2');
-
-        // Get the button that opens the modal
-        var btn = document.getElementsByClassName("image-12")[0];
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close2")[0];
-
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-    
-    </script>
+        ?>
+   
     <?php
         }
         else
