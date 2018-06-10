@@ -21,13 +21,9 @@ namespace ProPApplication
         private RFID attachCus;
         private RFID scanCus;
         private RFID scanCheckOut;
-        private RFID LoanStand;
-        private RFID LoanStandReturnItem;
         int loginSuccessful;
         private List<Customer> CheckedInCus; //List of customer checked in
-        private List<Consumables> ItemsToSell; //List of items to be sold at food stands
-        private List<LoanItems> AllLoanAvailable; //List of all items that can be loaned at the moment 
-        private List<LoanItems> AllLoaned; //List of all items that was loaned
+        private List<Consumables> ItemsToSell; //List of item to be sold at food stands
 
         public Form1()
         {
@@ -45,90 +41,20 @@ namespace ProPApplication
             scanCheckOut = new RFID();
             scanCheckOut.Tag += CheckOutBalance;
 
-            LoanStand = new RFID();
-            LoanStand.Tag += LoanItem;
-
-
-
-
             btnUpdateTag.Enabled = false;
             labelCheckRFID.Visible = false;
             panelEntrance.Visible = false;
             panelLogIn.Visible = true;
             panelFoodsNDrinks.Visible = false;
-            panelLoan.Visible = false;
-            lbLoanScanStatus.Visible = false;
-
 
             allPanels = new List<Panel>();
             allPanels.Add(panelLogIn);
             allPanels.Add(panelAppList);
             allPanels.Add(panelEntrance);
 
-            //Lists initialized
             CheckedInCus = new List<Customer>();
             ItemsToSell = new List<Consumables>();
-            AllLoanAvailable = new List<LoanItems>();
-            AllLoaned = new List<LoanItems>();
 
-        }
-
-
-
-        private void LoanItem(object sender, RFIDTagEventArgs e)
-        {
-            using (MySqlConnection con = new MySqlConnection(connectionString))
-            {
-                string CustomerIDLoan = $"select customerID from customertest where customerRFIDpin = '{e.Tag}'";
-
-                con.Open();
-
-                MySqlCommand selectCusID = new MySqlCommand(CustomerIDLoan, con); //execute query to get customerID
-                int CusID = Convert.ToInt32(selectCusID.ExecuteScalar()); //get Customer ID as integer
-
-                if (CusID > 0) //Check if that customer exists
-                {
-
-                    //These code lines add requisite information to the object selected
-                    LoanItems ItemSelected = AllLoanAvailable[lbDisplayLoan.SelectedIndex];
-                    ItemSelected.CustomerID = CusID;
-                    ItemSelected.BorrowDate = DateTime.Now.ToShortDateString();
-                    ItemSelected.ReturnDate = "unknown";
-                    ItemSelected.isBorrowed = true;
-                    AllLoaned.Add(ItemSelected);
-
-                    //Upload the data back to the database
-                    string UpdateCusLoan = $"UPDATE loan_products SET CustomerID ='{CusID}', returnDate = '{ItemSelected.ReturnDate}', borrowDate = '{ItemSelected.BorrowDate}' WHERE ProductID = '{ItemSelected.ID}'";
-                    MySqlCommand updateData = new MySqlCommand(UpdateCusLoan, con);
-                    int result = updateData.ExecuteNonQuery();
-                    if (result == 1)
-                    {
-                        string loanInfo = $"The item {ItemSelected.Name} has been loaned to a customer with ID {CusID} at {ItemSelected.BorrowDate}";
-                        MessageBox.Show(loanInfo);
-                    }
-
-
-                    //Delete the item from the loan available list
-
-                    AllLoanAvailable.Remove(ItemSelected);
-
-
-                    //Refresh the listbox
-                    lbDisplayLoan.Items.Clear();
-                    foreach (var v in AllLoanAvailable)
-                    {
-                        lbDisplayLoan.Items.Add(v.AsAString());
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Your tag data does not exist on the database");
-                }
-
-                lbLoanScanStatus.Visible = false;
-
-
-            }
         }
 
 
@@ -140,7 +66,7 @@ namespace ProPApplication
                 double totalPrice = 0;
                 double updatedBalance;
                 string getBalance = $"select customerBalance from customertest where customerRFIDpin = '{e.Tag}'";
-
+                
                 MySqlCommand executeCommand = new MySqlCommand(getBalance, con);
 
                 DataTable dt = new DataTable();
@@ -150,14 +76,14 @@ namespace ProPApplication
 
                 if (dt.Rows.Count > 0)
                 {
-
+                
                     double cusBalance = Convert.ToDouble(executeCommand.ExecuteScalar());
                     foreach (var v in ItemsToSell)
                     {
                         totalPrice += v.GetPrice();
                     }
                     updatedBalance = cusBalance - totalPrice;
-                    if (updatedBalance >= 0)
+                    if(updatedBalance >= 0)
                     {
                         string updateBalance = $"UPDATE customertest SET customerBalance = '{updatedBalance}' WHERE customerRFIDpin = '{e.Tag}'";
                         MySqlCommand deductBalance = new MySqlCommand(updateBalance, con);
@@ -671,234 +597,6 @@ namespace ProPApplication
         {
             scanCheckOut.Open();
             lbScanCheckOut.Show();
-        }
-
-        private void button27_Click(object sender, EventArgs e)
-        {
-            if (this.listBoxItemsToSell.SelectedIndex >= 0)
-            {
-                ItemsToSell.RemoveAt(listBoxItemsToSell.SelectedIndex);
-                this.listBoxItemsToSell.Items.RemoveAt(listBoxItemsToSell.SelectedIndex);
-            }
-            else if (ItemsToSell.Count == 0)
-            {
-                MessageBox.Show("Your cart does not have any item");
-            }
-            else
-            {
-                MessageBox.Show("Please select an item to remove");
-            }
-        }
-
-        private void btnClearAll_Click(object sender, EventArgs e)
-        {
-            listBoxItemsToSell.Items.Clear();
-            ItemsToSell.Clear();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            panelAppList.Hide();
-            panelLoan.Show();
-            //btnLoan.Enabled = false;
-            //btnLoanReturn.Enabled = false;
-        }
-
-        private void btnGetLoanItems_Click(object sender, EventArgs e)
-        {
-            btnLoan.Enabled = true;
-            btnLoanReturn.Enabled = false;
-            lbDisplayLoan.Items.Clear();
-
-            using (MySqlConnection con = new MySqlConnection(connectionString))
-            {
-                AllLoaned.Clear();
-                AllLoanAvailable.Clear();
-
-
-                con.Open();
-                LoanItems ItemsLoan;
-                string getAllItems = "select ProductID, ProductName, ProductType, CustomerID, returnDate, borrowDate from loan_products";
-
-                MySqlCommand getAll = new MySqlCommand(getAllItems, con);
-                DataTable dt = new DataTable();
-                MySqlDataAdapter da = new MySqlDataAdapter(getAll);
-                da.Fill(dt);
-
-                //check if an item is borrowed or now
-
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (dr[3] == DBNull.Value)
-                    {
-                        ItemsLoan = new LoanItems(Convert.ToInt32(dr[0]), dr[1].ToString(), dr[2].ToString());
-                        AllLoanAvailable.Add(ItemsLoan);
-                    }
-
-                    else
-                    {
-                        ItemsLoan = new LoanItems(Convert.ToInt32(dr[0]), dr[1].ToString(), dr[2].ToString(), Convert.ToInt32(dr[3]), dr[4].ToString(), dr[5].ToString());
-                        ItemsLoan.isBorrowed = true;
-                        AllLoaned.Add(ItemsLoan);
-                    }
-
-                }
-
-                foreach (LoanItems l in AllLoanAvailable)
-                {
-                    lbDisplayLoan.Items.Add(l.AsAString());
-                }
-            }
-        }
-
-        private void btnAllItemsForLoan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLoan_Click(object sender, EventArgs e)
-        {
-            if (lbDisplayLoan.SelectedIndex >= 0)
-            {
-                lbLoanScanStatus.Visible = true;
-                LoanStand.Open();
-            }
-            else
-            {
-                MessageBox.Show("Please select an item from the list");
-            }
-        }
-
-        private void btnLoanedItems_Click(object sender, EventArgs e)
-        {
-            btnLoan.Enabled = false;
-            btnLoanReturn.Enabled = true;
-            lbDisplayLoan.Items.Clear();
-
-            using (MySqlConnection con = new MySqlConnection(connectionString))
-            {
-                AllLoaned.Clear();
-                AllLoanAvailable.Clear();
-
-
-                con.Open();
-                LoanItems ItemsLoan;
-                string getAllItems = "select ProductID, ProductName, ProductType, CustomerID, returnDate, borrowDate from loan_products";
-
-                MySqlCommand getAll = new MySqlCommand(getAllItems, con);
-                DataTable dt = new DataTable();
-                MySqlDataAdapter da = new MySqlDataAdapter(getAll);
-                da.Fill(dt);
-
-                //check if an item is borrowed or now
-
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (dr[3] != DBNull.Value)
-                    {
-                        ItemsLoan = new LoanItems(Convert.ToInt32(dr[0]), dr[1].ToString(), dr[2].ToString(), Convert.ToInt32(dr[3]), dr[4].ToString(), dr[5].ToString());
-                        ItemsLoan.isBorrowed = true;
-                        AllLoaned.Add(ItemsLoan);
-                    }
-                }
-
-                foreach (LoanItems l in AllLoaned)
-                {
-                    lbDisplayLoan.Items.Add(l.AsAString());
-                }
-            }
-        }
-
-        private void btnLoanReturn_Click(object sender, EventArgs e)
-        {
-            if (lbDisplayLoan.SelectedIndex >= 0)
-            {
-                using (MySqlConnection con = new MySqlConnection(connectionString))
-                {
-                    con.Open();
-                    LoanItems ItemToReturn = AllLoaned[lbDisplayLoan.SelectedIndex];
-                    //Set the return date 
-                    string getReturnDate = $"UPDATE loan_products SET returnDate = '{DateTime.Now.ToShortDateString()}' WHERE ProductID = '{ItemToReturn.ID}'";
-                    MySqlCommand getReturn = new MySqlCommand(getReturnDate, con);
-                    int updateReturnDate = getReturn.ExecuteNonQuery();
-                    if (updateReturnDate == 1)
-                    {
-                        //Get the price from the database
-                        string getPrice = $"select price from loan_products where ProductID = '{ItemToReturn.ID}'";
-                        MySqlCommand getThePrice = new MySqlCommand(getPrice, con);
-                        double price = Convert.ToDouble(getThePrice.ExecuteScalar());
-                        MessageBox.Show(price.ToString());
-
-                        //get the amount of days that the product was loaned
-                        string getDifference = $"SELECT str_to_date(returnDate,'%m/%d/%Y')-str_to_date(borrowDate,'%m/%d/%Y') from loan_products WHERE ProductID = {ItemToReturn.ID}";
-                        MySqlCommand getDifferenceDate = new MySqlCommand(getDifference, con);
-                        double days = Convert.ToDouble(getDifferenceDate.ExecuteScalar());
-
-
-                        //calculate the amount of money cost
-                        double finalPrice;
-                        if (days == 0)
-                        {
-                            finalPrice = price * 1;
-                        }
-                        else
-                        {
-                            finalPrice = price * days;
-                        }
-
-                        //deduct the money from the client's balance
-                        string getCusBalance = $"SELECT customerBalance from customertest where customerID = '{ItemToReturn.CustomerID}'";
-                        MySqlCommand getTheBalance = new MySqlCommand(getCusBalance, con);
-                        double balance = Convert.ToDouble(getTheBalance.ExecuteScalar());
-                        if ((balance - finalPrice) > 0) //To check if the custormer balance if sufficient for the transaction
-                        {
-                            string updateBalance = $"UPDATE customertest SET customerBalance = '{balance - finalPrice}' where customerID = '{ItemToReturn.CustomerID}'";
-                            MySqlCommand BalanceUpdated = new MySqlCommand(updateBalance, con);
-                            //remove data that is related to the loan
-                            int checkBalanceUpdated = BalanceUpdated.ExecuteNonQuery();
-                            if (checkBalanceUpdated == 1)
-                            {
-                                string returnQuery = $"UPDATE loan_products SET CustomerID = NULL, returnDate = NULL, borrowDate = NULL WHERE ProductID = {ItemToReturn.ID}";
-                                MySqlCommand cmd = new MySqlCommand(returnQuery, con);
-                                int result = cmd.ExecuteNonQuery();
-                                if (result == 1)
-                                {
-                                    string returnInfo = $"The item {ItemToReturn.ID} has been returned";
-
-                                    AllLoaned.Remove(ItemToReturn);
-
-                                    ItemToReturn.CustomerID = null;
-                                    ItemToReturn.ReturnDate = "";
-                                    ItemToReturn.BorrowDate = "";
-                                    ItemToReturn.isBorrowed = false;
-
-
-                                    AllLoanAvailable.Add(ItemToReturn);
-
-                                    lbDisplayLoan.Items.Clear();
-                                    foreach (var v in AllLoaned)
-                                    {
-                                        lbDisplayLoan.Items.Add(v.AsAString());
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("The ID does not match any loaned item");
-                                }
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Please charge your balance before returning the loan item, you need {finalPrice - balance} more credits!");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select an item from the list");
-            }
-
         }
     }
 }
