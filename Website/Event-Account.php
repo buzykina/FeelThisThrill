@@ -108,7 +108,10 @@ session_start();
     </nav>
         
         
- 
+ <?php
+        if($_SESSION['LoggedIn']==true)
+        {
+ ?>
         
 	<div class ="D1">
 
@@ -217,5 +220,12 @@ window.onclick = function(event) {
     }
 }
 </script>
+<?php
+}
+else
+    {
+        echo '<script> window.location.href="Log-In.php"; </script>';
+    }
+    ?>
 	</body>
 </html>
