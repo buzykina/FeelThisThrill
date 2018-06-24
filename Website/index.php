@@ -222,13 +222,13 @@ session_start();
     </div>
     <div id="lineuptext" class="hidden1">
         <div id = "d1">
-        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <div>Justin Bieber, The Neighbourhood, Artic Monkeys, Adele and many more in our festival. Check our schedule for more info!</div>
         <a href="line_up.php"><button class = "schedule">More artists</button></a>
     </div>
     </div>
     <div id = "experiencetext" class="hidden1">
         <div id = "d2">
-        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <div>From delicious food to world class art, Feel This Thrill offers numerous experiences to enjoy along with the music.</div>
         <a href="experience.php"><button class = "schedule">More photos</button></a>
     </div>
     </div>
@@ -240,13 +240,13 @@ session_start();
     </div>
     <div id = "tickettext" class="hidden1">
         <div id = "d3">
-        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <div>If you don't want to regret the rest of your life about not coming book your tickets and accommodation for via the link below.</div>
         <a href="Tickets.php"><button class = "schedule">Buy ticket</button></a>
     </div>
     </div>
     <div id = "giftstext" class="hidden1">
         <div id = "d4">
-        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+        <div>Can't come, but really want a gift? No problem, we made a lot of different T-Shirts, bags, etc for you and your friends!</div>
         <a href="gifts.php"><button class = "schedule">Buy gifts</button></a>
     </div>
     </div>
