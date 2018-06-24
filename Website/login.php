@@ -335,7 +335,7 @@ $conn = new mysqli($servername,$username,$password,$db);
             </form>
           </div>
       </div>
-        <p class="sign-up">How to sign up?!<span class = "link">To sign up you need to buy a ticket first. You can do it <a href="Tickets.php" id = "link">here</a>!</span></p>
+            <p class="sign-up"><a href = "Tickets.php">How to sign up?!</a><span class = "link">To sign up you need to buy a ticket first. You can do it <a href="Tickets.php" id = "link">here</a>!</span></p>
     <br>
     </div>
 </div>

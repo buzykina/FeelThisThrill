@@ -296,7 +296,7 @@ session_start();
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     
     <!--modal for 3 persons-->
    <div id="Modal-Wrapper" class="modal-wrapper" name="form3" style="overflow-y: scroll;">
@@ -440,9 +440,33 @@ session_start();
     </div>
     
     
+    <!--
     
+            if(isset($_POST['buyNormal']))
+            { 
+                $answer = $_POST['Tickets-choice'];
+                $TicketType="Normal";
+                $_SESSION["newTransaction"]=$answer;
+                $_SESSION["newTransaction2"]=$TicketType;
+                $_SESSION["newTransaction3"]='<script>document.getElementById("field").value </script>';
+             
+                
+               
+            }
+            else if(isset($_POST['buyVIP']))
+            {
+                $answer = $_POST['Tickets-option'];
+                $TicketType="VIP";
+                $_SESSION["newTransaction"]=$answer;
+                $_SESSION["newTransaction2"]=$TicketType;
+                $_SESSION["newTransaction3"]='<script>document.getElementById("field").value </script>';
+                
+           
+            }
+        
+   
     
-    
+    -->
     
     
 <br><br>
@@ -456,25 +480,33 @@ session_start();
         <h3 class="heading-5">20 euros/day</h3>
         <h4 class="heading-4">Tickets option:</h4>
         <div class="w-form">
-            <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form-2"><label for="name" class="field-label-2"></label>
+            <form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form-2" action="BuyTickets.php" method="post"><label for="name" class="field-label-2"></label>
                 <div class="radio-button-field w-radio"><input type="radio" id="1 Day Ticket" name="Tickets-choice" value="1 Day Ticket" data-name="Tickets choice" required="" class="w-radio-input" checked><label for="1 Day Ticket" class="w-form-label">1 Day Ticket</label></div>
                 <div class="w-radio"><input type="radio" id="2 Days Ticket" name="Tickets-choice" value="2 Days Ticket" data-name="Tickets choice" class="w-radio-input"><label for="2 Days Ticket" class="w-form-label">2 Days Ticket</label></div>
                 <div class="radio-button-field-2 w-radio"><input type="radio" id="General Ticket" name="Tickets-choice" value="General Ticket" data-name="Tickets choice" class="w-radio-input"><label for="General Ticket" class="w-form-label">General Ticket</label></div>
+            
+             <a type="submit" class="button-2 w-button" value="" name = "buyNormal">BUY TICKETS</a>
+                
             </form>
            
-        </div><a class="button-2 w-button">BUY TICKETS</a></div>
+        </div></div>
+    
+    
     <div class="div-block-7"><img src="./Livia popper&#39;s First Project_files/5ad4d245fbca00c250d6ef14_logo2.JPG" width="105" class="image-4">
         <h3 class="heading-8">VIP Ticket</h3>
         <h2 class="heading-7">30 euros/day</h2>
         <h4 class="heading-6">Tickets option:</h4>
         <div class="form-block w-form">
-            <form id="email-form-3" name="email-form-3" data-name="Email Form 3" class="form-3">
+            <form id="email-form-3" name="email-form-3" data-name="Email Form 3" class="form-3" action="BuyTickets.php" method="post">
                 <div class="radio-button-field-3 w-radio"><input type="radio" id="1 Day Ticket-2" name="Tickets-option" value="1 Day Ticket" data-name="Tickets option" class="w-radio-input" checked><label for="1 Day Ticket-2" class="field-label-3 w-form-label">1 Day Ticket</label></div>
                 <div class="radio-button-field-4 w-radio"><input type="radio" id="2 Days Ticket-2" name="Tickets-option" value="2 Days Ticket" data-name="Tickets option" class="w-radio-input"><label for="2 Days Ticket-2" class="field-label-4 w-form-label">2 Days Ticket</label></div>
                 <div class="radio-button-field-5 w-radio"><input type="radio" id="General Ticket-2" name="Tickets-option" value="General Ticket" data-name="Tickets option" class="w-radio-input"><label for="General Ticket-2" class="field-label-5 w-form-label">General Ticket</label></div>
+           
+                <a type="submit" class="button-3 w-button" value="" name = "buyVIP">BUY TICKETS</a>
+            
             </form>
           
-        </div><a class="button-3 w-button">BUY TICKETS</a></div>
+        </div></div>
    
       
     <?php
@@ -527,10 +559,16 @@ session_start();
         $("#modals").css("display", "block")
         modals.each(function(){
             
+            inputs = $(this).find("input")
+            inputs.each(function(){
+                $(this).val("")
+            })
+            
             if(number == 0) return;
             number -= 1;
             $(this).css("opacity", "1")
             $(this).css("display", "block")
+            
         })
     }
     

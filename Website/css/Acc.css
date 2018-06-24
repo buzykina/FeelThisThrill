@@ -26,6 +26,43 @@
 	grid-template-rows: 1fr 1fr;
 	grid-gap: 1em;
 }
+
+
+
+.D2D3
+{
+    padding: 10px;
+	margin-left: auto;
+	position:relative;
+	margin-top: auto;
+	display: grid;
+	grid-template-rows: 0fr 0fr;
+	grid-gap: 1em;
+}
+
+div.D2D3 button{
+background-color: #222233;
+	color:#AACCFF;
+border-style: solid;
+box-shadow: 3px 4px 15px black;
+	padding:10px;
+	
+	
+    margin-left: 80%;
+	font-family: Verdana, Geneva, sans-serif;
+}
+div.D2D3 h1{
+		font-family: Verdana, Geneva, sans-serif;
+	color:white;
+	 text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+
+
+
+
+
+
 .D2D1{
 	padding: 10px;
 	position:relative;

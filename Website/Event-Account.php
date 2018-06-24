@@ -186,8 +186,20 @@ if(isset($_POST['LogOut']))
 	</div>
 	<div class = "Info">
 		<div class="i1"><div class = "hea1"><h3>Ticket Details</h3></div><div class = "details"><div><p>Ticket NO: <?php echo $_SESSION['TicketID']; ?></p> <p>Ticket type: <?php echo $_SESSION['type']; ?></p> <p>Camp Spot: 22R2</p></div><div class = "clo"><p>Name: <?php echo $_SESSION['Buyer']; ?></p><p>Credit: <?php echo $_SESSION['Credits']; ?> €</p><p>Email: <?php echo $_SESSION['Buyer_Email']; ?></p></div></div></div>
-	<div class ="Campcontainer"><div class ="Set1"><h3>Camp Details</h3></div><div class ="Set2"><p>Row: 22 NO: R2</p></div><div class="Set3"><div>Himanshu Kotai<div class ="se">Member</div></div><div> Jane Buzykina<div class="se">Member</div></div><div>Livia Popper<div class = "se1">Host</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>
-	<div>Trung Dung Luong<div class = "se">Member</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>	</div></div>
+	<div class ="Campcontainer"><div class ="Set1"><h3>Camp Details</h3></div><div class ="Set2"><p>Row: 22 NO: R2</p></div><div class="Set3"><div>Livia Popper<div class = "se1">Host</div></div><div>Himanshu Kotai<div class ="se">Member</div></div><div> Jane Buzykina<div class="se">Member</div></div><div>Trung Dung Luong<div class = "se">Member</div></div>
+        
+        
+		</div>
+        
+        <form action="" method="post">
+             <input type="text" name="FirstName" style="background-color: #222233; color:#AACCFF; font-style: italic; border-color: grey; padding:3px; padding-right:30px; text-align: center; padding-left:25px;" placeholder="Enter member's ticket ID"><br>
+            <div class="D2D3"><button class="pointer" name="btnAddMember" type="submit">Add Member</button></div>
+        </form>
+        
+        
+        
+        
+        </div>
 	</div>
 		</div>
 		 <?php

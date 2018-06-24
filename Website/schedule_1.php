@@ -255,7 +255,7 @@ session_start();
   </tr>
   </tbody>
 </table>
-<a href="http://localhost/Website1/schedule/day1.pdf"><button class = "schedule">View schedule in pdf</button></a>
+<a href="http://i380316.hera.fhict.nl/schedule/day1.pdf"><button class = "schedule">View schedule in pdf</button></a>
 </div>
     <?php
     include 'included/footer.html';

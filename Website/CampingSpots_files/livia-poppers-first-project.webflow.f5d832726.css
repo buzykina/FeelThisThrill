@@ -2452,54 +2452,68 @@ textarea.w-select {
     text-align: center;
 }
 
-#img7 {
-    margin-left: 347px;
-    margin-top: -741px;
+.image-9 {
+    position: relative;
+    left: -197px;
+    top: -741px;
+    right: -48px;
 }
 
-#img10{
-    margin-left: 1018px;
-    margin-top: -533px;
+.image-10 {
+    position: relative;
+    left: 618px;
+    top: -533px;
+    right: -43px;
 }
 
-#img6 {
-    margin-left: 315px;
-    margin-top: -887px;
+.image-11 {
+    position: relative;
+    left: -255px;
+    top: -887px;
+    right: -3px;
 }
 
-#img12 {
-    margin-left: 1000px;
-    margin-top: -600px;
+.image-12 {
+    position: relative;
+    left: 623px;
+    top: -551px;
+    right: -85px;
 }
 
-#img13 {
-    margin-left: 1105px;
-    margin-top: -573px;
+.image-13 {
+    position: relative;
+    left: 625px;
+    top: -473px;
+    right: -43px;
 }
 
-#img5 {
-    margin-top: -122px;
-    margin-left: 240px;
+.image-14 {
+    position: relative;
+    top: -122px;
 }
 
-#img4 {
-    margin-left: 60px;
-    margin-top: -465px;
+.image-15 {
+    position: relative;
+    left: 60px;
+    top: -465px;
 }
 
-#img3 {
-    margin-left: 129px;
-    margin-top: -565px;
+.image-16 {
+    position: relative;
+    left: -29px;
+    top: -565px;
 }
 
-#img2 {
-    margin-left: 255px;
-    margin-top: -336px;
+.image-17 {
+    position: relative;
+    left: 155px;
+    top: -336px;
 }
 
-#img1 {
-    margin-left: 63px;
-    margin-top: -298px;
+.image-18 {
+    position: relative;
+    left: 63px;
+    top: -298px;
 }
 
 html.w-mod-js *[data-ix="modal-interaction"] {

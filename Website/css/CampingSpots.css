@@ -17,13 +17,12 @@
 }
 /* Modal Content/Box */
 .modal-content {
-    color:white;
-    background-color: #332438;
-    margin: 15% auto;
+    background-color: #FF8900;
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 20%;
-    /* border: solid #d6d389; */
+    width: 20%; /* Could be more or less, depending on screen size */
+    /*border:solid  #d6d389;*/
     border-radius: 20px;
     object-position: center;
     text-align: center;
@@ -87,14 +86,10 @@
     text-decoration: none;
     cursor: pointer;
 }
-.button5:hover {
-    background-color: white;
-    color: #332438;
-}
-.button5 {
-
-    background-color: transparent;
-    border: 2px solid white;
+        
+        .button5 {
+            background-color: #555555;
+        border: 1px solid #555555;
     color: white;
     padding: 10px 25px;
     text-align: center;
@@ -104,7 +99,3 @@
     margin: 2px 1px;
     cursor: pointer;
         } /* Black */
-.img{
-    cursor: pointer;
-    position: absolute;
-}
