@@ -160,15 +160,27 @@ include 'php.php';
    if($_SERVER['REQUEST_METHOD'] == 'POST')
    {
 
-if(isset($_POST['idCamp']))
-{
- $_SESSION['idCamp'] = $_POST['idCamp'];
-}
-if(isset($_POST['price']))
-{
-    $_SESSION['price'] = $_POST['price'];
-}
-   }
+        if(isset($_POST['idCamp']))
+        {
+         $_SESSION['idCamp'] = $_POST['idCamp'];
+        }
+        if(isset($_POST['price']))
+        {
+            $_SESSION['price'] = $_POST['price'];
+        }
+        if($_SESSION['Credits'] >= $_SESSION["price"])
+                                {
+                                    echo '<style type="text/css">
+                                    #myModal1{
+                                    display:block;
+                                    }
+                                    </style>';
+                                }
+                                else
+                                {
+                                    echo '<script> window.location.href="PaymentPage.php"; </script>';
+                                }
+    }
    ?>
      <?php 
      if($_SESSION['LoggedIn']==true)
@@ -216,11 +228,30 @@ if(isset($_POST['price']))
           endif;
           endif;
         ?>
-    
+    <div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+          <div class="modal-content">
+            <span id="close" class = "close">&times;</span>
+            <form method="post" action = "CampingSpots.php">
+             <h3>How would you like to pay?</h3>
+            <input type="radio" name="choice" value="account" checked> By Account<br>
+            <input type="radio" name="choice" value="card"> By card
+            </form>
+          </div>
+        </div>
     
       <?php
     include 'included/footer.html';
      ?>
+     <script type="text/javascript">
+        var modal = document.getElementById('myModal1');
+// Get the <span> element that closes the modal
+var span = document.getElementById('close');
+span.onclick = function() {
+    modal.style.display = "none";
+}
+    </script>
     <script src="./CampingSpots_files/jquery-3.3.1.min.js.download" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./CampingSpots_files/webflow.54797e483.js.download" type="text/javascript"></script>
 <?php

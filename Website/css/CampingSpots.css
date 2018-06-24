@@ -15,6 +15,9 @@
     cursor: pointer; 
     float:right;
 }
+#myModal1 form{
+line-height: 30px;
+}
 /* Modal Content/Box */
 .modal-content {
     color:white;
@@ -27,6 +30,10 @@
     border-radius: 20px;
     object-position: center;
     text-align: center;
+}
+#myModal1 .modal-content [type = "radio"]
+{
+text-align: left !important;
 }
         
         .modal-content [type="text"] {
