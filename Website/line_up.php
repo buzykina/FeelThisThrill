@@ -174,7 +174,7 @@ session_start();
     <?php
     include 'included/footer.html';
      ?>
-     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</a></button>
+     <button onclick="topFunction()" id="myBtn1" title="Go to top">Top</button>
     </body>   
 
 </html>

@@ -258,7 +258,6 @@ if(isset($_POST['price']))
           endif;
 
         ?>
-   </script>
     <?php
         }
         else

@@ -23,7 +23,7 @@ body{
   background-color: #684c6b;  
     border: 1px solid white;
 }
-#myBtn {
+#myBtn1 {
     display: none; 
     position: fixed; 
     bottom: 10px; 
@@ -38,7 +38,7 @@ body{
     border-radius: 10px; 
     font-size: 18px; 
 }
-#myBtn:hover {
+#myBtn1:hover {
     background-color: #9370DB;
 }
 .logotop{
