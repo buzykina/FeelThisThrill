@@ -2,7 +2,7 @@
 session_start();
 include 'php.php';
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -168,6 +168,10 @@ include 'php.php';
         {
             $_SESSION['price'] = $_POST['price'];
         }
+        if(isset($_POST['location']))
+        {
+            $_SESSION['location'] = $_POST['location'];
+        }
         if($_SESSION['Credits'] >= $_SESSION["price"])
                                 {
                                     echo '<style type="text/css">
@@ -215,6 +219,7 @@ include 'php.php';
                        <input type="hidden" name="price" value = "<?php echo $product['price']; ?>">
                        <input type="hidden" name="idCamp" value = "<?php echo $product['idCamp']; ?>">
                         <p>Location: <?php echo $product['location']; ?></p>
+                        <input type="hidden" name="location" value = "<?php echo $product['location']; ?>">
                         <p>Nr of people: <?php echo $product['nrPeople']; ?>/6</p>
                         <p>Type: <?php echo $product['status']; ?></p>
                         <input type="submit" name="campspot" class = "button5" value="Rent the camping spot">
@@ -231,12 +236,13 @@ include 'php.php';
     <div id="myModal1" class="modal">
 
   <!-- Modal content -->
-          <div class="modal-content">
+          <div class="modal-content left">
             <span id="close" class = "close">&times;</span>
-            <form method="post" action = "CampingSpots.php">
+            <form method="post" action = "rentCamp.php">
              <h3>How would you like to pay?</h3>
             <input type="radio" name="choice" value="account" checked> By Account<br>
-            <input type="radio" name="choice" value="card"> By card
+            <input type="radio" name="choice" value="card"> By card<br>
+            <input type="submit" name="campspot" class = "button5" value="Checkout">
             </form>
           </div>
         </div>
@@ -273,7 +279,13 @@ span.onclick = function() {
 
         // When the user clicks on the button, open the modal 
         btn<?php echo $product['idCamp'];?>.onclick = function() {
+            <?php
+            echo "if(". $_SESSION['Buyer_CampSpot1']. " == null)
+            {";
+            ?>
             modal<?php echo $product['idCamp']; ?>.style.display = "block";
+            <?php echo "}";
+            ?>
         }
         
         // When the user clicks on <span> (x), close the modal

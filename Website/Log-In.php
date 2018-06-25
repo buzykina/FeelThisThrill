@@ -99,13 +99,17 @@ $conn = new mysqli($servername,$username,$password,$db);
             $_SESSION['Buyer']=$row['buyerName'];
             $_SESSION['Buyer_Email']=$row['email'];
             $_SESSION['age'] = date_diff(date_create($row['DoB']), date_create('today'))->y;
-            $_SESSION['Buyer_CampSpot']=$row['campingSpot'];
+            $_SESSION['Buyer_CampSpot1']=$row['idCamp'];
             $sql_query1="SELECT * FROM ticket WHERE idTicket='".$_SESSION['TicketID']."'";
             $result1 = mysqli_query($conn, $sql_query1);
             $row1 = mysqli_fetch_array($result1); 
             $_SESSION['price']=$row1['price'];
             $_SESSION['day']=$row1['day(s)'];
             $_SESSION['type']=$row1['type'];
+            $sql_query2="SELECT * FROM campspot WHERE idCamp='".$_SESSION['Buyer_CampSpot1']."'";
+            $result2 = mysqli_query($conn, $sql_query2);
+            $row2 = mysqli_fetch_array($result2);
+            $_SESSION['Buyer_CampSpot'] = $row2['location'];
             echo '<script> window.location.href="Event-Account.php"; </script>';
             
         }
