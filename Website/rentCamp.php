@@ -19,11 +19,13 @@ if($_POST['choice'] == 'card')
 			  SET idCamp = '".$_SESSION['idCamp'] ."', credits = credits - " .$_SESSION['price']. "
 			  WHERE ticketID = '".$_SESSION['TicketID'] ."'";
  $result3 = mysqli_query($conn, $sql_query3);
+
 $_SESSION['Buyer_CampSpot'] = $_SESSION['location'];
 $sql_query1="SELECT * FROM user WHERE TicketID='".$_SESSION['TicketID']."'";
             $result1 = mysqli_query($conn, $sql_query1);
             $row1 = mysqli_fetch_array($result1);
 $_SESSION['Credits'] = $row1['credits'];
+$_SESSION['Buyer_CampSpot1']=$row1['idCamp'];
 header("location: CampingSpots.php");
 	return;
 ?>

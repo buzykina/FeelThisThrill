@@ -200,7 +200,7 @@ include 'php.php';
     <img src="./CampingSpots_files/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map.jpg" srcset="http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-500.jpeg 500w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-800.jpeg 800w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map-p-1080.jpeg 1080w, http://uploads.webflow.com/5a9fe66c690c3d0001d4aa0c/5ad69783f2b8b58d187c2e06_Summer-Camp-2017-Map.jpg 1519w" sizes="(max-width: 1519px) 100vw, 1519px">
     
 <?php
-    $sql = 'SELECT * FROM campspot ORDER BY idCamp ASC';
+    $sql = 'SELECT * FROM campspot where idCamp <> 0  ORDER BY idCamp ASC';
     $result = mysqli_query($conn,$sql);
     if($result):
       if(mysqli_num_rows($result)>0):
@@ -261,7 +261,7 @@ span.onclick = function() {
     <script src="./CampingSpots_files/jquery-3.3.1.min.js.download" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./CampingSpots_files/webflow.54797e483.js.download" type="text/javascript"></script>
 <?php
-    $sql = 'SELECT * FROM campspot ORDER BY idCamp ASC';
+    $sql = 'SELECT * FROM campspot where idCamp <> 0 ORDER BY idCamp ASC';
     $result = mysqli_query($conn,$sql);
     if($result):
       if(mysqli_num_rows($result)>0):
@@ -280,7 +280,7 @@ span.onclick = function() {
         // When the user clicks on the button, open the modal 
         btn<?php echo $product['idCamp'];?>.onclick = function() {
             <?php
-            echo "if(". $_SESSION['Buyer_CampSpot1']. " == null)
+            echo "if(". $_SESSION['Buyer_CampSpot1']." == 0)
             {";
             ?>
             modal<?php echo $product['idCamp']; ?>.style.display = "block";
