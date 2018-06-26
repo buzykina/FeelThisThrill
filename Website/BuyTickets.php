@@ -372,35 +372,7 @@ session_start();
         </div>
     </div>
     </div>
-    
-    
-    <!--
-    
-            if(isset($_POST['buyNormal']))
-            { 
-                $answer = $_POST['Tickets-choice'];
-                $TicketType="Normal";
-                $_SESSION["newTransaction"]=$answer;
-                $_SESSION["newTransaction2"]=$TicketType;
-                $_SESSION["newTransaction3"]='<script>document.getElementById("field").value </script>';
-             
-                
-               
-            }
-            else if(isset($_POST['buyVIP']))
-            {
-                $answer = $_POST['Tickets-option'];
-                $TicketType="VIP";
-                $_SESSION["newTransaction"]=$answer;
-                $_SESSION["newTransaction2"]=$TicketType;
-                $_SESSION["newTransaction3"]='<script>document.getElementById("field").value </script>';
-                
-           
-            }
-        
-   
-    
-    -->
+
     
     
 <br><br>
@@ -495,8 +467,13 @@ session_start();
             
             inputs = $(this).find("input")
             inputs.each(function(){
+                
+                if($(this).attr("type") == "submit") return;
+                
                 $(this).val("")
             })
+            $(this).css("opacity", "0")
+            $(this).css("display", "none")
             
             if(number == 0) return;
             number -= 1;
